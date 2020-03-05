@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		245573A7240F697100B6CDDB /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573A6240F697100B6CDDB /* FirstView.swift */; };
+		245573AA240F698B00B6CDDB /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573A9240F698B00B6CDDB /* SecondView.swift */; };
+		245573AC240F699D00B6CDDB /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573AB240F699D00B6CDDB /* ThirdView.swift */; };
+		245573AE240F721A00B6CDDB /* ContactsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573AD240F721A00B6CDDB /* ContactsVM.swift */; };
+		245573B0240F78F100B6CDDB /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573AF240F78F100B6CDDB /* SwitchCell.swift */; };
+		245573B5240F7D3F00B6CDDB /* DetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573B4240F7D3F00B6CDDB /* DetailInfo.swift */; };
+		245573B8240F8EC300B6CDDB /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573B7240F8EC300B6CDDB /* LazyView.swift */; };
 		24DF7775240E327700D80C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DF7774240E327700D80C8E /* AppDelegate.swift */; };
 		24DF7777240E327700D80C8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DF7776240E327700D80C8E /* SceneDelegate.swift */; };
 		24DF7779240E327700D80C8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DF7778240E327700D80C8E /* ContentView.swift */; };
@@ -16,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		245573A6240F697100B6CDDB /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		245573A9240F698B00B6CDDB /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		245573AB240F699D00B6CDDB /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
+		245573AD240F721A00B6CDDB /* ContactsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVM.swift; sourceTree = "<group>"; };
+		245573AF240F78F100B6CDDB /* SwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
+		245573B4240F7D3F00B6CDDB /* DetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfo.swift; sourceTree = "<group>"; };
+		245573B7240F8EC300B6CDDB /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		24DF7771240E327700D80C8E /* OTUS-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTUS-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DF7774240E327700D80C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24DF7776240E327700D80C8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +51,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2455739F240F66D700B6CDDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24DF777A240E327800D80C8E /* Assets.xcassets */,
+				24DF777F240E327800D80C8E /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		245573A0240F689700B6CDDB /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				24DF7782240E327800D80C8E /* Info.plist */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
+		245573A1240F68A600B6CDDB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				245573B6240F8EA100B6CDDB /* Components */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		245573A2240F68B900B6CDDB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				245573A5240F68E100B6CDDB /* BusinessLogic */,
+				245573A4240F68D900B6CDDB /* Entity */,
+				245573A3240F68CB00B6CDDB /* Flows */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		245573A3240F68CB00B6CDDB /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				24DF7778240E327700D80C8E /* ContentView.swift */,
+				245573B1240F78F900B6CDDB /* FirstTab */,
+				245573B2240F790800B6CDDB /* SecondTab */,
+				245573B3240F791E00B6CDDB /* ThirdTab */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		245573A4240F68D900B6CDDB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				245573AD240F721A00B6CDDB /* ContactsVM.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		245573A5240F68E100B6CDDB /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				24DF7774240E327700D80C8E /* AppDelegate.swift */,
+				24DF7776240E327700D80C8E /* SceneDelegate.swift */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		245573B1240F78F900B6CDDB /* FirstTab */ = {
+			isa = PBXGroup;
+			children = (
+				245573A6240F697100B6CDDB /* FirstView.swift */,
+			);
+			path = FirstTab;
+			sourceTree = "<group>";
+		};
+		245573B2240F790800B6CDDB /* SecondTab */ = {
+			isa = PBXGroup;
+			children = (
+				245573A9240F698B00B6CDDB /* SecondView.swift */,
+				245573AF240F78F100B6CDDB /* SwitchCell.swift */,
+				245573B4240F7D3F00B6CDDB /* DetailInfo.swift */,
+			);
+			path = SecondTab;
+			sourceTree = "<group>";
+		};
+		245573B3240F791E00B6CDDB /* ThirdTab */ = {
+			isa = PBXGroup;
+			children = (
+				245573AB240F699D00B6CDDB /* ThirdView.swift */,
+			);
+			path = ThirdTab;
+			sourceTree = "<group>";
+		};
+		245573B6240F8EA100B6CDDB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				245573B7240F8EC300B6CDDB /* LazyView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		24DF7768240E327700D80C8E = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +167,10 @@
 		24DF7773240E327700D80C8E /* OTUS-Practice */ = {
 			isa = PBXGroup;
 			children = (
-				24DF7774240E327700D80C8E /* AppDelegate.swift */,
-				24DF7776240E327700D80C8E /* SceneDelegate.swift */,
-				24DF7778240E327700D80C8E /* ContentView.swift */,
-				24DF777A240E327800D80C8E /* Assets.xcassets */,
-				24DF777F240E327800D80C8E /* LaunchScreen.storyboard */,
-				24DF7782240E327800D80C8E /* Info.plist */,
+				245573A2240F68B900B6CDDB /* App */,
+				245573A1240F68A600B6CDDB /* Core */,
+				245573A0240F689700B6CDDB /* Environments */,
+				2455739F240F66D700B6CDDB /* Resources */,
 				24DF777C240E327800D80C8E /* Preview Content */,
 			);
 			path = "OTUS-Practice";
@@ -147,7 +256,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DF7775240E327700D80C8E /* AppDelegate.swift in Sources */,
+				245573AA240F698B00B6CDDB /* SecondView.swift in Sources */,
+				245573A7240F697100B6CDDB /* FirstView.swift in Sources */,
+				245573AE240F721A00B6CDDB /* ContactsVM.swift in Sources */,
 				24DF7777240E327700D80C8E /* SceneDelegate.swift in Sources */,
+				245573B0240F78F100B6CDDB /* SwitchCell.swift in Sources */,
+				245573B5240F7D3F00B6CDDB /* DetailInfo.swift in Sources */,
+				245573AC240F699D00B6CDDB /* ThirdView.swift in Sources */,
+				245573B8240F8EC300B6CDDB /* LazyView.swift in Sources */,
 				24DF7779240E327700D80C8E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +404,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"OTUS-Practice/Preview Content\"";
 				DEVELOPMENT_TEAM = B2H4W42259;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "OTUS-Practice/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OTUS-Practice/Environments/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +424,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"OTUS-Practice/Preview Content\"";
 				DEVELOPMENT_TEAM = B2H4W42259;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "OTUS-Practice/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/OTUS-Practice/Environments/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
