@@ -17,7 +17,8 @@ struct ThirdView: View {
             Button("Modal") {
                 self.isModal = true
             }.sheet(isPresented: $isModal, content: {
-                LazyView(Text("Hello"))
+                LazyView(ColumnView()
+                    .environmentObject(ColumnVM()))
             })
         }
     }

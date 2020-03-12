@@ -9,34 +9,53 @@
 import SwiftUI
 
 struct DetailInfo: View {
+    
+    @State var isOn: Bool = false
+    
     var element: Contact
     
     var body: some View {
         Group {
-            
-            HStack {
-                Spacer()
+            VStack {
+                HStack {
+                    Spacer()
                 
-                Image(systemName: element.imgName)
-                    .resizable()
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .foregroundColor(element.imgColor)
+                    Image(systemName: element.imgName)
+                        .resizable()
+                        .frame(width: 100, height: 100, alignment: .center)
+                        .foregroundColor(element.imgColor)
                 
-                Spacer()
+                    Spacer()
                 
-                VStack {
-                    Text(element.name)
-                        .font(.title)
+                    VStack {
+                        Text(element.name)
+                            .font(.title)
                     
-                    Text(element.id)
-                        .font(.body)
+                        Text(element.id)
+                            .font(.body)
+                    } //VStack
+                
+                    Spacer()
+                    Spacer()
+                } //HStack
+                Spacer()
+                
+                CustomButton(action: {
+                    withAnimation(.easeInOut) {
+                        self.isOn.toggle()
+                    }
+                }) {
+                    Text("My Button")
+                }
+                if isOn {
+                    RoundedRectangle(cornerRadius: 6)
+                        .fill(Color.red)
+                        .frame(width: 100, height: 100)
+                        .transition(.moveAndFade)
                 }
                 
                 Spacer()
-                Spacer()
-            }
-            
-            Spacer()
+            } //VStack
         }
     }
 }

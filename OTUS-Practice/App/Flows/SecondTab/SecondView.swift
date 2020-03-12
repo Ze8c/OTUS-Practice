@@ -21,16 +21,22 @@ struct SecondView: View {
                 SwitchCell(radish: $radish)
                     .environmentObject(vm)
                 
-                List(vm.list.filter({ !self.radish || $0.isRadish })) { item in
-                    NavigationLink(destination: LazyView(DetailInfo(element: item))
-                        .navigationBarTitle("Detail info", displayMode: .inline)) {
-                            HStack{
-                                Image(systemName: item.imgName).foregroundColor(item.imgColor)
-                                Text(item.name)
-                            }
+                List {
+                    ForEach(vm.list) { item in
+                        if !self.radish || item.isRadish {
+                            NavigationLink(destination: LazyView(DetailInfo(element: item))
+                                .navigationBarTitle("Detail info", displayMode: .inline), tag: item.id, selection: self.$vm.selected) {
+                                    HStack {
+                                        Image(systemName: item.imgName)
+                                            .foregroundColor(item.imgColor)
+                                        Text(item.name)
+                                    }
+                            } //NavigationLink
+                        }
                     }
-                }.navigationBarTitle("Contacts")
-            }
+                } //List
+                .navigationBarTitle("Contacts")
+            } //VStack
         }
     }
 }

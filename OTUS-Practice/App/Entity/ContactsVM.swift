@@ -26,7 +26,7 @@ struct Contact: Identifiable {
 
 final class ContactsVM: ObservableObject {
     
-    @Published var selected: Int = 0
+    @Published var selected: String? = ""
     
     @Published private(set) var btnName = "Bad people"
     
@@ -53,8 +53,4 @@ final class ContactsVM: ObservableObject {
         Contact(name: "20", isRadish: true),
         Contact(name: "21", isRadish: true)
     ]
-    
-    var selectedElement: Contact {
-        list[selected]
-    }
 }

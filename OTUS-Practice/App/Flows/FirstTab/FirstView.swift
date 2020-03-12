@@ -14,7 +14,7 @@ struct FirstView: View {
     
     @EnvironmentObject var vm: ContactsVM
     
-    @State var selection: Int = 0
+    @State var selection: String = ""
     
     var body: some View {
         VStack {
@@ -26,8 +26,8 @@ struct FirstView: View {
             HStack {
                 Spacer()
                 Picker(selection: $selection, label: Text("")) {
-                    ForEach(vm.list.indices) { i in
-                        Text(self.vm.list[i].name).tag(i)
+                    ForEach(vm.list) { it in
+                        Text(it.name).tag(it.id)
                     }
                 }
                 Spacer()

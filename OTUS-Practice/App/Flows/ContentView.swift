@@ -16,12 +16,13 @@ enum Tabs: Hashable {
 
 struct ContentView: View {
     
+    @EnvironmentObject var vm: ContactsVM
+    
     @State private var selection: Tabs = .second
     
     var body: some View {
         TabView(selection: $selection) {
             FirstView(selectedTab: $selection)
-                .environmentObject(ContactsVM())
                 .tag(Tabs.first)
                 .tabItem {
                     Image(systemName: "escape")
@@ -29,7 +30,6 @@ struct ContentView: View {
                 }
             
             SecondView()
-                .environmentObject(ContactsVM())
                 .tag(Tabs.second)
                 .tabItem {
                     Image(systemName: "scope")
@@ -49,5 +49,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ContactsVM())
     }
 }

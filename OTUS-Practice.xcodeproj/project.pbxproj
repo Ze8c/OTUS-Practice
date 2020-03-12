@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241EBD542419FE610089A32B /* ColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241EBD532419FE610089A32B /* ColumnView.swift */; };
+		2443AED5241A0762009DDCEB /* ColumnVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443AED4241A0762009DDCEB /* ColumnVM.swift */; };
+		2443AED8241A1665009DDCEB /* AnyTransitionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443AED7241A1665009DDCEB /* AnyTransitionExt.swift */; };
+		2443AEDA241A1CA2009DDCEB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443AED9241A1CA2009DDCEB /* CustomButton.swift */; };
 		245573A7240F697100B6CDDB /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573A6240F697100B6CDDB /* FirstView.swift */; };
 		245573AA240F698B00B6CDDB /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573A9240F698B00B6CDDB /* SecondView.swift */; };
 		245573AC240F699D00B6CDDB /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573AB240F699D00B6CDDB /* ThirdView.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		241EBD532419FE610089A32B /* ColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnView.swift; sourceTree = "<group>"; };
+		2443AED4241A0762009DDCEB /* ColumnVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnVM.swift; sourceTree = "<group>"; };
+		2443AED7241A1665009DDCEB /* AnyTransitionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionExt.swift; sourceTree = "<group>"; };
+		2443AED9241A1CA2009DDCEB /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		245573A6240F697100B6CDDB /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		245573A9240F698B00B6CDDB /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		245573AB240F699D00B6CDDB /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
@@ -51,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2443AED6241A1636009DDCEB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2443AED7241A1665009DDCEB /* AnyTransitionExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2455739F240F66D700B6CDDB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +87,7 @@
 		245573A1240F68A600B6CDDB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2443AED6241A1636009DDCEB /* Extensions */,
 				245573B6240F8EA100B6CDDB /* Components */,
 			);
 			path = Core;
@@ -100,6 +117,7 @@
 		245573A4240F68D900B6CDDB /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				2443AED4241A0762009DDCEB /* ColumnVM.swift */,
 				245573AD240F721A00B6CDDB /* ContactsVM.swift */,
 			);
 			path = Entity;
@@ -136,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				245573AB240F699D00B6CDDB /* ThirdView.swift */,
+				241EBD532419FE610089A32B /* ColumnView.swift */,
 			);
 			path = ThirdTab;
 			sourceTree = "<group>";
@@ -143,6 +162,7 @@
 		245573B6240F8EA100B6CDDB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2443AED9241A1CA2009DDCEB /* CustomButton.swift */,
 				245573B7240F8EC300B6CDDB /* LazyView.swift */,
 			);
 			path = Components;
@@ -258,10 +278,14 @@
 				24DF7775240E327700D80C8E /* AppDelegate.swift in Sources */,
 				245573AA240F698B00B6CDDB /* SecondView.swift in Sources */,
 				245573A7240F697100B6CDDB /* FirstView.swift in Sources */,
+				2443AED5241A0762009DDCEB /* ColumnVM.swift in Sources */,
+				2443AEDA241A1CA2009DDCEB /* CustomButton.swift in Sources */,
 				245573AE240F721A00B6CDDB /* ContactsVM.swift in Sources */,
 				24DF7777240E327700D80C8E /* SceneDelegate.swift in Sources */,
 				245573B0240F78F100B6CDDB /* SwitchCell.swift in Sources */,
 				245573B5240F7D3F00B6CDDB /* DetailInfo.swift in Sources */,
+				2443AED8241A1665009DDCEB /* AnyTransitionExt.swift in Sources */,
+				241EBD542419FE610089A32B /* ColumnView.swift in Sources */,
 				245573AC240F699D00B6CDDB /* ThirdView.swift in Sources */,
 				245573B8240F8EC300B6CDDB /* LazyView.swift in Sources */,
 				24DF7779240E327700D80C8E /* ContentView.swift in Sources */,
