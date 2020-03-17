@@ -14,12 +14,9 @@ struct ThirdView: View {
     
     var body: some View {
         VStack {
-            Button("Modal") {
-                self.isModal = true
-            }.sheet(isPresented: $isModal, content: {
-                LazyView(ColumnView()
-                    .environmentObject(ColumnVM()))
-            })
+            NavControllerView(transition: .custom(.scale)) {
+                NextFirstView(cellText: "Hello!!!")
+            }
         }
     }
 }
