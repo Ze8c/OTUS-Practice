@@ -1,0 +1,84 @@
+openapi: 3.0.1
+info:
+  title: Jikan
+  description: 'Jikan'
+  version: 1.0.0
+externalDocs:
+  description: API Root
+  url: https://api.jikan.moe/v3/
+servers:
+- url: https://api.jikan.moe/v3/
+tags:
+- name: anime
+  description: Anime
+paths:
+  /search/anime:
+    get:
+      tags:
+      - search anime
+      summary: Get Anime
+      operationId: getAnime
+      parameters:
+        - name: q
+          in: query
+          description: Query
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: query
+          description: Paging
+          required: true
+          schema:
+            type: integer  
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnimeList'
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+components:
+  schemas:
+    AnimeList:
+      type: object
+      properties:
+        last_page:
+          type: integer
+        results:
+          type: array
+          items: 
+            $ref: "#/components/schemas/Anime"
+    Anime:
+      type: object
+      properties:
+        mal_id:
+          type: integer
+        image_url:
+          type: string
+        title:
+          type: string
+        synopsis:
+          type: string
+        episodes:
+          type: integer
+        score:
+          type: number
+    ErrorModel:
+      type: object
+      required:
+      - message
+      - code
+      properties:
+        message:
+          type: string
+        code:
+          type: integer
+          minimum: 100
+          maximum: 600

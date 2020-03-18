@@ -10,33 +10,28 @@ import SwiftUI
 
 struct SecondView: View {
     
-    @EnvironmentObject var vm: ContactsVM
-    
-    @State var radish: Bool = false
+    @EnvironmentObject var vm: AnimeVM
     
     var body: some View {
         NavigationView {
-            VStack {
-                
-                SwitchCell(radish: $radish)
-                    .environmentObject(vm)
-                
-                List {
-                    ForEach(vm.list) { item in
-                        if !self.radish || item.isRadish {
-                            NavigationLink(destination: LazyView(DetailInfo(element: item))
-                                .navigationBarTitle("Detail info", displayMode: .inline), tag: item.id, selection: self.$vm.selected) {
-                                    HStack {
-                                        Image(systemName: item.imgName)
-                                            .foregroundColor(item.imgColor)
-                                        Text(item.name)
-                                    }
-                            } //NavigationLink
-                        }
+            List {
+                ForEach(vm.list, id: \.self) { item in
+                    NavigationLink(destination: LazyView(DetailInfo(element: item))
+                        .navigationBarTitle("Detail info", displayMode: .inline), tag: item.id, selection: self.$vm.selected) {
+                            HStack {
+                                Text(item.title ?? "")
+                            }
                     }
-                } //List
-                .navigationBarTitle("Contacts")
-            } //VStack
+                    .onAppear() {
+                        if self.vm.list.isLast(item) {
+                            self.vm.getAnime()
+                        }
+                    }//NavigationLink
+                }
+            }.onAppear(perform: {
+                self.vm.getAnime()
+            }) //List
+                .navigationBarTitle("Anime")
         }
     }
 }

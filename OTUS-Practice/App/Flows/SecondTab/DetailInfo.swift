@@ -7,51 +7,63 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct DetailInfo: View {
     
     @State var isOn: Bool = false
     
-    var element: Contact
+    var element: Anime
     
     var body: some View {
         Group {
             VStack {
+                Spacer()
                 HStack {
                     Spacer()
-                
-                    Image(systemName: element.imgName)
+                    
+                    KFImage(element.imgURL)
                         .resizable()
                         .frame(width: 100, height: 100, alignment: .center)
-                        .foregroundColor(element.imgColor)
-                
-                    Spacer()
-                
-                    VStack {
-                        Text(element.name)
-                            .font(.title)
+                        .cornerRadius(12)
                     
-                        Text(element.id)
-                            .font(.body)
+                    Spacer()
+                    VStack {
+                        Text(element.title ?? "")
+                            .font(.title)
+                        
+                        HStack {
+                            Text("Episodes: \(element.episodes ?? 0)")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                            Spacer()
+                            Text("Rating: \(element.score ?? 0.0)")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        } //HStack
                     } //VStack
-                
                     Spacer()
                     Spacer()
-                } //HStack
-                Spacer()
+                }
+                    .background(Color.white)
+                    .cornerRadius(20)
+                    .shadow(color: .gray, radius: 5, x: 1, y: 1)//HStack
                 
-                CustomButton(action: {
+                Button(action: {
                     withAnimation(.easeInOut) {
                         self.isOn.toggle()
                     }
                 }) {
-                    Text("My Button")
+                    Text("About")
                 }
+                
                 if isOn {
-                    RoundedRectangle(cornerRadius: 6)
-                        .fill(Color.red)
-                        .frame(width: 100, height: 100)
+                    Text(element.synopsis ?? "")
+                        .font(.body)
+                        .background(Color.white)
                         .transition(.moveAndFade)
+                        .cornerRadius(12)
+                        .shadow(color: .gray, radius: 4, x: 1, y: 1)
                 }
                 
                 Spacer()

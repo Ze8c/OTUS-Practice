@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SwitchCell: View {
     
-    @EnvironmentObject var vm: ContactsVM
+    @EnvironmentObject var vm: AnimeVM
     
     @Binding var radish: Bool
     

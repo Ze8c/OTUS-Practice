@@ -12,9 +12,9 @@ struct FirstView: View {
     
     @Binding var selectedTab: Tabs
     
-    @EnvironmentObject var vm: ContactsVM
+    @EnvironmentObject var vm: AnimeVM
     
-    @State var selection: String = ""
+    @State var selection: Int = 0
     
     var body: some View {
         VStack {
@@ -26,8 +26,8 @@ struct FirstView: View {
             HStack {
                 Spacer()
                 Picker(selection: $selection, label: Text("")) {
-                    ForEach(vm.list) { it in
-                        Text(it.name).tag(it.id)
+                    ForEach(vm.list, id: \.self) { it in
+                        Text(it.title ?? "").tag(it.malId)
                     }
                 }
                 Spacer()
