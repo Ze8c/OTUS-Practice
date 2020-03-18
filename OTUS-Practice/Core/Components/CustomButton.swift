@@ -10,38 +10,30 @@ import SwiftUI
 
 struct CustomButton<Content>: View where Content: View {
     
-    private let action: ()->Void
-    private let content: ()->Content
+    @Binding var isOn: Bool
+    let name: String
     
-    init(action: @escaping ()->Void, @ViewBuilder content: @escaping () -> Content) {
-        self.action = action
-        self.content = content
-    }
+    var contentColorOn: Color = .init(dRed: 16, green: 130, blue: 23)
+    var colorOn: Color = .init(dRed: 100, green: 228, blue: 108)
+    var contentColorOff: Color = .init(dRed: 53, green: 53, blue: 53)
+    var colorOff: Color = .init(dRed: 184, green: 184, blue: 184)
+    
+    let action: (String) -> Void
+    let content: (String) -> Content
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 6)
-                .foregroundColor(.green)
-            HStack {
-                self.content()
-            }
-            .padding(.horizontal, 14)
-            .padding(.vertical, 14)
+            self.content(self.name)
+                .font(.body)
+                .foregroundColor(isOn ? contentColorOn : contentColorOff)
+                .padding(.all, 5)
         }
-        .fixedSize(horizontal: true, vertical: true)
-        .simultaneousGesture(TapGesture().onEnded({
-            self.action()
-        }))
-    }
-}
-
-struct CustomButton_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomButton(action: {}) {
-            VStack {
-                EmptyView()
-                Text("Test")
-            }
-        }
+            .foregroundColor(.green)
+            .cornerRadius(12)
+            .background(isOn ? colorOn : colorOff)
+            .simultaneousGesture(TapGesture().onEnded({
+                self.isOn.toggle()
+                self.action(self.name.lowercased())
+            }))
     }
 }

@@ -12,7 +12,7 @@ struct FirstView: View {
     
     @Binding var selectedTab: Tabs
     
-    @EnvironmentObject var vm: AnimeVM
+    @EnvironmentObject var vm: ProductVM
     
     @State var selection: Int = 0
     

@@ -16,7 +16,7 @@ enum Tabs: Hashable {
 
 struct ContentView: View {
     
-    @EnvironmentObject var vm: AnimeVM
+    @EnvironmentObject var vm: ProductVM
     
     @State private var selection: Tabs = .second
     
@@ -49,6 +49,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(AnimeVM())
+            .environmentObject(ProductVM())
     }
 }

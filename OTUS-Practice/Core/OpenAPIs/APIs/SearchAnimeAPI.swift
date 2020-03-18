@@ -18,8 +18,8 @@ open class SearchAnimeAPI {
      - parameter apiResponseQueue: The queue on which api response is dispatched.
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnime(q: String, page: Int, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: AnimeList?,_ error: Error?) -> Void)) {
-        getAnimeWithRequestBuilder(q: q, page: page).execute(apiResponseQueue) { result -> Void in
+    open class func getAnime(q: String, page: Int, filter: String, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: ProductList?,_ error: Error?) -> Void)) {
+        getAnimeWithRequestBuilder(q: q, page: page, filter: filter).execute(apiResponseQueue) { result -> Void in
             switch result {
             case let .success(response):
                 completion(response.body, nil)
@@ -34,10 +34,10 @@ open class SearchAnimeAPI {
      - GET /search/anime
      - parameter q: (query) Query 
      - parameter page: (query) Paging 
-     - returns: RequestBuilder<AnimeList> 
+     - returns: RequestBuilder<ProductList> 
      */
-    open class func getAnimeWithRequestBuilder(q: String, page: Int) -> RequestBuilder<AnimeList> {
-        let path = "/search/anime"
+    open class func getAnimeWithRequestBuilder(q: String, page: Int, filter: String) -> RequestBuilder<ProductList> {
+        let path = "/search/\(filter)"
         let URLString = OpenAPIClientAPI.basePath + path
         let parameters: [String:Any]? = nil
         
@@ -47,7 +47,7 @@ open class SearchAnimeAPI {
             "page": page.encodeToJSON()
         ])
 
-        let requestBuilder: RequestBuilder<AnimeList>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ProductList>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", URLString: (url?.string ?? URLString), parameters: parameters, isBody: false)
     }
