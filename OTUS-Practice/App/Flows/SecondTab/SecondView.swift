@@ -64,7 +64,8 @@ struct SecondView: View {
                             NavigationLink(destination: LazyView(DetailInfo(element: item))
                                 .navigationBarTitle("Detail info", displayMode: .inline), tag: item.id, selection: self.$vm.selected) {
                                     HStack {
-                                        Text(item.title ?? "")
+                                        //Text(item.title ?? "")
+                                        Badge(model: item)
                                     }
                             }
                             .onAppear() {

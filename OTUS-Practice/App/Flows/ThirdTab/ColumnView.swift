@@ -41,10 +41,3 @@ struct ColumnView: View {
             .padding(.horizontal, 20)
     }
 }
-
-struct ColumnView_Previews: PreviewProvider {
-    static var previews: some View {
-        ColumnView()
-            .environmentObject(ColumnVM())
-    }
-}

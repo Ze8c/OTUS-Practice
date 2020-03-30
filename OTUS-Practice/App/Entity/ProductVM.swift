@@ -46,6 +46,7 @@ final class ProductVM: ObservableObject {
                 
                 guard let items = it?.results else { return }
                 DispatchQueue.main.async {
+                    //print("[LOG] -> ", items[0])
                     self?.list.append(contentsOf: items)
                     self?.lastPage = it?.lastPage ?? 1
                     self?.page += 1

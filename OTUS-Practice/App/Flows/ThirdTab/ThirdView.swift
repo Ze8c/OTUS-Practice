@@ -10,8 +10,6 @@ import SwiftUI
 
 struct ThirdView: View {
     
-    @State var isModal: Bool = false
-    
     var body: some View {
         VStack {
             NavControllerView(transition: .custom(.scale)) {

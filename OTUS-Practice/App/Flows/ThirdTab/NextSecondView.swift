@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct NextSecondView: View {
+    
     var body: some View {
         VStack{
             HStack{

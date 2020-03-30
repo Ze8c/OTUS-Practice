@@ -12,6 +12,7 @@ enum Tabs: Hashable {
     case first
     case second
     case third
+    case fourth
 }
 
 struct ContentView: View {
@@ -41,6 +42,12 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "burn")
                     Text("3")
+                }
+            FourthView()
+                .tag(Tabs.fourth)
+                .tabItem {
+                    Image(systemName: "flame")
+                    Text("4")
                 }
         }
     }
