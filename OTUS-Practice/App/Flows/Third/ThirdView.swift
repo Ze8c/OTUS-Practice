@@ -1,5 +1,5 @@
 //
-//  FourthView.swift
+//  ThirdView.swift
 //  OTUS-Practice
 //
 //  Created by Mak on 26.03.2020.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FourthView: View {
+struct ThirdView: View {
     
     @State var isSwitch: Bool = false
     
@@ -34,8 +34,8 @@ struct FourthView: View {
 }
     
 
-struct FourthView_Previews: PreviewProvider {
+struct ThirdView_Previews: PreviewProvider {
     static var previews: some View {
-        FourthView()
+        ThirdView()
     }
 }

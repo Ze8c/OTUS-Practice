@@ -18,13 +18,14 @@ open class SearchAnimeAPI {
      - parameter apiResponseQueue: The queue on which api response is dispatched.
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnime(q: String, page: Int, filter: String, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: ProductList?,_ error: Error?) -> Void)) {
+    open class func getAnime(q: String, page: Int, filter: String, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: ProductList?) -> Void)) {
         getAnimeWithRequestBuilder(q: q, page: page, filter: filter).execute(apiResponseQueue) { result -> Void in
             switch result {
             case let .success(response):
-                completion(response.body, nil)
+                completion(response.body)
             case let .failure(error):
-                completion(nil, error)
+                completion(nil)
+                print("[ERROR]", String(describing: self), ":", #function, "->", error.localizedDescription)
             }
         }
     }

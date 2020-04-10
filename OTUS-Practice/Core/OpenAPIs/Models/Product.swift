@@ -7,8 +7,30 @@
 
 import Foundation
 
+public enum ProductType: String, CaseIterable {
+    case manga
+    case anime
+    
+    static func from(str: String?) -> ProductType {
+        if let tStr = str?.lowercased(), tStr == ProductType.manga.rawValue {
+            return .manga
+        } else {
+            return .anime
+        }
+    }
+}
 
 public struct Product: Codable, Identifiable, Hashable {
+    
+    static var naught: Product {
+        Product(malId: nil,
+                imageUrl: nil,
+                title: nil,
+                synopsis: nil,
+                type: nil,
+                members: nil,
+                score: nil)
+    }
     
     public var id: Int {
         malId ?? UUID().hashValue
@@ -18,18 +40,24 @@ public struct Product: Codable, Identifiable, Hashable {
         URL(string: imageUrl ?? "")
     }
     
+    public var typeProd: ProductType {
+        ProductType.from(str: type)
+    }
+    
     public var malId: Int?
     public var imageUrl: String?
     public var title: String?
     public var synopsis: String?
+    private var type: String?
     public var members: Int?
     public var score: Double?
 
-    public init(malId: Int?, imageUrl: String?, title: String?, synopsis: String?, members: Int?, score: Double?) {
+    public init(malId: Int?, imageUrl: String?, title: String?, synopsis: String?, type: String?, members: Int?, score: Double?) {
         self.malId = malId
         self.imageUrl = imageUrl
         self.title = title
         self.synopsis = synopsis
+        self.type = type
         self.members = members
         self.score = score
     }
@@ -39,6 +67,7 @@ public struct Product: Codable, Identifiable, Hashable {
         case imageUrl = "image_url"
         case title
         case synopsis
+        case type
         case members
         case score
     }

@@ -15,11 +15,23 @@ struct Badge: View {
     
     var body: some View {
         HStack {
-            KFImage(model.imgURL)
-                .resizable()
-                .frame(width: 100, height: 100, alignment: .center)
-                .cornerRadius(12)
-                .padding([.horizontal, .vertical], 10)
+            ZStack {
+                KFImage(model.imgURL)
+                    .resizable()
+                    .frame(width: 100, height: 100, alignment: .center)
+                    .cornerRadius(12)
+                    .padding([.horizontal, .vertical], 10)
+                
+                Group {
+                    Text(model.typeProd.rawValue.capitalized.prefix(1))
+                        .font(.system(size: 12))
+                        .foregroundColor(.white)
+                        .padding([.all], 3)
+                }
+                .background(Color(dRed: 155, green: 155, blue: 155).opacity(0.7))
+                .cornerRadius(4)
+                .offset(x: 36, y: -36)
+            }
             
             VStack {
                 Text(model.title ?? "")
@@ -47,13 +59,14 @@ struct Badge: View {
 }
 
 struct Badge_Previews: PreviewProvider {
-    static let imgURL = "https://cdn.myanimelist.net/images/anime/13/22128.jpg?s=08c2b1b4a465fc43cbe15aae4a425b78"
-    static let itemStub: Product = Product(malId: 4224,
+    static let imgURL = "https://cdn.myanimelist.net/images/anime/13/11460.jpg?s=7e890b7e93b7b57c2de4aa90211931bd"
+    static let itemStub: Product = Product(malId: 245,
                                            imageUrl: imgURL,
-                                           title: "Toradora!",
-                                           synopsis: "Ryuuji Takasu is a gentle...",
-                                           members: 1191008,
-                                           score: 8.3300000000000001)
+                                           title: "Great Teacher Onizuka",
+                                           synopsis: "Onizuka is a reformed biker gang leader who has his sights set on an honorable new ambition: to become the world's greatest teacher... for the purpose of meeting sexy high school girls. Okay, so he's...",
+                                           type: "Anime",
+                                           members: 476501,
+                                           score: 8.71)
     
     static var previews: some View {
         Badge(model: itemStub)

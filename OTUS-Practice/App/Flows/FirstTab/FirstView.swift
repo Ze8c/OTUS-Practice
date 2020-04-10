@@ -10,28 +10,59 @@ import SwiftUI
 
 struct FirstView: View {
     
-    @Binding var selectedTab: Tabs
-    
     @EnvironmentObject var vm: ProductVM
     
-    @State var selection: Int = 0
+    @State private var searchText: String = ""
+    @State private var searchFilter: String = ""
     
     var body: some View {
-        VStack {
-            Button("Second tab") {
-                self.selectedTab = .second
-                self.vm.selected = self.selection
-            }
-            
-            HStack {
-                Spacer()
-                Picker(selection: $selection, label: Text("")) {
-                    ForEach(vm.list, id: \.self) { it in
-                        Text(it.title ?? "").tag(it.malId)
-                    }
+        NavigationView {
+            VStack {
+                FilteringString(filter: $searchFilter, filters: vm.filters) {
+                    Text("Select one filter ")
                 }
-                Spacer()
-            }
-        }
+                
+                TextField("Search text", text: $searchText, onCommit: {
+                    self.vm.filter = self.searchFilter
+                    self.vm.query = self.searchText
+                })
+                    .keyboardType(.webSearch)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding([.horizontal, .bottom], 5)
+                
+                if vm.list.isEmpty {
+                    Spacer()
+                    if !vm.isLoaded {
+                        Spiner()
+                        Spacer()
+                    }
+                } else {
+                    List {
+                        ForEach(vm.list, id: \.self) { item in
+                            NavigationLink(destination: LazyView(DetailInfo(element: item))
+                                .navigationBarTitle("Detail info", displayMode: .inline), tag: item.id, selection: self.$vm.selected) {
+                                    HStack {
+                                        Badge(model: item)
+                                    }
+                            }
+                            .onAppear() {
+                                self.vm.lastAppearElement = item
+                            } //NavigationLink
+                        }
+                    } //List
+                }
+                    
+                
+            } //VStack
+                .navigationBarTitle("Search")
+        } //NavigationView
+        .padding(5.0)
+    }
+}
+
+struct FirstView_Previews: PreviewProvider {
+    static var previews: some View {
+        FirstView()
+            .environmentObject(ProductVM(serviceAPI: ServiceAPIImpl()))
     }
 }

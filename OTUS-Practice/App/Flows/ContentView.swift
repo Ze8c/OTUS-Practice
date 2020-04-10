@@ -19,35 +19,28 @@ struct ContentView: View {
     
     @EnvironmentObject var vm: ProductVM
     
-    @State private var selection: Tabs = .second
+    @State private var selection: Tabs = .first
     
     var body: some View {
         TabView(selection: $selection) {
-            FirstView(selectedTab: $selection)
+            FirstView()
                 .tag(Tabs.first)
                 .tabItem {
-                    Image(systemName: "escape")
+                    Image(systemName: "scope")
                     Text("1")
                 }
             
             SecondView()
                 .tag(Tabs.second)
                 .tabItem {
-                    Image(systemName: "scope")
+                    Image(systemName: "burn")
                     Text("2")
                 }
-            
             ThirdView()
                 .tag(Tabs.third)
                 .tabItem {
-                    Image(systemName: "burn")
-                    Text("3")
-                }
-            FourthView()
-                .tag(Tabs.fourth)
-                .tabItem {
                     Image(systemName: "flame")
-                    Text("4")
+                    Text("3")
                 }
         }
     }
@@ -56,6 +49,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ProductVM())
+            .environmentObject(ProductVM(serviceAPI: ServiceAPIImpl()))
     }
 }

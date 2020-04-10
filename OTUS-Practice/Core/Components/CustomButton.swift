@@ -8,9 +8,10 @@
 
 import SwiftUI
 
-struct CustomButton<Content>: View where Content: View {
+struct CustomButton: View {
     
-    @Binding var isOn: Bool
+    @Binding var selected: String
+    
     let name: String
     
     var contentColorOn: Color = .init(dRed: 16, green: 130, blue: 23)
@@ -18,22 +19,19 @@ struct CustomButton<Content>: View where Content: View {
     var contentColorOff: Color = .init(dRed: 53, green: 53, blue: 53)
     var colorOff: Color = .init(dRed: 184, green: 184, blue: 184)
     
-    let action: (String) -> Void
-    let content: (String) -> Content
-    
     var body: some View {
-        ZStack {
-            self.content(self.name)
+        let flag: Bool = selected.lowercased() == name.lowercased()
+        
+        return ZStack {
+            Text(name)
+                .foregroundColor(flag ? contentColorOn : contentColorOff)
                 .font(.body)
-                .foregroundColor(isOn ? contentColorOn : contentColorOff)
                 .padding(.all, 5)
         }
-            .foregroundColor(.green)
+            .background(flag ? colorOn : colorOff)
             .cornerRadius(12)
-            .background(isOn ? colorOn : colorOff)
-            .simultaneousGesture(TapGesture().onEnded({
-                self.isOn.toggle()
-                self.action(self.name.lowercased())
-            }))
+            .simultaneousGesture(TapGesture().onEnded {
+                self.selected = self.name.lowercased()
+            })
     }
 }

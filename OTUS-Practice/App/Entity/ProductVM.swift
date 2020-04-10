@@ -7,52 +7,44 @@
 //
 
 import Foundation
-import SwiftUI
+import Combine
 
 final class ProductVM: ObservableObject {
     
-    @Published var selected: Int? = nil
+    private var bag = Set<AnyCancellable>()
     
-    @Published private(set) var btnName = "Bad people"
+    @Published var selected: Int? = nil
+    @Published var query: String = ""
+    @Published var lastAppearElement: Product = .naught
     
     @Published private(set) var list: Array<Product> = []
-    @Published private(set) var page: Int = 1
     @Published private(set) var isLoaded: Bool = true
     
-    private var lastPage: Int = 1
+    @Published var filter: String = ProductType.anime.rawValue
+    var filters: Array<String>
     
-    private var tmpFilter: String = ""
-    private var tmpQuery: String = ""
-    
-    func getAnime(_ query: String = "", filter: String = "") {
-        if !(query.isEmpty || filter.isEmpty) {
-            tmpFilter = filter
-            tmpQuery = query
-            list = []
-            page = 1
-            lastPage = 1
-        }
+    init(serviceAPI: AbstractServiceAPI) {
+        filters = ProductType.allCases
+            .map { $0.rawValue }
         
-        guard isLoaded, !query.isEmpty || !tmpQuery.isEmpty else { return }
+        $filter
+            .sink { serviceAPI.tmpFilter = $0 }
+            .store(in: &bag)
         
-        isLoaded.toggle()
+        $query
+            .sink(receiveValue: serviceAPI.get)
+            .store(in: &bag)
         
-        if page <= lastPage {
-            SearchAnimeAPI.getAnime(q: tmpQuery,
-                                    page: page,
-                                    filter: tmpFilter,
-                                    apiResponseQueue: .global(qos: .background))
-            { [weak self] (it, error) in
-                
-                guard let items = it?.results else { return }
-                DispatchQueue.main.async {
-                    //print("[LOG] -> ", items[0])
-                    self?.list.append(contentsOf: items)
-                    self?.lastPage = it?.lastPage ?? 1
-                    self?.page += 1
-                    self?.isLoaded = true
-                }
-            }
-        }
+        serviceAPI.isLoadedPublisher
+            .sink { self.isLoaded = $0 }
+            .store(in: &bag)
+        
+        serviceAPI.listPublisher
+            .sink { self.list = $0 }
+            .store(in: &bag)
+        
+        $lastAppearElement
+            .sink(receiveValue: serviceAPI.nextPage)
+            .store(in: &bag)
     }
 }

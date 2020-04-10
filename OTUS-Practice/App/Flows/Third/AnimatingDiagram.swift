@@ -15,9 +15,9 @@ struct AnimatingDiagram: View {
     @State var diagramDatas = [(CFTimeInterval, CGFloat)]()
     
     var animation: Animation {
-        Animation.spring(response: 0.77, dampingFraction: 0.2, blendDuration: 0.2)
-            .speed(1.5)
-            .delay(0.3)
+        Animation.interactiveSpring(response: 0.82, dampingFraction: 0.3, blendDuration: 0.1)
+        .speed(1.5)
+        .delay(0.3)
     }
     
     var body: some View {
@@ -25,8 +25,7 @@ struct AnimatingDiagram: View {
             
             Circle()
                 .fill(Color.purple)
-                .frame(width: 44, height: 44)
-                .offset(x: diagramSwitch ? 300 : 0)
+                .frame(width: (diagramSwitch ? 100 : 44), height: 200)
                 .modifier(DiagramEffect(callback: { value in
                     DispatchQueue.main.async {
                         self.diagramDatas.append((CACurrentMediaTime(), value))
