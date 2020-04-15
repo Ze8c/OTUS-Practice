@@ -12,6 +12,8 @@ import Combine
 final class ProductVM: ObservableObject {
     
     private var bag = Set<AnyCancellable>()
+    private weak var service: AbstractServiceAPI?
+    private let cache = Cache<Product, [Product]>()
     
     @Published var selected: Int? = nil
     @Published var query: String = ""
@@ -24,6 +26,8 @@ final class ProductVM: ObservableObject {
     var filters: Array<String>
     
     init(serviceAPI: AbstractServiceAPI) {
+        self.service = serviceAPI
+        
         filters = ProductType.allCases
             .map { $0.rawValue }
         
@@ -40,11 +44,18 @@ final class ProductVM: ObservableObject {
             .store(in: &bag)
         
         serviceAPI.listPublisher
-            .sink { self.list = $0 }
+            .sink { it in
+                self.list = it
+                self.cache.add(value: it)
+            }
             .store(in: &bag)
         
         $lastAppearElement
             .sink(receiveValue: serviceAPI.nextPage)
+            .store(in: &bag)
+        
+        cache.getValue()
+            .sink { self.list = $0 ?? [] }
             .store(in: &bag)
     }
 }

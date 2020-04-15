@@ -45,6 +45,7 @@
 		249C4E072422249B00925F96 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 249C4E062422249B00925F96 /* KingfisherSwiftUI */; };
 		249C4E0924224BEC00925F96 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E0824224BEC00925F96 /* ColorExt.swift */; };
 		249C4E0B2422849D00925F96 /* Spiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E0A2422849D00925F96 /* Spiner.swift */; };
+		24AD81F82446FFA0004C4EC1 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AD81F72446FFA0004C4EC1 /* Cache.swift */; };
 		24CCC5CE241F5BF900A5528A /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC5CD241F5BF900A5528A /* NavController.swift */; };
 		24CCC5D0241F5C3B00A5528A /* NavPushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC5CF241F5C3B00A5528A /* NavPushButton.swift */; };
 		24CCC5D2241F5C7600A5528A /* NavPopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC5D1241F5C7600A5528A /* NavPopButton.swift */; };
@@ -98,6 +99,7 @@
 		249C4E012422066000925F96 /* RandomAccessCollectionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAccessCollectionExt.swift; sourceTree = "<group>"; };
 		249C4E0824224BEC00925F96 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		249C4E0A2422849D00925F96 /* Spiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spiner.swift; sourceTree = "<group>"; };
+		24AD81F72446FFA0004C4EC1 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		24CCC5CD241F5BF900A5528A /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		24CCC5CF241F5C3B00A5528A /* NavPushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavPushButton.swift; sourceTree = "<group>"; };
 		24CCC5D1241F5C7600A5528A /* NavPopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavPopButton.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				2466DD4B24326E2B009F2FC4 /* Diagram */,
 				24CCC5CC241F5AAC00A5528A /* Navigation */,
 				2454F8E4242CD422001AA9EE /* Badge.swift */,
+				24AD81F72446FFA0004C4EC1 /* Cache.swift */,
 				2443AED9241A1CA2009DDCEB /* CustomButton.swift */,
 				24DE27C4243C42F1002D8B00 /* FilteringString.swift */,
 				245573B7240F8EC300B6CDDB /* LazyView.swift */,
@@ -448,6 +451,7 @@
 				24DF7775240E327700D80C8E /* AppDelegate.swift in Sources */,
 				245573AA240F698B00B6CDDB /* FirstView.swift in Sources */,
 				2454F871242CB4EA001AA9EE /* ThirdView.swift in Sources */,
+				24AD81F82446FFA0004C4EC1 /* Cache.swift in Sources */,
 				2443AED5241A0762009DDCEB /* ColumnVM.swift in Sources */,
 				2443AEDA241A1CA2009DDCEB /* CustomButton.swift in Sources */,
 				249C4DF42421FE7300925F96 /* SynchronizedDictionary.swift in Sources */,

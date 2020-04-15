@@ -23,36 +23,36 @@ public enum ProductType: String, CaseIterable {
 public struct Product: Codable, Identifiable, Hashable {
     
     static var naught: Product {
-        Product(malId: nil,
-                imageUrl: nil,
-                title: nil,
-                synopsis: nil,
-                type: nil,
-                members: nil,
-                score: nil)
+        Product(malId: 0,
+                imageUrl: "",
+                title: "",
+                synopsis: "",
+                type: "",
+                members: 0,
+                score: 0)
     }
     
     public var id: Int {
-        malId ?? UUID().hashValue
+        malId
     }
     
     public var imgURL: URL? {
-        URL(string: imageUrl ?? "")
+        URL(string: imageUrl)
     }
     
     public var typeProd: ProductType {
         ProductType.from(str: type)
     }
     
-    public var malId: Int?
-    public var imageUrl: String?
-    public var title: String?
-    public var synopsis: String?
-    private var type: String?
-    public var members: Int?
-    public var score: Double?
+    public var malId: Int = 0
+    public var imageUrl: String = ""
+    public var title: String = ""
+    public var synopsis: String = ""
+    private var type: String = ""
+    public var members: Int = 0
+    public var score: Double = 0
 
-    public init(malId: Int?, imageUrl: String?, title: String?, synopsis: String?, type: String?, members: Int?, score: Double?) {
+    public init(malId: Int, imageUrl: String, title: String, synopsis: String, type: String, members: Int, score: Double) {
         self.malId = malId
         self.imageUrl = imageUrl
         self.title = title
@@ -71,5 +71,15 @@ public struct Product: Codable, Identifiable, Hashable {
         case members
         case score
     }
-
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(malId, forKey: .malId)
+        try container.encode(imageUrl, forKey: .imageUrl)
+        try container.encode(title, forKey: .title)
+        try container.encode(synopsis, forKey: .synopsis)
+        try container.encode(type, forKey: .type)
+        try container.encode(members, forKey: .members)
+        try container.encode(score, forKey: .score)
+    }
 }
