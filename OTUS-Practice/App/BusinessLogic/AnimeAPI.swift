@@ -9,32 +9,19 @@
 import Foundation
 import Combine
 
-protocol AbstractServiceAPI: class {
+protocol AbstractAnimeAPI: class {
     var tmpFilter: String { get set }
-    
-    var isLoaded: Bool { get }
-    var isLoadedPublished: Published<Bool> { get }
-    var isLoadedPublisher: Published<Bool>.Publisher { get }
-    
-    var list: Array<Product> { get }
-    var listPublished: Published<Array<Product>> { get }
-    var listPublisher: Published<Array<Product>>.Publisher { get }
-    
-    func get(_ query: String) -> Void
-    func nextPage(lastIt: Product)
+    var listInit: Bool { get }
+    func get(_ query: String) -> (v: Published<Array<Product>>.Publisher, f: Published<Bool>.Publisher)
+    func nextPage(lastIt: Product) -> Published<Array<Product>>.Publisher
 }
 
-final public class ServiceAPIImpl: ObservableObject, AbstractServiceAPI {
+final public class AnimeAPIImpl: AbstractAnimeAPI {
     
     var tmpFilter: String = ""
     
-    @Published private(set) var list: Array<Product> = []
-    var listPublished: Published<Array<Product>> { _list }
-    var listPublisher: Published<Array<Product>>.Publisher { $list }
-    
-    @Published private(set) var isLoaded: Bool = true
-    var isLoadedPublished: Published<Bool> { _isLoaded }
-    var isLoadedPublisher: Published<Bool>.Publisher { $isLoaded }
+    @Published private var list: Array<Product> = []
+    @Published private var isLoaded: Bool = false
     
     private let queryQueue: DispatchQueue = .global(qos: .background)
     
@@ -42,16 +29,21 @@ final public class ServiceAPIImpl: ObservableObject, AbstractServiceAPI {
     private var page: Int = 1
     private var tmpQuery: String = ""
     
-    func get(_ query: String) -> Void {
+    var listInit: Bool {
+        list.count > 0
+    }
+    
+    func get(_ query: String) -> (v: Published<Array<Product>>.Publisher, f: Published<Bool>.Publisher) {
         self.tmpQuery = query
         self.list = []
         self.page = 1
         self.lastPage = 1
-        self.nextPage(lastIt: .naught)
+        self.isLoaded = true
+        return (v: self.nextPage(lastIt: .naught), f: $isLoaded)
     }
     
-    func nextPage(lastIt: Product) {
-        guard isLoaded, list.isLast(lastIt), !tmpQuery.isEmpty else { return }
+    func nextPage(lastIt: Product) -> Published<Array<Product>>.Publisher {
+        guard isLoaded, list.isLast(lastIt), !tmpQuery.isEmpty else { return $list }
         
         isLoaded = false
         
@@ -71,5 +63,6 @@ final public class ServiceAPIImpl: ObservableObject, AbstractServiceAPI {
                 }
             }
         }
+        return $list
     }
 }

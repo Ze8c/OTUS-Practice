@@ -12,7 +12,7 @@ import Combine
 final class ProductVM: ObservableObject {
     
     private var bag = Set<AnyCancellable>()
-    private weak var service: AbstractServiceAPI?
+    private weak var service: AbstractAnimeAPI?
     private let cache = Cache<Product, [Product]>()
     
     @Published var selected: Int? = nil
@@ -25,37 +25,43 @@ final class ProductVM: ObservableObject {
     @Published var filter: String = ProductType.anime.rawValue
     var filters: Array<String>
     
-    init(serviceAPI: AbstractServiceAPI) {
+    init(serviceAPI: AbstractAnimeAPI?) {
         self.service = serviceAPI
         
         filters = ProductType.allCases
             .map { $0.rawValue }
         
+        guard let service = serviceAPI else { return }
+        
         $filter
-            .sink { serviceAPI.tmpFilter = $0 }
+            .sink { service.tmpFilter = $0 }
             .store(in: &bag)
         
         $query
-            .sink(receiveValue: serviceAPI.get)
-            .store(in: &bag)
-        
-        serviceAPI.isLoadedPublisher
-            .sink { self.isLoaded = $0 }
-            .store(in: &bag)
-        
-        serviceAPI.listPublisher
-            .sink { it in
-                self.list = it
-                self.cache.add(value: it)
-            }
+            .filter { $0.count > 2 }
+            .compactMap(service.get)
+            .sink(receiveValue: resFlag)
             .store(in: &bag)
         
         $lastAppearElement
-            .sink(receiveValue: serviceAPI.nextPage)
+            .filter { _ in service.listInit }
+            .map(service.nextPage)
+            .sink(receiveValue: result(_:))
             .store(in: &bag)
         
         cache.getValue()
             .sink { self.list = $0 ?? [] }
             .store(in: &bag)
+    }
+    
+    private func resFlag(_ v: Published<Array<Product>>.Publisher, _ f: Published<Bool>.Publisher) {
+        f.sink { self.isLoaded = $0 }.store(in: &bag)
+        
+        result(v)
+    }
+    
+    private func result(_ v: Published<Array<Product>>.Publisher) {
+        v.sink(receiveValue: cache.add(value:)).store(in: &bag)
+        v.sink { self.list = $0 }.store(in: &bag)
     }
 }
