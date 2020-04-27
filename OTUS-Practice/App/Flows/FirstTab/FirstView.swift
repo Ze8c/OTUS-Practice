@@ -63,6 +63,6 @@ struct FirstView: View {
 struct FirstView_Previews: PreviewProvider {
     static var previews: some View {
         FirstView()
-            .environmentObject(ProductVM(serviceAPI: AnimeAPIImpl()))
+            .environmentObject(ProductVM(serviceAPI: AnimeAPIImpl(), db: DBImpl()))
     }
 }

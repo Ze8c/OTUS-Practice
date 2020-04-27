@@ -25,6 +25,8 @@
 		2466DD4F24326E93009F2FC4 /* DiagramEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466DD4E24326E93009F2FC4 /* DiagramEffect.swift */; };
 		2466DD51243271A9009F2FC4 /* AnimatingServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466DD50243271A9009F2FC4 /* AnimatingServiceLocator.swift */; };
 		2466DD532432754D009F2FC4 /* TapAnimatig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466DD522432754D009F2FC4 /* TapAnimatig.swift */; };
+		24710823244F4B010068A847 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710822244F4B010068A847 /* FileService.swift */; };
+		24710825244F4B1B0068A847 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710824244F4B1B0068A847 /* DBService.swift */; };
 		24729BE4244853C800DE49FB /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24729BE3244853C800DE49FB /* ServiceLocator.swift */; };
 		248A39A7243DA51F007E8E23 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A39A6243DA51F007E8E23 /* AnimeAPI.swift */; };
 		249C4DF22421FE7300925F96 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */; };
@@ -60,6 +62,7 @@
 		24DF7781240E327800D80C8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DF777F240E327800D80C8E /* LaunchScreen.storyboard */; };
 		24F5A4222420ADA800F4A1C3 /* NextFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F5A4212420ADA800F4A1C3 /* NextFirstView.swift */; };
 		24F5A4242420AFB900F4A1C3 /* NextSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F5A4232420AFB900F4A1C3 /* NextSecondView.swift */; };
+		5F4E45C7EB6267C50C91E90F /* Pods_OTUS_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4125ECE7555AA6A3F64CD4A /* Pods_OTUS_Practice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +84,8 @@
 		2466DD4E24326E93009F2FC4 /* DiagramEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramEffect.swift; sourceTree = "<group>"; };
 		2466DD50243271A9009F2FC4 /* AnimatingServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingServiceLocator.swift; sourceTree = "<group>"; };
 		2466DD522432754D009F2FC4 /* TapAnimatig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapAnimatig.swift; sourceTree = "<group>"; };
+		24710822244F4B010068A847 /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
+		24710824244F4B1B0068A847 /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
 		24729BE3244853C800DE49FB /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		248A39A6243DA51F007E8E23 /* AnimeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeAPI.swift; sourceTree = "<group>"; };
 		249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodingHelper.swift; sourceTree = "<group>"; };
@@ -117,6 +122,9 @@
 		24DF7782240E327800D80C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24F5A4212420ADA800F4A1C3 /* NextFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextFirstView.swift; sourceTree = "<group>"; };
 		24F5A4232420AFB900F4A1C3 /* NextSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextSecondView.swift; sourceTree = "<group>"; };
+		31B56B4853F69A7CD0CA3F3F /* Pods-OTUS-Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTUS-Practice.debug.xcconfig"; path = "Target Support Files/Pods-OTUS-Practice/Pods-OTUS-Practice.debug.xcconfig"; sourceTree = "<group>"; };
+		82477D9FD640558CCE4F8B8C /* Pods-OTUS-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTUS-Practice.release.xcconfig"; path = "Target Support Files/Pods-OTUS-Practice/Pods-OTUS-Practice.release.xcconfig"; sourceTree = "<group>"; };
+		C4125ECE7555AA6A3F64CD4A /* Pods_OTUS_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTUS_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,12 +133,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				249C4E072422249B00925F96 /* KingfisherSwiftUI in Frameworks */,
+				5F4E45C7EB6267C50C91E90F /* Pods_OTUS_Practice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240C95B02456BB710036DC4F /* DBService */ = {
+			isa = PBXGroup;
+			children = (
+				24710824244F4B1B0068A847 /* DBService.swift */,
+			);
+			path = DBService;
+			sourceTree = "<group>";
+		};
 		2443AED6241A1636009DDCEB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,9 +188,11 @@
 		245573A1240F68A600B6CDDB /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				2443AED6241A1636009DDCEB /* Extensions */,
 				245573B6240F8EA100B6CDDB /* Components */,
+				240C95B02456BB710036DC4F /* DBService */,
+				2443AED6241A1636009DDCEB /* Extensions */,
 				249C4DE02421FE7300925F96 /* OpenAPIs */,
+				2471078B244F40F60068A847 /* Services */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -214,7 +233,7 @@
 				24DF7774240E327700D80C8E /* AppDelegate.swift */,
 				24DF7776240E327700D80C8E /* SceneDelegate.swift */,
 				248A39A6243DA51F007E8E23 /* AnimeAPI.swift */,
-				24729BE3244853C800DE49FB /* ServiceLocator.swift */,
+				24710822244F4B010068A847 /* FileService.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -262,6 +281,14 @@
 				2466DD4C24326E46009F2FC4 /* PathDiagram.swift */,
 			);
 			path = Diagram;
+			sourceTree = "<group>";
+		};
+		2471078B244F40F60068A847 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				24729BE3244853C800DE49FB /* ServiceLocator.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		249C4DE02421FE7300925F96 /* OpenAPIs */ = {
@@ -336,6 +363,8 @@
 			children = (
 				24DF7773240E327700D80C8E /* OTUS-Practice */,
 				24DF7772240E327700D80C8E /* Products */,
+				3617BCAFB3E17FE19EA74E55 /* Pods */,
+				3295CDE9666D50F7D6115983 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -367,6 +396,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3295CDE9666D50F7D6115983 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4125ECE7555AA6A3F64CD4A /* Pods_OTUS_Practice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3617BCAFB3E17FE19EA74E55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31B56B4853F69A7CD0CA3F3F /* Pods-OTUS-Practice.debug.xcconfig */,
+				82477D9FD640558CCE4F8B8C /* Pods-OTUS-Practice.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -374,9 +420,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24DF7785240E327800D80C8E /* Build configuration list for PBXNativeTarget "OTUS-Practice" */;
 			buildPhases = (
+				84046AF0D79618B9687509D5 /* [CP] Check Pods Manifest.lock */,
 				24DF776D240E327700D80C8E /* Sources */,
 				24DF776E240E327700D80C8E /* Frameworks */,
 				24DF776F240E327700D80C8E /* Resources */,
+				69DE08D8F3D8DB7C3DD286AE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -439,6 +487,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		69DE08D8F3D8DB7C3DD286AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OTUS-Practice/Pods-OTUS-Practice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OTUS-Practice/Pods-OTUS-Practice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OTUS-Practice/Pods-OTUS-Practice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84046AF0D79618B9687509D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OTUS-Practice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		24DF776D240E327700D80C8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -470,6 +560,7 @@
 				249C4DF32421FE7300925F96 /* Configuration.swift in Sources */,
 				249C4DF72421FE7300925F96 /* APIs.swift in Sources */,
 				249C4E0B2422849D00925F96 /* Spiner.swift in Sources */,
+				24710825244F4B1B0068A847 /* DBService.swift in Sources */,
 				245573B5240F7D3F00B6CDDB /* DetailInfo.swift in Sources */,
 				2454F8E5242CD422001AA9EE /* Badge.swift in Sources */,
 				2443AED8241A1665009DDCEB /* AnyTransitionExt.swift in Sources */,
@@ -487,6 +578,7 @@
 				249C4DF52421FE7300925F96 /* Extensions.swift in Sources */,
 				2466DD4D24326E46009F2FC4 /* PathDiagram.swift in Sources */,
 				245573B8240F8EC300B6CDDB /* LazyView.swift in Sources */,
+				24710823244F4B010068A847 /* FileService.swift in Sources */,
 				24F5A4242420AFB900F4A1C3 /* NextSecondView.swift in Sources */,
 				249C4DFB2421FE7300925F96 /* Product.swift in Sources */,
 				24DF7779240E327700D80C8E /* ContentView.swift in Sources */,
@@ -626,6 +718,7 @@
 		};
 		24DF7786240E327800D80C8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B56B4853F69A7CD0CA3F3F /* Pods-OTUS-Practice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -646,6 +739,7 @@
 		};
 		24DF7787240E327800D80C8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82477D9FD640558CCE4F8B8C /* Pods-OTUS-Practice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

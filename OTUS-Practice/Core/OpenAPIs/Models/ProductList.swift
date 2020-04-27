@@ -18,7 +18,7 @@ public struct ProductList: Codable {
         self.results = results
     }
 
-    public enum CodingKeys: String, CodingKey, CaseIterable { 
+    public enum CodingKeys: String, CodingKey, CaseIterable {
         case lastPage = "last_page"
         case results
     }

@@ -13,6 +13,7 @@ final class ProductVM: ObservableObject {
     
     private var bag = Set<AnyCancellable>()
     private weak var service: AbstractAnimeAPI?
+    private weak var db: DBAbstract?
     private let cache = Cache<Product, [Product]>()
     
     @Published var selected: Int? = nil
@@ -25,8 +26,9 @@ final class ProductVM: ObservableObject {
     @Published var filter: String = ProductType.anime.rawValue
     var filters: Array<String>
     
-    init(serviceAPI: AbstractAnimeAPI?) {
+    init(serviceAPI: AbstractAnimeAPI?, db: DBAbstract?) {
         self.service = serviceAPI
+        self.db = db
         
         filters = ProductType.allCases
             .map { $0.rawValue }
@@ -49,9 +51,9 @@ final class ProductVM: ObservableObject {
             .sink(receiveValue: result(_:))
             .store(in: &bag)
         
-        cache.getValue()
-            .sink { self.list = $0 ?? [] }
-            .store(in: &bag)
+        if let dataBase = db {
+            self.list = dataBase.getElements()
+        }
     }
     
     private func resFlag(_ v: Published<Array<Product>>.Publisher, _ f: Published<Bool>.Publisher) {
@@ -61,7 +63,9 @@ final class ProductVM: ObservableObject {
     }
     
     private func result(_ v: Published<Array<Product>>.Publisher) {
-        v.sink(receiveValue: cache.add(value:)).store(in: &bag)
+        if let dataBase = self.db {
+            v.sink(receiveValue: dataBase.save(elements:)).store(in: &bag)
+        }
         v.sink { self.list = $0 }.store(in: &bag)
     }
 }

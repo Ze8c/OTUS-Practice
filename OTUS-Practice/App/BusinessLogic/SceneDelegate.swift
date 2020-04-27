@@ -21,10 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         
-        ServiceLocator.imlp.register(AnimeAPIImpl() as AbstractAnimeAPI)
+        ServiceLocator.imlp.registrator { container in
+            container.inject(AbstractAnimeAPI.self) { AnimeAPIImpl() }
+            container.inject(DBAbstract.self) { DBImpl() }
+        }
         
         let contentView = ContentView()
-            .environmentObject(ProductVM(serviceAPI: ServiceLocator.imlp.tryGet()))
+            .environmentObject(ProductVM(serviceAPI: ServiceLocator.imlp.tryGet(),
+                                         db: ServiceLocator.imlp.tryGet()))
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
