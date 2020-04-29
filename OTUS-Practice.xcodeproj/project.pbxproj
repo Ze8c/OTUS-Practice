@@ -27,8 +27,8 @@
 		2466DD532432754D009F2FC4 /* TapAnimatig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466DD522432754D009F2FC4 /* TapAnimatig.swift */; };
 		24710823244F4B010068A847 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710822244F4B010068A847 /* FileService.swift */; };
 		24710825244F4B1B0068A847 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710824244F4B1B0068A847 /* DBService.swift */; };
-		24729BE4244853C800DE49FB /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24729BE3244853C800DE49FB /* ServiceLocator.swift */; };
 		248A39A7243DA51F007E8E23 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A39A6243DA51F007E8E23 /* AnimeAPI.swift */; };
+		2498113624598A180069C553 /* ServiceLocator in Frameworks */ = {isa = PBXBuildFile; productRef = 2498113524598A180069C553 /* ServiceLocator */; };
 		249C4DF22421FE7300925F96 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */; };
 		249C4DF32421FE7300925F96 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE22421FE7300925F96 /* Configuration.swift */; };
 		249C4DF42421FE7300925F96 /* SynchronizedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE32421FE7300925F96 /* SynchronizedDictionary.swift */; };
@@ -86,8 +86,8 @@
 		2466DD522432754D009F2FC4 /* TapAnimatig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapAnimatig.swift; sourceTree = "<group>"; };
 		24710822244F4B010068A847 /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
 		24710824244F4B1B0068A847 /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
-		24729BE3244853C800DE49FB /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		248A39A6243DA51F007E8E23 /* AnimeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeAPI.swift; sourceTree = "<group>"; };
+		2498113424598A060069C553 /* ServiceLocator */ = {isa = PBXFileReference; lastKnownFileType = text; path = ServiceLocator; sourceTree = SOURCE_ROOT; };
 		249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodingHelper.swift; sourceTree = "<group>"; };
 		249C4DE22421FE7300925F96 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		249C4DE32421FE7300925F96 /* SynchronizedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynchronizedDictionary.swift; sourceTree = "<group>"; };
@@ -132,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2498113624598A180069C553 /* ServiceLocator in Frameworks */,
 				249C4E072422249B00925F96 /* KingfisherSwiftUI in Frameworks */,
 				5F4E45C7EB6267C50C91E90F /* Pods_OTUS_Practice.framework in Frameworks */,
 			);
@@ -192,7 +193,6 @@
 				240C95B02456BB710036DC4F /* DBService */,
 				2443AED6241A1636009DDCEB /* Extensions */,
 				249C4DE02421FE7300925F96 /* OpenAPIs */,
-				2471078B244F40F60068A847 /* Services */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -283,14 +283,6 @@
 			path = Diagram;
 			sourceTree = "<group>";
 		};
-		2471078B244F40F60068A847 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				24729BE3244853C800DE49FB /* ServiceLocator.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		249C4DE02421FE7300925F96 /* OpenAPIs */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +371,7 @@
 		24DF7773240E327700D80C8E /* OTUS-Practice */ = {
 			isa = PBXGroup;
 			children = (
+				2498113424598A060069C553 /* ServiceLocator */,
 				245573A2240F68B900B6CDDB /* App */,
 				245573A1240F68A600B6CDDB /* Core */,
 				245573A0240F689700B6CDDB /* Environments */,
@@ -433,6 +426,7 @@
 			name = "OTUS-Practice";
 			packageProductDependencies = (
 				249C4E062422249B00925F96 /* KingfisherSwiftUI */,
+				2498113524598A180069C553 /* ServiceLocator */,
 			);
 			productName = "OTUS-Practice";
 			productReference = 24DF7771240E327700D80C8E /* OTUS-Practice.app */;
@@ -569,7 +563,6 @@
 				2454F8E7242CD9C1001AA9EE /* StretchyHeader.swift in Sources */,
 				24F5A4222420ADA800F4A1C3 /* NextFirstView.swift in Sources */,
 				241EBD542419FE610089A32B /* ColumnView.swift in Sources */,
-				24729BE4244853C800DE49FB /* ServiceLocator.swift in Sources */,
 				249C4DF92421FE7300925F96 /* ProductList.swift in Sources */,
 				2466DD4A24326D4C009F2FC4 /* AnimatingDiagram.swift in Sources */,
 				249C4DFF2421FE7300925F96 /* JSONDataEncoding.swift in Sources */,
@@ -793,6 +786,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2498113524598A180069C553 /* ServiceLocator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ServiceLocator;
+		};
 		249C4E062422249B00925F96 /* KingfisherSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 249C4E052422249B00925F96 /* XCRemoteSwiftPackageReference "Kingfisher" */;

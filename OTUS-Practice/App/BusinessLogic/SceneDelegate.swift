@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import ServiceLocator
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,15 +21,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
+        let serviceLocator: ServiceLocator = ServiceLocatorImpl()
         
-        ServiceLocator.imlp.registrator { container in
+        serviceLocator.registrator { container in
             container.inject(AbstractAnimeAPI.self) { AnimeAPIImpl() }
             container.inject(DBAbstract.self) { DBImpl() }
         }
         
         let contentView = ContentView()
-            .environmentObject(ProductVM(serviceAPI: ServiceLocator.imlp.tryGet(),
-                                         db: ServiceLocator.imlp.tryGet()))
+            .environmentObject(ProductVM(serviceAPI: serviceLocator.tryGet(),
+                                         db: serviceLocator.tryGet()))
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
