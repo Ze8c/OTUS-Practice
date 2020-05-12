@@ -28,6 +28,8 @@
 		24710823244F4B010068A847 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710822244F4B010068A847 /* FileService.swift */; };
 		24710825244F4B1B0068A847 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710824244F4B1B0068A847 /* DBService.swift */; };
 		2484CC9B246ADC1B00C59D56 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2484CC9A246ADC1B00C59D56 /* KingfisherSwiftUI */; };
+		2484CC9E246AFA7100C59D56 /* ValidateINN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CC9D246AFA7100C59D56 /* ValidateINN.swift */; };
+		2484CCA0246B000900C59D56 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CC9F246B000900C59D56 /* StringExt.swift */; };
 		248A39A7243DA51F007E8E23 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A39A6243DA51F007E8E23 /* AnimeAPI.swift */; };
 		2498113624598A180069C553 /* ServiceLocator in Frameworks */ = {isa = PBXBuildFile; productRef = 2498113524598A180069C553 /* ServiceLocator */; };
 		249C4DF22421FE7300925F96 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */; };
@@ -86,6 +88,8 @@
 		2466DD522432754D009F2FC4 /* TapAnimatig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapAnimatig.swift; sourceTree = "<group>"; };
 		24710822244F4B010068A847 /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
 		24710824244F4B1B0068A847 /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		2484CC9D246AFA7100C59D56 /* ValidateINN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateINN.swift; sourceTree = "<group>"; };
+		2484CC9F246B000900C59D56 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		248A39A6243DA51F007E8E23 /* AnimeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeAPI.swift; sourceTree = "<group>"; };
 		2498113424598A060069C553 /* ServiceLocator */ = {isa = PBXFileReference; lastKnownFileType = text; path = ServiceLocator; sourceTree = SOURCE_ROOT; };
 		249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodingHelper.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 				245573B2240F790800B6CDDB /* FirstTab */,
 				245573B3240F791E00B6CDDB /* SecondTab */,
 				2454F86F242CB491001AA9EE /* Third */,
+				2484CC9C246AFA3F00C59D56 /* ValidateINN */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -283,6 +288,14 @@
 			path = Diagram;
 			sourceTree = "<group>";
 		};
+		2484CC9C246AFA3F00C59D56 /* ValidateINN */ = {
+			isa = PBXGroup;
+			children = (
+				2484CC9D246AFA7100C59D56 /* ValidateINN.swift */,
+			);
+			path = ValidateINN;
+			sourceTree = "<group>";
+		};
 		249C4DE02421FE7300925F96 /* OpenAPIs */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +348,7 @@
 			children = (
 				249C4E012422066000925F96 /* RandomAccessCollectionExt.swift */,
 				249C4E0824224BEC00925F96 /* ColorExt.swift */,
+				2484CC9F246B000900C59D56 /* StringExt.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -542,6 +556,7 @@
 				2443AED5241A0762009DDCEB /* ColumnVM.swift in Sources */,
 				2443AEDA241A1CA2009DDCEB /* CustomButton.swift in Sources */,
 				249C4DF42421FE7300925F96 /* SynchronizedDictionary.swift in Sources */,
+				2484CCA0246B000900C59D56 /* StringExt.swift in Sources */,
 				24CCC5CE241F5BF900A5528A /* NavController.swift in Sources */,
 				2466DD4F24326E93009F2FC4 /* DiagramEffect.swift in Sources */,
 				245573AE240F721A00B6CDDB /* ProductVM.swift in Sources */,
@@ -573,6 +588,7 @@
 				245573B8240F8EC300B6CDDB /* LazyView.swift in Sources */,
 				24710823244F4B010068A847 /* FileService.swift in Sources */,
 				24F5A4242420AFB900F4A1C3 /* NextSecondView.swift in Sources */,
+				2484CC9E246AFA7100C59D56 /* ValidateINN.swift in Sources */,
 				249C4DFB2421FE7300925F96 /* Product.swift in Sources */,
 				24DF7779240E327700D80C8E /* ContentView.swift in Sources */,
 				249C4DF62421FE7300925F96 /* SearchAnimeAPI.swift in Sources */,

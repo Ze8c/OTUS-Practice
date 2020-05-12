@@ -42,6 +42,12 @@ struct ContentView: View {
                     Image(systemName: "flame")
                     Text("3")
                 }
+            ValidateINN()
+                .tag(Tabs.fourth)
+                .tabItem {
+                    Image(systemName: "flame")
+                    Text("4")
+                }
         }
     }
 }
