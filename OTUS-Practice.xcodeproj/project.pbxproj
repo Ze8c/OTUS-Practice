@@ -27,6 +27,7 @@
 		2466DD532432754D009F2FC4 /* TapAnimatig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466DD522432754D009F2FC4 /* TapAnimatig.swift */; };
 		24710823244F4B010068A847 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710822244F4B010068A847 /* FileService.swift */; };
 		24710825244F4B1B0068A847 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710824244F4B1B0068A847 /* DBService.swift */; };
+		2484CC9B246ADC1B00C59D56 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2484CC9A246ADC1B00C59D56 /* KingfisherSwiftUI */; };
 		248A39A7243DA51F007E8E23 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A39A6243DA51F007E8E23 /* AnimeAPI.swift */; };
 		2498113624598A180069C553 /* ServiceLocator in Frameworks */ = {isa = PBXBuildFile; productRef = 2498113524598A180069C553 /* ServiceLocator */; };
 		249C4DF22421FE7300925F96 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */; };
@@ -45,7 +46,6 @@
 		249C4DFF2421FE7300925F96 /* JSONDataEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DF02421FE7300925F96 /* JSONDataEncoding.swift */; };
 		249C4E002421FE7300925F96 /* OpenISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DF12421FE7300925F96 /* OpenISO8601DateFormatter.swift */; };
 		249C4E022422066000925F96 /* RandomAccessCollectionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E012422066000925F96 /* RandomAccessCollectionExt.swift */; };
-		249C4E072422249B00925F96 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 249C4E062422249B00925F96 /* KingfisherSwiftUI */; };
 		249C4E0924224BEC00925F96 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E0824224BEC00925F96 /* ColorExt.swift */; };
 		249C4E0B2422849D00925F96 /* Spiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E0A2422849D00925F96 /* Spiner.swift */; };
 		24AD81F82446FFA0004C4EC1 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AD81F72446FFA0004C4EC1 /* Cache.swift */; };
@@ -132,8 +132,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2484CC9B246ADC1B00C59D56 /* KingfisherSwiftUI in Frameworks */,
 				2498113624598A180069C553 /* ServiceLocator in Frameworks */,
-				249C4E072422249B00925F96 /* KingfisherSwiftUI in Frameworks */,
 				5F4E45C7EB6267C50C91E90F /* Pods_OTUS_Practice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,8 +425,8 @@
 			);
 			name = "OTUS-Practice";
 			packageProductDependencies = (
-				249C4E062422249B00925F96 /* KingfisherSwiftUI */,
 				2498113524598A180069C553 /* ServiceLocator */,
+				2484CC9A246ADC1B00C59D56 /* KingfisherSwiftUI */,
 			);
 			productName = "OTUS-Practice";
 			productReference = 24DF7771240E327700D80C8E /* OTUS-Practice.app */;
@@ -457,7 +457,7 @@
 			);
 			mainGroup = 24DF7768240E327700D80C8E;
 			packageReferences = (
-				249C4E052422249B00925F96 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				2484CC99246ADC1B00C59D56 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 24DF7772240E327700D80C8E /* Products */;
 			projectDirPath = "";
@@ -775,9 +775,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		249C4E052422249B00925F96 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		2484CC99246ADC1B00C59D56 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:onevcat/Kingfisher.git";
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -786,14 +786,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2484CC9A246ADC1B00C59D56 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2484CC99246ADC1B00C59D56 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
 		2498113524598A180069C553 /* ServiceLocator */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ServiceLocator;
-		};
-		249C4E062422249B00925F96 /* KingfisherSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 249C4E052422249B00925F96 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
