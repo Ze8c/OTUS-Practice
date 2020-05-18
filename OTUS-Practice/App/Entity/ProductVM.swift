@@ -12,8 +12,6 @@ import Combine
 final class ProductVM: ObservableObject {
     
     private var bag = Set<AnyCancellable>()
-    private weak var service: AbstractAnimeAPI?
-    private weak var db: DBAbstract?
     private let cache = Cache<Product, [Product]>()
     
     @Published var selected: Int? = nil
@@ -27,13 +25,11 @@ final class ProductVM: ObservableObject {
     var filters: Array<String>
     
     init(serviceAPI: AbstractAnimeAPI?, db: DBAbstract?) {
-        self.service = serviceAPI
-        self.db = db
         
         filters = ProductType.allCases
             .map { $0.rawValue }
         
-        guard let service = serviceAPI else { return }
+        guard let service = serviceAPI, let dataBase = db else { return }
         
         $filter
             .sink { service.tmpFilter = $0 }
@@ -42,30 +38,37 @@ final class ProductVM: ObservableObject {
         $query
             .filter { $0.count > 2 }
             .compactMap(service.get)
-            .sink(receiveValue: resFlag)
+            .sink(receiveValue: resFlag(dataBase))
             .store(in: &bag)
         
         $lastAppearElement
             .filter { _ in service.listInit }
             .map(service.nextPage)
-            .sink(receiveValue: result(_:))
+            .sink(receiveValue: result(dataBase))
             .store(in: &bag)
         
-        if let dataBase = db {
-            self.list = dataBase.getElements()
-        }
+        self.list = dataBase.getElements()
     }
     
-    private func resFlag(_ v: Published<Array<Product>>.Publisher, _ f: Published<Bool>.Publisher) {
-        f.sink { self.isLoaded = $0 }.store(in: &bag)
-        
-        result(v)
+    private func resFlag(_ db: DBAbstract)
+        -> (Published<Array<Product>>.Publisher, Published<Bool>.Publisher)
+        -> Void {
+            return { [weak self] (v, f) in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    f.assign(to: \.isLoaded, on: self).store(in: &self.bag)
+                    self.result(db)(v)
+                }
+            }
     }
     
-    private func result(_ v: Published<Array<Product>>.Publisher) {
-        if let dataBase = self.db {
-            v.sink(receiveValue: dataBase.save(elements:)).store(in: &bag)
+    private func result(_ db: DBAbstract) -> (Published<Array<Product>>.Publisher) -> Void {
+        return { [weak self] (v) in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                v.sink(receiveValue: db.save(elements:)).store(in: &self.bag)
+                v.assign(to: \.list, on: self).store(in: &self.bag)
+            }
         }
-        v.sink { self.list = $0 }.store(in: &bag)
     }
 }

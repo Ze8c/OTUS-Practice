@@ -54,11 +54,12 @@ final public class AnimeAPIImpl: AbstractAnimeAPI {
                                     apiResponseQueue: queryQueue) { [weak self] (it) in
                 
                 guard let items = it?.results else { return }
-                                        
+                
+                self?.lastPage = it?.lastPage ?? 1
+                self?.page += 1
+                
                 DispatchQueue.main.async {
                     self?.list.append(contentsOf: items)
-                    self?.lastPage = it?.lastPage ?? 1
-                    self?.page += 1
                     self?.isLoaded = true
                 }
             }

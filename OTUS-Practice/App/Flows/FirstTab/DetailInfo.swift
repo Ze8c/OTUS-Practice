@@ -35,7 +35,7 @@ struct DetailInfo: View {
                     
                     if isOn {
                         Group {
-                            Text(element.synopsis ?? "")
+                            Text(element.synopsis)
                                 .font(.body)
                                 .padding([.horizontal, .vertical], 20)
                         } //Group

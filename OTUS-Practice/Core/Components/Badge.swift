@@ -34,15 +34,15 @@ struct Badge: View {
             }
             
             VStack {
-                Text(model.title ?? "")
+                Text(model.title)
                     .font(.title)
                     .padding(.vertical, 5)
                 
                 HStack {
-                    Text("Members: \(model.members ?? 0)")
+                    Text("Members: \(model.members)")
                         .font(.caption)
                         .foregroundColor(.gray)
-                    Text("Rating: \(model.score ?? 0.0)")
+                    Text("Rating: \(model.score)")
                         .font(.caption)
                         .foregroundColor(.gray)
                 } //HStack

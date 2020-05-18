@@ -29,25 +29,17 @@ struct ContentView: View {
                     Image(systemName: "scope")
                     Text("1")
                 }
-            
-            SecondView()
+            LocalizeTextView()
+                .environmentObject(LocalizeTextVM(withService: SharingService()))
                 .tag(Tabs.second)
                 .tabItem {
-                    Image(systemName: "burn")
+                    Image(systemName: "doc.plaintext")
                     Text("2")
                 }
-            ThirdView()
-                .tag(Tabs.third)
-                .tabItem {
-                    Image(systemName: "flame")
-                    Text("3")
-                }
-            ValidateINN()
-                .tag(Tabs.fourth)
-                .tabItem {
-                    Image(systemName: "flame")
-                    Text("4")
-                }
         }
+    }
+    
+    mutating func change(tab: Tabs) {
+        selection = tab
     }
 }

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2419224D246DED500090A21C /* LocalizeTextVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419224C246DED500090A21C /* LocalizeTextVM.swift */; };
+		2419224F246EAECA0090A21C /* SharingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419224E246EAECA0090A21C /* SharingService.swift */; };
+		24192250246EAECA0090A21C /* SharingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419224E246EAECA0090A21C /* SharingService.swift */; };
+		24192252246EB1030090A21C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24192251246EB1030090A21C /* DataProvider.swift */; };
+		24192254246EB3510090A21C /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24192253246EB3510090A21C /* FileService.swift */; };
+		24192255246EB5F00090A21C /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24192251246EB1030090A21C /* DataProvider.swift */; };
+		24192256246EB5F50090A21C /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710822244F4B010068A847 /* UserDefaultsService.swift */; };
+		24192257246ED2A70090A21C /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24192253246EB3510090A21C /* FileService.swift */; };
 		241EBD542419FE610089A32B /* ColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241EBD532419FE610089A32B /* ColumnView.swift */; };
 		2443AED5241A0762009DDCEB /* ColumnVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443AED4241A0762009DDCEB /* ColumnVM.swift */; };
 		2443AED8241A1665009DDCEB /* AnyTransitionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443AED7241A1665009DDCEB /* AnyTransitionExt.swift */; };
@@ -25,11 +33,14 @@
 		2466DD4F24326E93009F2FC4 /* DiagramEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466DD4E24326E93009F2FC4 /* DiagramEffect.swift */; };
 		2466DD51243271A9009F2FC4 /* AnimatingServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466DD50243271A9009F2FC4 /* AnimatingServiceLocator.swift */; };
 		2466DD532432754D009F2FC4 /* TapAnimatig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466DD522432754D009F2FC4 /* TapAnimatig.swift */; };
-		24710823244F4B010068A847 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710822244F4B010068A847 /* FileService.swift */; };
+		24710823244F4B010068A847 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710822244F4B010068A847 /* UserDefaultsService.swift */; };
 		24710825244F4B1B0068A847 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710824244F4B1B0068A847 /* DBService.swift */; };
+		247CC436246D6FFD00205319 /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CC435246D6FFD00205319 /* ShareVC.swift */; };
 		2484CC9B246ADC1B00C59D56 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2484CC9A246ADC1B00C59D56 /* KingfisherSwiftUI */; };
 		2484CC9E246AFA7100C59D56 /* ValidateINN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CC9D246AFA7100C59D56 /* ValidateINN.swift */; };
 		2484CCA0246B000900C59D56 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CC9F246B000900C59D56 /* StringExt.swift */; };
+		2484CCAF246BCC0000C59D56 /* OTUS-Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2484CD4E246C90BE00C59D56 /* LocalizeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CD4D246C90BE00C59D56 /* LocalizeTextView.swift */; };
 		248A39A7243DA51F007E8E23 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A39A6243DA51F007E8E23 /* AnimeAPI.swift */; };
 		2498113624598A180069C553 /* ServiceLocator in Frameworks */ = {isa = PBXBuildFile; productRef = 2498113524598A180069C553 /* ServiceLocator */; };
 		249C4DF22421FE7300925F96 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */; };
@@ -67,7 +78,35 @@
 		5F4E45C7EB6267C50C91E90F /* Pods_OTUS_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4125ECE7555AA6A3F64CD4A /* Pods_OTUS_Practice.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2484CCAD246BCC0000C59D56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2484CCA4246BCC0000C59D56;
+			remoteInfo = "OTUS-Share";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2484CCB3246BCC0000C59D56 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2484CCAF246BCC0000C59D56 /* OTUS-Share.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2419224C246DED500090A21C /* LocalizeTextVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeTextVM.swift; sourceTree = "<group>"; };
+		2419224E246EAECA0090A21C /* SharingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingService.swift; sourceTree = "<group>"; };
+		24192251246EB1030090A21C /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		24192253246EB3510090A21C /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
 		241EBD532419FE610089A32B /* ColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnView.swift; sourceTree = "<group>"; };
 		2443AED4241A0762009DDCEB /* ColumnVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnVM.swift; sourceTree = "<group>"; };
 		2443AED7241A1665009DDCEB /* AnyTransitionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionExt.swift; sourceTree = "<group>"; };
@@ -86,10 +125,16 @@
 		2466DD4E24326E93009F2FC4 /* DiagramEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramEffect.swift; sourceTree = "<group>"; };
 		2466DD50243271A9009F2FC4 /* AnimatingServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingServiceLocator.swift; sourceTree = "<group>"; };
 		2466DD522432754D009F2FC4 /* TapAnimatig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapAnimatig.swift; sourceTree = "<group>"; };
-		24710822244F4B010068A847 /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
+		24710822244F4B010068A847 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		24710824244F4B1B0068A847 /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		247CC435246D6FFD00205319 /* ShareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
 		2484CC9D246AFA7100C59D56 /* ValidateINN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateINN.swift; sourceTree = "<group>"; };
 		2484CC9F246B000900C59D56 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OTUS-Share.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2484CCAC246BCC0000C59D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2484CCB4246BD44500C59D56 /* OTUS-Practice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OTUS-Practice.entitlements"; sourceTree = "<group>"; };
+		2484CD4B246C4E1300C59D56 /* OTUS-Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OTUS-Share.entitlements"; sourceTree = "<group>"; };
+		2484CD4D246C90BE00C59D56 /* LocalizeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizeTextView.swift; sourceTree = "<group>"; };
 		248A39A6243DA51F007E8E23 /* AnimeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeAPI.swift; sourceTree = "<group>"; };
 		2498113424598A060069C553 /* ServiceLocator */ = {isa = PBXFileReference; lastKnownFileType = text; path = ServiceLocator; sourceTree = SOURCE_ROOT; };
 		249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodingHelper.swift; sourceTree = "<group>"; };
@@ -132,6 +177,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2484CCA2246BCC0000C59D56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24DF776E240E327700D80C8E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,12 +197,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		240C95B02456BB710036DC4F /* DBService */ = {
+		2419224A246DE7C50090A21C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				24192251246EB1030090A21C /* DataProvider.swift */,
 				24710824244F4B1B0068A847 /* DBService.swift */,
+				24192253246EB3510090A21C /* FileService.swift */,
+				24710822244F4B010068A847 /* UserDefaultsService.swift */,
+				2419224E246EAECA0090A21C /* SharingService.swift */,
 			);
-			path = DBService;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		2443AED6241A1636009DDCEB /* Extensions */ = {
@@ -194,9 +250,9 @@
 			isa = PBXGroup;
 			children = (
 				245573B6240F8EA100B6CDDB /* Components */,
-				240C95B02456BB710036DC4F /* DBService */,
 				2443AED6241A1636009DDCEB /* Extensions */,
 				249C4DE02421FE7300925F96 /* OpenAPIs */,
+				2419224A246DE7C50090A21C /* Services */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -218,6 +274,7 @@
 				245573B2240F790800B6CDDB /* FirstTab */,
 				245573B3240F791E00B6CDDB /* SecondTab */,
 				2454F86F242CB491001AA9EE /* Third */,
+				2484CD4C246C907400C59D56 /* LocalizeText */,
 				2484CC9C246AFA3F00C59D56 /* ValidateINN */,
 			);
 			path = Flows;
@@ -238,7 +295,6 @@
 				24DF7774240E327700D80C8E /* AppDelegate.swift */,
 				24DF7776240E327700D80C8E /* SceneDelegate.swift */,
 				248A39A6243DA51F007E8E23 /* AnimeAPI.swift */,
-				24710822244F4B010068A847 /* FileService.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -294,6 +350,25 @@
 				2484CC9D246AFA7100C59D56 /* ValidateINN.swift */,
 			);
 			path = ValidateINN;
+			sourceTree = "<group>";
+		};
+		2484CCA6246BCC0000C59D56 /* OTUS-Share */ = {
+			isa = PBXGroup;
+			children = (
+				2484CD4B246C4E1300C59D56 /* OTUS-Share.entitlements */,
+				2484CCAC246BCC0000C59D56 /* Info.plist */,
+				247CC435246D6FFD00205319 /* ShareVC.swift */,
+			);
+			path = "OTUS-Share";
+			sourceTree = "<group>";
+		};
+		2484CD4C246C907400C59D56 /* LocalizeText */ = {
+			isa = PBXGroup;
+			children = (
+				2484CD4D246C90BE00C59D56 /* LocalizeTextView.swift */,
+				2419224C246DED500090A21C /* LocalizeTextVM.swift */,
+			);
+			path = LocalizeText;
 			sourceTree = "<group>";
 		};
 		249C4DE02421FE7300925F96 /* OpenAPIs */ = {
@@ -368,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				24DF7773240E327700D80C8E /* OTUS-Practice */,
+				2484CCA6246BCC0000C59D56 /* OTUS-Share */,
 				24DF7772240E327700D80C8E /* Products */,
 				3617BCAFB3E17FE19EA74E55 /* Pods */,
 				3295CDE9666D50F7D6115983 /* Frameworks */,
@@ -378,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				24DF7771240E327700D80C8E /* OTUS-Practice.app */,
+				2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -385,6 +462,7 @@
 		24DF7773240E327700D80C8E /* OTUS-Practice */ = {
 			isa = PBXGroup;
 			children = (
+				2484CCB4246BD44500C59D56 /* OTUS-Practice.entitlements */,
 				2498113424598A060069C553 /* ServiceLocator */,
 				245573A2240F68B900B6CDDB /* App */,
 				245573A1240F68A600B6CDDB /* Core */,
@@ -423,6 +501,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2484CCA4246BCC0000C59D56 /* OTUS-Share */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2484CCB0246BCC0000C59D56 /* Build configuration list for PBXNativeTarget "OTUS-Share" */;
+			buildPhases = (
+				2484CCA1246BCC0000C59D56 /* Sources */,
+				2484CCA2246BCC0000C59D56 /* Frameworks */,
+				2484CCA3246BCC0000C59D56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OTUS-Share";
+			packageProductDependencies = (
+			);
+			productName = "OTUS-Share";
+			productReference = 2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		24DF7770240E327700D80C8E /* OTUS-Practice */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24DF7785240E327800D80C8E /* Build configuration list for PBXNativeTarget "OTUS-Practice" */;
@@ -432,10 +529,12 @@
 				24DF776E240E327700D80C8E /* Frameworks */,
 				24DF776F240E327700D80C8E /* Resources */,
 				69DE08D8F3D8DB7C3DD286AE /* [CP] Embed Pods Frameworks */,
+				2484CCB3246BCC0000C59D56 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2484CCAE246BCC0000C59D56 /* PBXTargetDependency */,
 			);
 			name = "OTUS-Practice";
 			packageProductDependencies = (
@@ -456,6 +555,10 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Mak;
 				TargetAttributes = {
+					2484CCA4246BCC0000C59D56 = {
+						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
+					};
 					24DF7770240E327700D80C8E = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -478,11 +581,19 @@
 			projectRoot = "";
 			targets = (
 				24DF7770240E327700D80C8E /* OTUS-Practice */,
+				2484CCA4246BCC0000C59D56 /* OTUS-Share */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2484CCA3246BCC0000C59D56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24DF776F240E327700D80C8E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,6 +649,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2484CCA1246BCC0000C59D56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24192256246EB5F50090A21C /* UserDefaultsService.swift in Sources */,
+				24192255246EB5F00090A21C /* DataProvider.swift in Sources */,
+				24192250246EAECA0090A21C /* SharingService.swift in Sources */,
+				24192257246ED2A70090A21C /* FileService.swift in Sources */,
+				247CC436246D6FFD00205319 /* ShareVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24DF776D240E327700D80C8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -552,16 +675,20 @@
 				24DF7775240E327700D80C8E /* AppDelegate.swift in Sources */,
 				245573AA240F698B00B6CDDB /* FirstView.swift in Sources */,
 				2454F871242CB4EA001AA9EE /* ThirdView.swift in Sources */,
+				24192252246EB1030090A21C /* DataProvider.swift in Sources */,
 				24AD81F82446FFA0004C4EC1 /* Cache.swift in Sources */,
 				2443AED5241A0762009DDCEB /* ColumnVM.swift in Sources */,
 				2443AEDA241A1CA2009DDCEB /* CustomButton.swift in Sources */,
 				249C4DF42421FE7300925F96 /* SynchronizedDictionary.swift in Sources */,
+				2419224D246DED500090A21C /* LocalizeTextVM.swift in Sources */,
 				2484CCA0246B000900C59D56 /* StringExt.swift in Sources */,
 				24CCC5CE241F5BF900A5528A /* NavController.swift in Sources */,
 				2466DD4F24326E93009F2FC4 /* DiagramEffect.swift in Sources */,
 				245573AE240F721A00B6CDDB /* ProductVM.swift in Sources */,
+				24192254246EB3510090A21C /* FileService.swift in Sources */,
 				24CCC5D4241F5D0700A5528A /* NavVM.swift in Sources */,
 				249C4DF22421FE7300925F96 /* JSONEncodingHelper.swift in Sources */,
+				2419224F246EAECA0090A21C /* SharingService.swift in Sources */,
 				249C4DFD2421FE7300925F96 /* URLSessionImplementations.swift in Sources */,
 				24DF7777240E327700D80C8E /* SceneDelegate.swift in Sources */,
 				249C4DFA2421FE7300925F96 /* ErrorModel.swift in Sources */,
@@ -583,10 +710,11 @@
 				249C4DFF2421FE7300925F96 /* JSONDataEncoding.swift in Sources */,
 				245573AC240F699D00B6CDDB /* SecondView.swift in Sources */,
 				249C4DFC2421FE7300925F96 /* APIHelper.swift in Sources */,
+				2484CD4E246C90BE00C59D56 /* LocalizeTextView.swift in Sources */,
 				249C4DF52421FE7300925F96 /* Extensions.swift in Sources */,
 				2466DD4D24326E46009F2FC4 /* PathDiagram.swift in Sources */,
 				245573B8240F8EC300B6CDDB /* LazyView.swift in Sources */,
-				24710823244F4B010068A847 /* FileService.swift in Sources */,
+				24710823244F4B010068A847 /* UserDefaultsService.swift in Sources */,
 				24F5A4242420AFB900F4A1C3 /* NextSecondView.swift in Sources */,
 				2484CC9E246AFA7100C59D56 /* ValidateINN.swift in Sources */,
 				249C4DFB2421FE7300925F96 /* Product.swift in Sources */,
@@ -598,6 +726,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2484CCAE246BCC0000C59D56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2484CCA4246BCC0000C59D56 /* OTUS-Share */;
+			targetProxy = 2484CCAD246BCC0000C59D56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		24DF777F240E327800D80C8E /* LaunchScreen.storyboard */ = {
@@ -611,6 +747,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2484CCB1246BCC0000C59D56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "OTUS-Share/OTUS-Share.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2H4W42259;
+				INFOPLIST_FILE = "OTUS-Share/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice.OTUS-Share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2484CCB2246BCC0000C59D56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "OTUS-Share/OTUS-Share.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2H4W42259;
+				INFOPLIST_FILE = "OTUS-Share/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice.OTUS-Share";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		24DF7783240E327800D80C8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -729,7 +908,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 31B56B4853F69A7CD0CA3F3F /* Pods-OTUS-Practice.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "OTUS-Practice/OTUS-Practice.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"OTUS-Practice/Preview Content\"";
 				DEVELOPMENT_TEAM = B2H4W42259;
@@ -750,7 +931,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82477D9FD640558CCE4F8B8C /* Pods-OTUS-Practice.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "OTUS-Practice/OTUS-Practice.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"OTUS-Practice/Preview Content\"";
 				DEVELOPMENT_TEAM = B2H4W42259;
@@ -770,6 +953,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2484CCB0246BCC0000C59D56 /* Build configuration list for PBXNativeTarget "OTUS-Share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2484CCB1246BCC0000C59D56 /* Debug */,
+				2484CCB2246BCC0000C59D56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		24DF776C240E327700D80C8E /* Build configuration list for PBXProject "OTUS-Practice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

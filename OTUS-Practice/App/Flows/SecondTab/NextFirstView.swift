@@ -10,8 +10,6 @@ import SwiftUI
 
 struct NextFirstView: View {
     
-    @EnvironmentObject var vm: ColumnVM
-    
     var cellText: String
     
     var body: some View {

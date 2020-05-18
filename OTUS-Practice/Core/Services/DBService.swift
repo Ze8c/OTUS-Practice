@@ -20,11 +20,14 @@ final class DBImpl: DBAbstract {
     
     func save<T: Object>(elements: Array<T>) {
         dbQueue.async {
-            do {
-                guard let result = self.realm?.objects(T.self) else { return }
-                self.realm?.beginWrite()
+            guard let result = self.realm?.objects(T.self) else { return }
+            self.realm?.beginWrite()
+            if result.first != elements.first {
                 self.realm?.delete(result)
-                self.realm?.add(elements)
+            }
+            self.realm?.add(elements)
+            
+            do {
                 try self.realm?.commitWrite()
                 print(self.realm?.configuration.fileURL?.absoluteURL as Any)
             } catch {
