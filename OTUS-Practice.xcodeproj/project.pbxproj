@@ -62,6 +62,7 @@
 		249C4E0924224BEC00925F96 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E0824224BEC00925F96 /* ColorExt.swift */; };
 		249C4E0B2422849D00925F96 /* Spiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E0A2422849D00925F96 /* Spiner.swift */; };
 		24AD81F82446FFA0004C4EC1 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AD81F72446FFA0004C4EC1 /* Cache.swift */; };
+		24C28DD22473FD3E009F0476 /* AlgoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C28DD12473FD3E009F0476 /* AlgoProvider.swift */; };
 		24CCC5CE241F5BF900A5528A /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC5CD241F5BF900A5528A /* NavController.swift */; };
 		24CCC5D0241F5C3B00A5528A /* NavPushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC5CF241F5C3B00A5528A /* NavPushButton.swift */; };
 		24CCC5D2241F5C7600A5528A /* NavPopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC5D1241F5C7600A5528A /* NavPopButton.swift */; };
@@ -156,6 +157,7 @@
 		249C4E0824224BEC00925F96 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		249C4E0A2422849D00925F96 /* Spiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spiner.swift; sourceTree = "<group>"; };
 		24AD81F72446FFA0004C4EC1 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		24C28DD12473FD3E009F0476 /* AlgoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoProvider.swift; sourceTree = "<group>"; };
 		24CCC5CD241F5BF900A5528A /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		24CCC5CF241F5C3B00A5528A /* NavPushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavPushButton.swift; sourceTree = "<group>"; };
 		24CCC5D1241F5C7600A5528A /* NavPopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavPopButton.swift; sourceTree = "<group>"; };
@@ -200,11 +202,12 @@
 		2419224A246DE7C50090A21C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				24C28DD12473FD3E009F0476 /* AlgoProvider.swift */,
 				24192251246EB1030090A21C /* DataProvider.swift */,
 				24710824244F4B1B0068A847 /* DBService.swift */,
 				24192253246EB3510090A21C /* FileService.swift */,
-				24710822244F4B010068A847 /* UserDefaultsService.swift */,
 				2419224E246EAECA0090A21C /* SharingService.swift */,
+				24710822244F4B010068A847 /* UserDefaultsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				2443AED5241A0762009DDCEB /* ColumnVM.swift in Sources */,
 				2443AEDA241A1CA2009DDCEB /* CustomButton.swift in Sources */,
 				249C4DF42421FE7300925F96 /* SynchronizedDictionary.swift in Sources */,
+				24C28DD22473FD3E009F0476 /* AlgoProvider.swift in Sources */,
 				2419224D246DED500090A21C /* LocalizeTextVM.swift in Sources */,
 				2484CCA0246B000900C59D56 /* StringExt.swift in Sources */,
 				24CCC5CE241F5BF900A5528A /* NavController.swift in Sources */,

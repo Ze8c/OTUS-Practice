@@ -17,7 +17,7 @@ struct LocalizeTextView: View {
         return VStack {
             Picker("Locales", selection: $vm.selectedLocale) {
                 ForEach(vm.locales, id: \.self) { it in
-                    Text(it.rawValue)
+                    Text(it.rawValue.capitalized)
                         .tag(it)
                 }
             } //Picker
