@@ -10,6 +10,20 @@ import Foundation
 
 extension String {
     
+    static var alphanumeric: String {
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    }
+    
+    init(numbersOfChar: Int) {
+        self.init()
+        
+        for _ in 0 ..< numbersOfChar {
+            let elements = UInt32(String.alphanumeric.count)
+            let randomIndex = Int(arc4random_uniform(elements))
+            self += String(Array(String.alphanumeric)[randomIndex])
+        }
+    }
+    
     func getDate(withFormat format: String) -> Date? {
         if self.count < 3 { return nil }
         let dateFormatter = DateFormatter()

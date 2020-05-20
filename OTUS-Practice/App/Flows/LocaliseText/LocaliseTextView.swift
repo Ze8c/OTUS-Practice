@@ -1,5 +1,5 @@
 //
-//  LocalizeTextView.swift
+//  LocaliseTextView.swift
 //  OTUS-Practice
 //
 //  Created by Mak on 13.05.2020.
@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-struct LocalizeTextView: View {
+struct LocaliseTextView: View {
     
-    @EnvironmentObject var vm: LocalizeTextVM
+    @EnvironmentObject var vm: LocaliseTextVM
     
     var body: some View {
         
@@ -54,7 +54,7 @@ struct LocalizeTextView: View {
 
 struct LocalizeTextView_Previews: PreviewProvider {
     static var previews: some View {
-        LocalizeTextView()
-            .environmentObject(LocalizeTextVM(withService: SharingService()))
+        LocaliseTextView()
+            .environmentObject(LocaliseTextVM(withService: SharingService()))
     }
 }

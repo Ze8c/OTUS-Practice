@@ -1,5 +1,5 @@
 //
-//  LocalizeTextVM.swift
+//  LocaliseTextVM.swift
 //  OTUS-Practice
 //
 //  Created by Mak on 15.05.2020.
@@ -154,7 +154,7 @@ enum TypeConvert {
     }
 }
 
-final class LocalizeTextVM: ObservableObject {
+final class LocaliseTextVM: ObservableObject {
     
     @Published var sharedText: String = ""
     @Published var secondText: String = ""

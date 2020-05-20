@@ -29,12 +29,19 @@ struct ContentView: View {
                     Image(systemName: "scope")
                     Text("1")
                 }
-            LocalizeTextView()
-                .environmentObject(LocalizeTextVM(withService: SharingService()))
+            LocaliseTextView()
+                .environmentObject(LocaliseTextVM(withService: SharingService()))
                 .tag(Tabs.second)
                 .tabItem {
                     Image(systemName: "doc.plaintext")
                     Text("2")
+                }
+            AlgoTypesView()
+                .environmentObject(AlgoTypesVM())
+                .tag(Tabs.third)
+                .tabItem {
+                    Image(systemName: "checkmark.seal")
+                    Text("3")
                 }
         }
     }
