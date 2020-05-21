@@ -45,13 +45,13 @@
 		248081B224755AC20023A709 /* SuffixArrayProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248081B124755AC20023A709 /* SuffixArrayProcessor.swift */; };
 		248081B424755C200023A709 /* DictionaryProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248081B324755C200023A709 /* DictionaryProcessor.swift */; };
 		248081B624755D0B0023A709 /* SetProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248081B524755D0B0023A709 /* SetProcessor.swift */; };
-		2484CC9B246ADC1B00C59D56 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2484CC9A246ADC1B00C59D56 /* KingfisherSwiftUI */; };
+		2484CC9B246ADC1B00C59D56 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2484CC9A246ADC1B00C59D56 /* SwiftPackageProductDependency */; };
 		2484CC9E246AFA7100C59D56 /* ValidateINN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CC9D246AFA7100C59D56 /* ValidateINN.swift */; };
 		2484CCA0246B000900C59D56 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CC9F246B000900C59D56 /* StringExt.swift */; };
 		2484CCAF246BCC0000C59D56 /* OTUS-Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2484CD4E246C90BE00C59D56 /* LocaliseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CD4D246C90BE00C59D56 /* LocaliseTextView.swift */; };
 		248A39A7243DA51F007E8E23 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A39A6243DA51F007E8E23 /* AnimeAPI.swift */; };
-		2498113624598A180069C553 /* ServiceLocator in Frameworks */ = {isa = PBXBuildFile; productRef = 2498113524598A180069C553 /* ServiceLocator */; };
+		2498113624598A180069C553 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2498113524598A180069C553 /* SwiftPackageProductDependency */; };
 		249C4DF22421FE7300925F96 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */; };
 		249C4DF32421FE7300925F96 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE22421FE7300925F96 /* Configuration.swift */; };
 		249C4DF42421FE7300925F96 /* SynchronizedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE32421FE7300925F96 /* SynchronizedDictionary.swift */; };
@@ -76,6 +76,7 @@
 		24CCC5D0241F5C3B00A5528A /* NavPushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC5CF241F5C3B00A5528A /* NavPushButton.swift */; };
 		24CCC5D2241F5C7600A5528A /* NavPopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC5D1241F5C7600A5528A /* NavPopButton.swift */; };
 		24CCC5D4241F5D0700A5528A /* NavVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC5D3241F5D0700A5528A /* NavVM.swift */; };
+		24D7955E2476779E0016D1AF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 24D7955D2476779E0016D1AF /* SwiftPackageProductDependency */; };
 		24DE27C5243C42F1002D8B00 /* FilteringString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE27C4243C42F1002D8B00 /* FilteringString.swift */; };
 		24DF7775240E327700D80C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DF7774240E327700D80C8E /* AppDelegate.swift */; };
 		24DF7777240E327700D80C8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DF7776240E327700D80C8E /* SceneDelegate.swift */; };
@@ -85,7 +86,6 @@
 		24DF7781240E327800D80C8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DF777F240E327800D80C8E /* LaunchScreen.storyboard */; };
 		24F5A4222420ADA800F4A1C3 /* NextFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F5A4212420ADA800F4A1C3 /* NextFirstView.swift */; };
 		24F5A4242420AFB900F4A1C3 /* NextSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F5A4232420AFB900F4A1C3 /* NextSecondView.swift */; };
-		5F4E45C7EB6267C50C91E90F /* Pods_OTUS_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4125ECE7555AA6A3F64CD4A /* Pods_OTUS_Practice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,9 +191,6 @@
 		24DF7782240E327800D80C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24F5A4212420ADA800F4A1C3 /* NextFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextFirstView.swift; sourceTree = "<group>"; };
 		24F5A4232420AFB900F4A1C3 /* NextSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextSecondView.swift; sourceTree = "<group>"; };
-		31B56B4853F69A7CD0CA3F3F /* Pods-OTUS-Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTUS-Practice.debug.xcconfig"; path = "Target Support Files/Pods-OTUS-Practice/Pods-OTUS-Practice.debug.xcconfig"; sourceTree = "<group>"; };
-		82477D9FD640558CCE4F8B8C /* Pods-OTUS-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTUS-Practice.release.xcconfig"; path = "Target Support Files/Pods-OTUS-Practice/Pods-OTUS-Practice.release.xcconfig"; sourceTree = "<group>"; };
-		C4125ECE7555AA6A3F64CD4A /* Pods_OTUS_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTUS_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,9 +205,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2484CC9B246ADC1B00C59D56 /* KingfisherSwiftUI in Frameworks */,
-				2498113624598A180069C553 /* ServiceLocator in Frameworks */,
-				5F4E45C7EB6267C50C91E90F /* Pods_OTUS_Practice.framework in Frameworks */,
+				24D7955E2476779E0016D1AF /* BuildFile in Frameworks */,
+				2484CC9B246ADC1B00C59D56 /* BuildFile in Frameworks */,
+				2498113624598A180069C553 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,8 +512,6 @@
 				24DF7773240E327700D80C8E /* OTUS-Practice */,
 				2484CCA6246BCC0000C59D56 /* OTUS-Share */,
 				24DF7772240E327700D80C8E /* Products */,
-				3617BCAFB3E17FE19EA74E55 /* Pods */,
-				3295CDE9666D50F7D6115983 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -551,23 +546,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		3295CDE9666D50F7D6115983 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C4125ECE7555AA6A3F64CD4A /* Pods_OTUS_Practice.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3617BCAFB3E17FE19EA74E55 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				31B56B4853F69A7CD0CA3F3F /* Pods-OTUS-Practice.debug.xcconfig */,
-				82477D9FD640558CCE4F8B8C /* Pods-OTUS-Practice.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -584,8 +562,6 @@
 			dependencies = (
 			);
 			name = "OTUS-Share";
-			packageProductDependencies = (
-			);
 			productName = "OTUS-Share";
 			productReference = 2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -594,11 +570,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24DF7785240E327800D80C8E /* Build configuration list for PBXNativeTarget "OTUS-Practice" */;
 			buildPhases = (
-				84046AF0D79618B9687509D5 /* [CP] Check Pods Manifest.lock */,
 				24DF776D240E327700D80C8E /* Sources */,
 				24DF776E240E327700D80C8E /* Frameworks */,
 				24DF776F240E327700D80C8E /* Resources */,
-				69DE08D8F3D8DB7C3DD286AE /* [CP] Embed Pods Frameworks */,
 				2484CCB3246BCC0000C59D56 /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -608,8 +582,9 @@
 			);
 			name = "OTUS-Practice";
 			packageProductDependencies = (
-				2498113524598A180069C553 /* ServiceLocator */,
-				2484CC9A246ADC1B00C59D56 /* KingfisherSwiftUI */,
+				2498113524598A180069C553 /* SwiftPackageProductDependency */,
+				2484CC9A246ADC1B00C59D56 /* SwiftPackageProductDependency */,
+				24D7955D2476779E0016D1AF /* SwiftPackageProductDependency */,
 			);
 			productName = "OTUS-Practice";
 			productReference = 24DF7771240E327700D80C8E /* OTUS-Practice.app */;
@@ -644,7 +619,8 @@
 			);
 			mainGroup = 24DF7768240E327700D80C8E;
 			packageReferences = (
-				2484CC99246ADC1B00C59D56 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				2484CC99246ADC1B00C59D56 /* RemoteSwiftPackageReference */,
+				24D7955C2476779E0016D1AF /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 24DF7772240E327700D80C8E /* Products */;
 			projectDirPath = "";
@@ -675,48 +651,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		69DE08D8F3D8DB7C3DD286AE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OTUS-Practice/Pods-OTUS-Practice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OTUS-Practice/Pods-OTUS-Practice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OTUS-Practice/Pods-OTUS-Practice-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		84046AF0D79618B9687509D5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OTUS-Practice-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2484CCA1246BCC0000C59D56 /* Sources */ = {
@@ -986,7 +920,6 @@
 		};
 		24DF7786240E327800D80C8E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31B56B4853F69A7CD0CA3F3F /* Pods-OTUS-Practice.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1009,7 +942,6 @@
 		};
 		24DF7787240E327800D80C8E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82477D9FD640558CCE4F8B8C /* Pods-OTUS-Practice.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1063,9 +995,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2484CC99246ADC1B00C59D56 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		2484CC99246ADC1B00C59D56 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		24D7955C2476779E0016D1AF /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -1074,14 +1014,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2484CC9A246ADC1B00C59D56 /* KingfisherSwiftUI */ = {
+		2484CC9A246ADC1B00C59D56 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2484CC99246ADC1B00C59D56 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 2484CC99246ADC1B00C59D56 /* RemoteSwiftPackageReference */;
 			productName = KingfisherSwiftUI;
 		};
-		2498113524598A180069C553 /* ServiceLocator */ = {
+		2498113524598A180069C553 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ServiceLocator;
+		};
+		24D7955D2476779E0016D1AF /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24D7955C2476779E0016D1AF /* RemoteSwiftPackageReference */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
