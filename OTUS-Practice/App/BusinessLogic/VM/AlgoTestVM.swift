@@ -13,7 +13,7 @@ final class AlgoTestVM: ObservableObject {
     @Published var typeStructure: Structures
     @Published var list = [(String, TimeInterval)]()
     @Published var createElements: String = ""
-    @Published var ableToStart = true
+    @Published var disableToStart = false
     private var number = 1
     private let processor: TestStructureProcessor
     
@@ -23,13 +23,13 @@ final class AlgoTestVM: ObservableObject {
     }
     
     func startTest() {
-        self.ableToStart = false
+        self.disableToStart = true
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             let timeInterval = self.processor.setupWithObjectCount(self.number)
             self.createElements = ", created: \(String(ceil(timeInterval * 10000) / 10000))"
             self.list = self.processor.getTableData()
-            self.ableToStart = true
+            self.disableToStart = false
         }
     }
     

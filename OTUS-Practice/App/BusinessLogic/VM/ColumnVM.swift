@@ -15,8 +15,6 @@ final class ColumnVM: ObservableObject {
     
     init() {
         let coll = (1...30).publisher.collect(3)
-        _ = coll.collect().sink {
-            self.elements = $0
-        }
+        _ = coll.collect().assign(to: \.elements, on: self)
     }
 }

@@ -12,33 +12,56 @@ struct AlgoTypesView: View {
     
     @EnvironmentObject var vm: AlgoTypesVM
     
-    @State var algo: String = ""
+    @State var algo: String = "" {
+        didSet {
+            vm.updateList(search: algo)
+        }
+    }
     
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Algorithms")
-                    .fontWeight(.bold)
-                    .font(.system(size: 30))
-
-                TextField("", text: Binding<String>(get: {
-                    self.algo
-                }, set: {
-                    self.algo = $0
-                    self.vm.updateList(search: $0)
-                }))
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 200)
+            VStack(spacing: 5) {
+                search(name: "Algorithms", text: $algo)
                     .padding(10)
+                
+                testAlgo(title: "Testing algorithms for 10 000 items", vm)
+                    .padding([.horizontal, .bottom], 10)
                 
                 List(vm.list, id: \.self) { it in
                     NavigationLink(destination: AlgoTestView()
                         .environmentObject(AlgoTestVM(structure: it))) {
-                            Text(it.rawValue.capitalized)
+                            CellList(title: it.rawValue.capitalized, result: self.vm.listTest[it])
                     }
                 }
             } //VStack
         } //NavigationView
+    }
+    
+    private func search(name: String, text: Binding<String>) -> some View {
+        VStack {
+            Text(name)
+                .fontWeight(.bold)
+                .font(.system(size: 30))
+            
+            TextField("", text: text)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(width: 200)
+        } //VStack
+    }
+    
+    private func testAlgo(title: String, _ vm: AlgoTypesVM) -> some View {
+        HStack {
+            Text(title)
+                .multilineTextAlignment(.leading)
+            Button(action: vm.test) {
+                Text("Start test")
+                    .fontWeight(.bold)
+                    .padding()
+                    .foregroundColor(Color.white)
+                    .background(Color.orange)
+                    .cornerRadius(5)
+            }.disabled(vm.disableToStart)
+        } //HStack
     }
 }
 

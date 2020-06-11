@@ -41,13 +41,20 @@ final class SuffixArrayProcessor: TestStructureProcessor {
         
         return runClosureForTime(methodCalculation: {
             var tuples: [(suffix: String, algoName: String)] = []
-            for algo in AlgoProvider().all {
-                let trimedAlgo = algo.filter(String.alphanumeric.contains)
-                let suffixSequence = SuffixSequence(string: trimedAlgo)
-                for subString in suffixSequence {
-                    tuples.append((String(subString), algo))
+            
+            outerLabel: while tuples.count < objectCount {
+                for algo in AlgoProvider().all {
+                    let trimedAlgo = algo.filter(String.alphanumeric.contains)
+                    let suffixSequence = SuffixSequence(string: trimedAlgo)
+                    for subString in suffixSequence {
+                        tuples.append((String(subString), algo))
+                        if tuples.count >= objectCount {
+                            break outerLabel
+                        }
+                    }
                 }
             }
+            
             tuples.sort { $0.suffix < $1.suffix }
             suffixArray = tuples
         })

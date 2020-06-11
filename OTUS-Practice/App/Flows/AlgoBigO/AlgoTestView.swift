@@ -22,9 +22,7 @@ struct AlgoTestView: View {
                 .padding([.leading, .trailing], 50)
 
             Text("Number of items: \(vm.getNumberOfItems(value)) \(vm.createElements)")
-            Button(action: {
-                self.vm.startTest()
-            }) {
+            Button(action: vm.startTest) {
                 Text("Start test")
                     .fontWeight(.bold)
                     .font(.system(size: 20))
@@ -32,21 +30,12 @@ struct AlgoTestView: View {
                     .foregroundColor(Color.white)
                     .background(Color.orange)
                     .cornerRadius(5)
-            }.disabled(!vm.ableToStart)
+            }.disabled(vm.disableToStart)
             
-            List(vm.list, id: \.0, rowContent: algoView)
+            List(vm.list, id: \.0) { title, time in
+                CellList(title: title, result: (time: time, color: .green))
+            }
         } //VStack
-    }
-    
-    private func algoView(title: String, time: TimeInterval) -> some View {
-        
-        let strTime = String(ceil(time * 10000) / 10000)
-        
-        return HStack{
-            Text(title)
-            Spacer()
-            Text(strTime)
-        }
     }
 }
 

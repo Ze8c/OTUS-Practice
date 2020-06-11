@@ -35,6 +35,11 @@
 		2466DD532432754D009F2FC4 /* TapAnimatig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466DD522432754D009F2FC4 /* TapAnimatig.swift */; };
 		24710823244F4B010068A847 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710822244F4B010068A847 /* UserDefaultsService.swift */; };
 		24710825244F4B1B0068A847 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710824244F4B1B0068A847 /* DBService.swift */; };
+		2476971E24917BEF002AC915 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476971D24917BEF002AC915 /* Task.swift */; };
+		2476972024917C03002AC915 /* TaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476971F24917C03002AC915 /* TaskScheduler.swift */; };
+		2476972224921979002AC915 /* DispatchQoSExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476972124921979002AC915 /* DispatchQoSExt.swift */; };
+		2476972424922143002AC915 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476972324922143002AC915 /* AppError.swift */; };
+		2476972624924267002AC915 /* CellList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476972524924267002AC915 /* CellList.swift */; };
 		247CC436246D6FFD00205319 /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247CC435246D6FFD00205319 /* ShareVC.swift */; };
 		2480819C247521E30023A709 /* AlgoTypesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480819B247521E30023A709 /* AlgoTypesView.swift */; };
 		2480819E247527AB0023A709 /* AlgoTypesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480819D247527AB0023A709 /* AlgoTypesVM.swift */; };
@@ -45,13 +50,13 @@
 		248081B224755AC20023A709 /* SuffixArrayProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248081B124755AC20023A709 /* SuffixArrayProcessor.swift */; };
 		248081B424755C200023A709 /* DictionaryProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248081B324755C200023A709 /* DictionaryProcessor.swift */; };
 		248081B624755D0B0023A709 /* SetProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248081B524755D0B0023A709 /* SetProcessor.swift */; };
-		2484CC9B246ADC1B00C59D56 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2484CC9A246ADC1B00C59D56 /* SwiftPackageProductDependency */; };
+		2484CC9B246ADC1B00C59D56 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2484CC9A246ADC1B00C59D56 /* KingfisherSwiftUI */; };
 		2484CC9E246AFA7100C59D56 /* ValidateINN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CC9D246AFA7100C59D56 /* ValidateINN.swift */; };
 		2484CCA0246B000900C59D56 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CC9F246B000900C59D56 /* StringExt.swift */; };
 		2484CCAF246BCC0000C59D56 /* OTUS-Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2484CD4E246C90BE00C59D56 /* LocaliseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CD4D246C90BE00C59D56 /* LocaliseTextView.swift */; };
 		248A39A7243DA51F007E8E23 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A39A6243DA51F007E8E23 /* AnimeAPI.swift */; };
-		2498113624598A180069C553 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2498113524598A180069C553 /* SwiftPackageProductDependency */; };
+		2498113624598A180069C553 /* ServiceLocator in Frameworks */ = {isa = PBXBuildFile; productRef = 2498113524598A180069C553 /* ServiceLocator */; };
 		249C4DF22421FE7300925F96 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */; };
 		249C4DF32421FE7300925F96 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE22421FE7300925F96 /* Configuration.swift */; };
 		249C4DF42421FE7300925F96 /* SynchronizedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE32421FE7300925F96 /* SynchronizedDictionary.swift */; };
@@ -76,7 +81,7 @@
 		24CCC5D0241F5C3B00A5528A /* NavPushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC5CF241F5C3B00A5528A /* NavPushButton.swift */; };
 		24CCC5D2241F5C7600A5528A /* NavPopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC5D1241F5C7600A5528A /* NavPopButton.swift */; };
 		24CCC5D4241F5D0700A5528A /* NavVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC5D3241F5D0700A5528A /* NavVM.swift */; };
-		24D7955E2476779E0016D1AF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 24D7955D2476779E0016D1AF /* SwiftPackageProductDependency */; };
+		24D7955E2476779E0016D1AF /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 24D7955D2476779E0016D1AF /* RealmSwift */; };
 		24DE27C5243C42F1002D8B00 /* FilteringString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE27C4243C42F1002D8B00 /* FilteringString.swift */; };
 		24DF7775240E327700D80C8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DF7774240E327700D80C8E /* AppDelegate.swift */; };
 		24DF7777240E327700D80C8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DF7776240E327700D80C8E /* SceneDelegate.swift */; };
@@ -137,6 +142,11 @@
 		2466DD522432754D009F2FC4 /* TapAnimatig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapAnimatig.swift; sourceTree = "<group>"; };
 		24710822244F4B010068A847 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		24710824244F4B1B0068A847 /* DBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBService.swift; sourceTree = "<group>"; };
+		2476971D24917BEF002AC915 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		2476971F24917C03002AC915 /* TaskScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskScheduler.swift; sourceTree = "<group>"; };
+		2476972124921979002AC915 /* DispatchQoSExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQoSExt.swift; sourceTree = "<group>"; };
+		2476972324922143002AC915 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		2476972524924267002AC915 /* CellList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellList.swift; sourceTree = "<group>"; };
 		247CC435246D6FFD00205319 /* ShareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
 		2480819B247521E30023A709 /* AlgoTypesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoTypesView.swift; sourceTree = "<group>"; };
 		2480819D247527AB0023A709 /* AlgoTypesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoTypesVM.swift; sourceTree = "<group>"; };
@@ -205,9 +215,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24D7955E2476779E0016D1AF /* BuildFile in Frameworks */,
-				2484CC9B246ADC1B00C59D56 /* BuildFile in Frameworks */,
-				2498113624598A180069C553 /* BuildFile in Frameworks */,
+				24D7955E2476779E0016D1AF /* RealmSwift in Frameworks */,
+				2484CC9B246ADC1B00C59D56 /* KingfisherSwiftUI in Frameworks */,
+				2498113624598A180069C553 /* ServiceLocator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,8 +227,9 @@
 		2419224A246DE7C50090A21C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2476971C24917B38002AC915 /* Job */,
 				248081A82475303B0023A709 /* Saving */,
-				248081A724752FFA0023A709 /* TestStructures */,
+				248081AA247532D30023A709 /* StructureProcessor */,
 				248A39A6243DA51F007E8E23 /* AnimeAPI.swift */,
 			);
 			path = Services;
@@ -298,6 +309,8 @@
 		245573A4240F68D900B6CDDB /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				24C28DD12473FD3E009F0476 /* AlgoProvider.swift */,
+				2476972324922143002AC915 /* AppError.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -340,6 +353,7 @@
 				24CCC5CC241F5AAC00A5528A /* Navigation */,
 				2454F8E4242CD422001AA9EE /* Badge.swift */,
 				24AD81F72446FFA0004C4EC1 /* Cache.swift */,
+				2476972524924267002AC915 /* CellList.swift */,
 				2443AED9241A1CA2009DDCEB /* CustomButton.swift */,
 				24DE27C4243C42F1002D8B00 /* FilteringString.swift */,
 				245573B7240F8EC300B6CDDB /* LazyView.swift */,
@@ -358,6 +372,15 @@
 			path = Diagram;
 			sourceTree = "<group>";
 		};
+		2476971C24917B38002AC915 /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				2476971D24917BEF002AC915 /* Task.swift */,
+				2476971F24917C03002AC915 /* TaskScheduler.swift */,
+			);
+			path = Job;
+			sourceTree = "<group>";
+		};
 		2480819A247518E90023A709 /* AlgoBigO */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,15 +388,6 @@
 				2480819F247528770023A709 /* AlgoTestView.swift */,
 			);
 			path = AlgoBigO;
-			sourceTree = "<group>";
-		};
-		248081A724752FFA0023A709 /* TestStructures */ = {
-			isa = PBXGroup;
-			children = (
-				24C28DD12473FD3E009F0476 /* AlgoProvider.swift */,
-				248081AA247532D30023A709 /* StructureProcessor */,
-			);
-			path = TestStructures;
 			sourceTree = "<group>";
 		};
 		248081A82475303B0023A709 /* Saving */ = {
@@ -488,8 +502,9 @@
 		249C4E042422066F00925F96 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				249C4E012422066000925F96 /* RandomAccessCollectionExt.swift */,
 				249C4E0824224BEC00925F96 /* ColorExt.swift */,
+				2476972124921979002AC915 /* DispatchQoSExt.swift */,
+				249C4E012422066000925F96 /* RandomAccessCollectionExt.swift */,
 				2484CC9F246B000900C59D56 /* StringExt.swift */,
 			);
 			path = Data;
@@ -582,9 +597,9 @@
 			);
 			name = "OTUS-Practice";
 			packageProductDependencies = (
-				2498113524598A180069C553 /* SwiftPackageProductDependency */,
-				2484CC9A246ADC1B00C59D56 /* SwiftPackageProductDependency */,
-				24D7955D2476779E0016D1AF /* SwiftPackageProductDependency */,
+				2498113524598A180069C553 /* ServiceLocator */,
+				2484CC9A246ADC1B00C59D56 /* KingfisherSwiftUI */,
+				24D7955D2476779E0016D1AF /* RealmSwift */,
 			);
 			productName = "OTUS-Practice";
 			productReference = 24DF7771240E327700D80C8E /* OTUS-Practice.app */;
@@ -619,8 +634,8 @@
 			);
 			mainGroup = 24DF7768240E327700D80C8E;
 			packageReferences = (
-				2484CC99246ADC1B00C59D56 /* RemoteSwiftPackageReference */,
-				24D7955C2476779E0016D1AF /* RemoteSwiftPackageReference */,
+				2484CC99246ADC1B00C59D56 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				24D7955C2476779E0016D1AF /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 24DF7772240E327700D80C8E /* Products */;
 			projectDirPath = "";
@@ -670,8 +685,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				249C4E002421FE7300925F96 /* OpenISO8601DateFormatter.swift in Sources */,
+				2476971E24917BEF002AC915 /* Task.swift in Sources */,
 				2466DD532432754D009F2FC4 /* TapAnimatig.swift in Sources */,
 				24DE27C5243C42F1002D8B00 /* FilteringString.swift in Sources */,
+				2476972024917C03002AC915 /* TaskScheduler.swift in Sources */,
 				249C4E0924224BEC00925F96 /* ColorExt.swift in Sources */,
 				249C4DFE2421FE7300925F96 /* Models.swift in Sources */,
 				2454F873242CB732001AA9EE /* ImageExt.swift in Sources */,
@@ -696,6 +713,7 @@
 				24192254246EB3510090A21C /* FileService.swift in Sources */,
 				24CCC5D4241F5D0700A5528A /* NavVM.swift in Sources */,
 				249C4DF22421FE7300925F96 /* JSONEncodingHelper.swift in Sources */,
+				2476972624924267002AC915 /* CellList.swift in Sources */,
 				2419224F246EAECA0090A21C /* SharingService.swift in Sources */,
 				249C4DFD2421FE7300925F96 /* URLSessionImplementations.swift in Sources */,
 				24DF7777240E327700D80C8E /* SceneDelegate.swift in Sources */,
@@ -710,6 +728,7 @@
 				245573B5240F7D3F00B6CDDB /* DetailInfo.swift in Sources */,
 				2454F8E5242CD422001AA9EE /* Badge.swift in Sources */,
 				248081A2247528E30023A709 /* AlgoTestVM.swift in Sources */,
+				2476972224921979002AC915 /* DispatchQoSExt.swift in Sources */,
 				2443AED8241A1665009DDCEB /* AnyTransitionExt.swift in Sources */,
 				249C4DF82421FE7300925F96 /* CodableHelper.swift in Sources */,
 				24CCC5D2241F5C7600A5528A /* NavPopButton.swift in Sources */,
@@ -723,6 +742,7 @@
 				249C4DFF2421FE7300925F96 /* JSONDataEncoding.swift in Sources */,
 				245573AC240F699D00B6CDDB /* SecondView.swift in Sources */,
 				249C4DFC2421FE7300925F96 /* APIHelper.swift in Sources */,
+				2476972424922143002AC915 /* AppError.swift in Sources */,
 				2484CD4E246C90BE00C59D56 /* LocaliseTextView.swift in Sources */,
 				249C4DF52421FE7300925F96 /* Extensions.swift in Sources */,
 				2466DD4D24326E46009F2FC4 /* PathDiagram.swift in Sources */,
@@ -995,7 +1015,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2484CC99246ADC1B00C59D56 /* RemoteSwiftPackageReference */ = {
+		2484CC99246ADC1B00C59D56 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1003,7 +1023,7 @@
 				kind = branch;
 			};
 		};
-		24D7955C2476779E0016D1AF /* RemoteSwiftPackageReference */ = {
+		24D7955C2476779E0016D1AF /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
@@ -1014,18 +1034,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2484CC9A246ADC1B00C59D56 /* SwiftPackageProductDependency */ = {
+		2484CC9A246ADC1B00C59D56 /* KingfisherSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2484CC99246ADC1B00C59D56 /* RemoteSwiftPackageReference */;
+			package = 2484CC99246ADC1B00C59D56 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = KingfisherSwiftUI;
 		};
-		2498113524598A180069C553 /* SwiftPackageProductDependency */ = {
+		2498113524598A180069C553 /* ServiceLocator */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ServiceLocator;
 		};
-		24D7955D2476779E0016D1AF /* SwiftPackageProductDependency */ = {
+		24D7955D2476779E0016D1AF /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 24D7955C2476779E0016D1AF /* RemoteSwiftPackageReference */;
+			package = 24D7955C2476779E0016D1AF /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

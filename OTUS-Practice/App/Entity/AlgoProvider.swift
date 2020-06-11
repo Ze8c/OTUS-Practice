@@ -54,11 +54,6 @@ struct SuffixSequence: Sequence {
     }
 }
 
-struct Algo {
-    var name: String
-    //var color
-}
-
 struct AlgoProvider {
     
     var all: [String] {
@@ -116,25 +111,4 @@ struct AlgoProvider {
             "Simulated annealing",
         ]
     }
-    
-    lazy var allMapSuffix: [SuffixSequence] = all.map { SuffixSequence(string: $0) }
-    
-    
-    var sortings: [Algo] {
-        return [
-            Algo(name: "Insertion Sort"),
-            Algo(name: "Selection Sort"),
-            Algo(name: "Shell Sort"),
-            Algo(name: "Quicksort"),
-            Algo(name: "Merge Sort"),
-            Algo(name: "Heap Sort"),
-            Algo(name: "Introsort"),
-            Algo(name: "Counting Sort"),
-            Algo(name: "Radix Sort"),
-            Algo(name: "Topological Sort"),
-            Algo(name: "Bubble Sort"),
-            Algo(name: "Slow Sort")
-        ]
-    }
-    
 }
