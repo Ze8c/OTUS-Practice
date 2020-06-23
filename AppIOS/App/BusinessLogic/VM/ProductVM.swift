@@ -14,6 +14,9 @@ final class ProductVM: ObservableObject {
     private var bag = Set<AnyCancellable>()
     private let cache = Cache<Product, [Product]>()
     
+    let algoVM: AlgoTypesVM
+    let reduxStore: Store<Int, ActionReduxView>
+    
     @Published var selected: Int? = nil
     @Published var query: String = ""
     @Published var lastAppearElement: Product = .naught
@@ -25,6 +28,16 @@ final class ProductVM: ObservableObject {
     var filters: Array<String>
     
     init(serviceAPI: AbstractAnimeAPI?, db: DBAbstract?) {
+        
+        algoVM = AlgoTypesVM()
+        reduxStore = Store<Int, ActionReduxView>(initialState: 0) { prevState, action in
+            switch action {
+            case .increment:
+                return prevState + 1
+            case .decrement:
+                return prevState - 1
+            }
+        }
         
         filters = ProductType.allCases
             .map { $0.rawValue }

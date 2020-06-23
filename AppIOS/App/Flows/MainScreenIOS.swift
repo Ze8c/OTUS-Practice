@@ -39,11 +39,18 @@ struct MainScreenIOS: View {
                 }
             */
             AlgoTypesView()
-                .environmentObject(AlgoTypesVM())
+                .environmentObject(vm.algoVM)
                 .tag(Tabs.second)
                 .tabItem {
                     Image(systemName: "checkmark.seal")
                     Text("2")
+                }
+            ReduxView()
+                .environmentObject(vm.reduxStore)
+                .tag(Tabs.third)
+                .tabItem {
+                    Image(systemName: "arrow.3.trianglepath")
+                    Text("3")
                 }
         }
     }

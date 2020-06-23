@@ -165,6 +165,7 @@
 		EC65604124A25C0C00798CC6 /* AlgoTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480819F247528770023A709 /* AlgoTestView.swift */; };
 		EC65604224A266C800798CC6 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573B7240F8EC300B6CDDB /* LazyView.swift */; };
 		EC65604324A266C900798CC6 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573B7240F8EC300B6CDDB /* LazyView.swift */; };
+		EC65604624A27FE500798CC6 /* ReduxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65604524A27FE500798CC6 /* ReduxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -343,6 +344,7 @@
 		EC65602124A258B200798CC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC65602424A258B200798CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC65602624A258B200798CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC65604524A27FE500798CC6 /* ReduxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,6 +473,7 @@
 				245573B2240F790800B6CDDB /* AnimeSearch */,
 				245573B3240F791E00B6CDDB /* CustomNavigation */,
 				2484CD4C246C907400C59D56 /* LocaliseText */,
+				EC65604424A27F8400798CC6 /* TestingRedux */,
 				2484CC9C246AFA3F00C59D56 /* ValidateINN */,
 			);
 			path = Flows;
@@ -1020,6 +1023,14 @@
 			path = BusinessLogic;
 			sourceTree = "<group>";
 		};
+		EC65604424A27F8400798CC6 /* TestingRedux */ = {
+			isa = PBXGroup;
+			children = (
+				EC65604524A27FE500798CC6 /* ReduxView.swift */,
+			);
+			path = TestingRedux;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1328,6 +1339,7 @@
 				2476972424922143002AC915 /* AppError.swift in Sources */,
 				2484CD4E246C90BE00C59D56 /* LocaliseTextView.swift in Sources */,
 				249C4DF52421FE7300925F96 /* Extensions.swift in Sources */,
+				EC65604624A27FE500798CC6 /* ReduxView.swift in Sources */,
 				2466DD4D24326E46009F2FC4 /* PathDiagram.swift in Sources */,
 				EC655FD924A22AEC00798CC6 /* HandleTestAndButton.swift in Sources */,
 				245573B8240F8EC300B6CDDB /* LazyView.swift in Sources */,
