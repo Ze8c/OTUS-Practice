@@ -10,8 +10,24 @@ import SwiftUI
 
 struct MainScreenCatalyst: View {
     
+    @EnvironmentObject var vm: MainScreenCatalystVM
+    
     var body: some View {
-        AlgoTypesView().environmentObject(AlgoTypesVM())
+        TabView() {
+            AlgoTypesView()
+                .environmentObject(vm.algoVM)
+                .tabItem {
+                    Image(systemName: "checkmark.seal")
+                    Text("1")
+                }
+            
+            View3D()
+                .environmentObject(vm.view3DVM)
+                .tabItem {
+                    Image(systemName: "view.3d")
+                    Text("2")
+                }
+        }
     }
 }
 
