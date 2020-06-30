@@ -34,7 +34,7 @@ final class TaskScheduler {
         if nameQueue.isEmpty {
             queue = DispatchQueue.global(qos: qos)
         } else {
-            queue = DispatchQueue(label: nameQueue, qos: qos.value)
+            queue = DispatchQueue(label: nameQueue, qos: qos.value, attributes: .concurrent)
         }
     }
     
