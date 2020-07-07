@@ -101,6 +101,8 @@
 		EC24742024A12D1A00D35F94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC24741F24A12D1A00D35F94 /* Assets.xcassets */; };
 		EC24742324A12D1A00D35F94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC24742224A12D1A00D35F94 /* Preview Assets.xcassets */; };
 		EC24742824A12D1A00D35F94 /* WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EC24740424A12D1700D35F94 /* WatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EC2E924924B464B0006762E1 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2E924824B464B0006762E1 /* Shake.swift */; };
+		EC2E924B24B464D8006762E1 /* ScoreModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2E924A24B464D8006762E1 /* ScoreModifier.swift */; };
 		EC32799424A5207E00844DC8 /* View3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC32799324A5207E00844DC8 /* View3D.swift */; };
 		EC32799524A5207E00844DC8 /* View3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC32799324A5207E00844DC8 /* View3D.swift */; };
 		EC655FC424A211A100798CC6 /* ArrayProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248081AB247533000023A709 /* ArrayProcessor.swift */; };
@@ -346,6 +348,8 @@
 		EC24742224A12D1A00D35F94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC24742424A12D1A00D35F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC24742524A12D1A00D35F94 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		EC2E924824B464B0006762E1 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
+		EC2E924A24B464D8006762E1 /* ScoreModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModifier.swift; sourceTree = "<group>"; };
 		EC32799324A5207E00844DC8 /* View3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View3D.swift; sourceTree = "<group>"; };
 		EC655FD124A213E900798CC6 /* AlgoTypesWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoTypesWatch.swift; sourceTree = "<group>"; };
 		EC655FD824A22AEC00798CC6 /* HandleTestAndButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleTestAndButton.swift; sourceTree = "<group>"; };
@@ -552,6 +556,7 @@
 		245573B6240F8EA100B6CDDB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EC2E924724B46499006762E1 /* Animation */,
 				2466DD4B24326E2B009F2FC4 /* Diagram */,
 				24CCC5CC241F5AAC00A5528A /* Navigation */,
 				2454F8E4242CD422001AA9EE /* Badge.swift */,
@@ -797,6 +802,15 @@
 				EC24742224A12D1A00D35F94 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC2E924724B46499006762E1 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				EC2E924824B464B0006762E1 /* Shake.swift */,
+				EC2E924A24B464D8006762E1 /* ScoreModifier.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		EC655FBF24A1FF2400798CC6 /* MainScreen */ = {
@@ -1375,6 +1389,7 @@
 				249C4DF42421FE7300925F96 /* SynchronizedDictionary.swift in Sources */,
 				24C28DD22473FD3E009F0476 /* AlgoProvider.swift in Sources */,
 				2419224D246DED500090A21C /* LocaliseTextVM.swift in Sources */,
+				EC2E924924B464B0006762E1 /* Shake.swift in Sources */,
 				2484CCA0246B000900C59D56 /* StringExt.swift in Sources */,
 				24CCC5CE241F5BF900A5528A /* NavController.swift in Sources */,
 				2466DD4F24326E93009F2FC4 /* DiagramEffect.swift in Sources */,
@@ -1423,6 +1438,7 @@
 				EC655FD924A22AEC00798CC6 /* HandleTestAndButton.swift in Sources */,
 				245573B8240F8EC300B6CDDB /* LazyView.swift in Sources */,
 				24710823244F4B010068A847 /* UserDefaultsService.swift in Sources */,
+				EC2E924B24B464D8006762E1 /* ScoreModifier.swift in Sources */,
 				ECB8363524A359ED0083760D /* MaterialShader.metal in Sources */,
 				24F5A4242420AFB900F4A1C3 /* NextSecondView.swift in Sources */,
 				2484CC9E246AFA7100C59D56 /* ValidateINN.swift in Sources */,

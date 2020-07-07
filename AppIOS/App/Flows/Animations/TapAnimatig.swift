@@ -61,34 +61,6 @@ struct TapAnimatig: View {
     }
 }
 
-
-struct Shake: GeometryEffect {
-    var animatableData: CGFloat
-    func effectValue(size: CGSize) -> ProjectionTransform {
-        .init(CGAffineTransform(translationX: -30*sin(animatableData * .pi), y: 0))
-    }
-}
-
-struct ScoreModifier: AnimatableModifier {
-    
-    var animatableData: CGFloat
-    
-    func body(content: Content) -> some View {
-        content
-            .overlay(LabelView(score: animatableData))
-            .modifier(Shake(animatableData: animatableData))
-    }
-    
-    struct LabelView: View {
-        let score: CGFloat
-        var body: some View {
-            Text("\(score, specifier: "%0.2f") %")
-                .frame(width: 300)
-                .font(.headline)
-        }
-    }
-}
-
 struct TapAnimatig_Previews: PreviewProvider {
     static var previews: some View {
         TapAnimatig()
