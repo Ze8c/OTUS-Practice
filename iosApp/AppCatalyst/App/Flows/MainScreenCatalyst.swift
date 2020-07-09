@@ -18,21 +18,28 @@ struct MainScreenCatalyst: View {
                 .environmentObject(vm.algoVM)
                 .tabItem {
                     Image(systemName: "checkmark.seal")
-                    Text("1")
+                    Text("Algorithms")
                 }
             
             View3D()
                 .environmentObject(vm.view3DVM)
                 .tabItem {
                     Image(systemName: "view.3d")
-                    Text("2")
+                    Text("Metal")
                 }
             
             ReduxView()
                 .environmentObject(vm.reduxStore)
                 .tabItem {
                     Image(systemName: "arrow.3.trianglepath")
-                    Text("3")
+                    Text("Redux")
+                }
+            
+            AnimeSearch()
+                .environmentObject(vm.animeVM)
+                .tabItem {
+                    Image(systemName: "a")
+                    Text("Anime")
                 }
         }
     }

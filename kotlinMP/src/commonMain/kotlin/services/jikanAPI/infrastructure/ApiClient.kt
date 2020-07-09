@@ -28,7 +28,7 @@ open class ApiClient(
         httpClientEngine: HttpClientEngine?,
         serializer: KotlinxSerializer) {
 
-    @OptIn(UnstableDefault::class)
+//    @OptIn(UnstableDefault::class)
     constructor(
             baseUrl: String,
             httpClientEngine: HttpClientEngine?,

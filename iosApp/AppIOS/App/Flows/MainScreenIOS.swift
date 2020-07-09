@@ -17,13 +17,14 @@ enum Tabs: Hashable {
 
 struct MainScreenIOS: View {
     
-    @EnvironmentObject var vm: ProductVM
+    @EnvironmentObject var vm: MainScreenIOSVM
     
     @State private var selection: Tabs = .first
     
     var body: some View {
         TabView(selection: $selection) {
-            FirstView()
+            AnimeSearch()
+                .environmentObject(vm.animeVM)
                 .tag(Tabs.first)
                 .tabItem {
                     Image(systemName: "scope")

@@ -1,5 +1,5 @@
 //
-//  FirstView.swift
+//  AnimeSearch.swift
 //  OTUS-Practice
 //
 //  Created by Mak on 04.03.2020.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FirstView: View {
+struct AnimeSearch: View {
     
     @EnvironmentObject var vm: ProductVM
     
@@ -60,9 +60,9 @@ struct FirstView: View {
     }
 }
 
-struct FirstView_Previews: PreviewProvider {
+struct AnimeSearch_Previews: PreviewProvider {
     static var previews: some View {
-        FirstView()
+        AnimeSearch()
             .environmentObject(ProductVM(serviceAPI: AnimeAPIImpl(), db: DBImpl()))
     }
 }

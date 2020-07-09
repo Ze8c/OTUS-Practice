@@ -31,8 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         let mainView = contentView
-            .environmentObject(ProductVM(serviceAPI: serviceLocator.tryGet(),
-                                         db: serviceLocator.tryGet()))
+            .environmentObject(MainScreenIOSVM())
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

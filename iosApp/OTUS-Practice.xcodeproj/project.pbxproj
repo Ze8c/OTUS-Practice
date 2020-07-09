@@ -23,7 +23,7 @@
 		2454F873242CB732001AA9EE /* ImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454F872242CB732001AA9EE /* ImageExt.swift */; };
 		2454F8E5242CD422001AA9EE /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454F8E4242CD422001AA9EE /* Badge.swift */; };
 		2454F8E7242CD9C1001AA9EE /* StretchyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454F8E6242CD9C1001AA9EE /* StretchyHeader.swift */; };
-		245573AA240F698B00B6CDDB /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573A9240F698B00B6CDDB /* FirstView.swift */; };
+		245573AA240F698B00B6CDDB /* AnimeSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573A9240F698B00B6CDDB /* AnimeSearch.swift */; };
 		245573AC240F699D00B6CDDB /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573AB240F699D00B6CDDB /* SecondView.swift */; };
 		245573AE240F721A00B6CDDB /* ProductVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573AD240F721A00B6CDDB /* ProductVM.swift */; };
 		245573B5240F7D3F00B6CDDB /* DetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573B4240F7D3F00B6CDDB /* DetailInfo.swift */; };
@@ -53,7 +53,6 @@
 		2484CC9B246ADC1B00C59D56 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2484CC9A246ADC1B00C59D56 /* KingfisherSwiftUI */; };
 		2484CC9E246AFA7100C59D56 /* ValidateINN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CC9D246AFA7100C59D56 /* ValidateINN.swift */; };
 		2484CCA0246B000900C59D56 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CC9F246B000900C59D56 /* StringExt.swift */; };
-		2484CCAF246BCC0000C59D56 /* OTUS-Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2484CD4E246C90BE00C59D56 /* LocaliseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CD4D246C90BE00C59D56 /* LocaliseTextView.swift */; };
 		248A39A7243DA51F007E8E23 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A39A6243DA51F007E8E23 /* AnimeAPI.swift */; };
 		249C4DF22421FE7300925F96 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */; };
@@ -178,10 +177,9 @@
 		EC6EDCAE24A614CB00B71D10 /* View3DVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAC24A614CB00B71D10 /* View3DVM.swift */; };
 		EC6EDCB024A616B500B71D10 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAF24A616B500B71D10 /* Renderer.swift */; };
 		EC6EDCB124A616B500B71D10 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAF24A616B500B71D10 /* Renderer.swift */; };
-		EC70890C24B4AFFE00C8525E /* kotlinMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC70890524B4AFFE00C8525E /* kotlinMP.framework */; };
-		EC70890D24B4AFFE00C8525E /* kotlinMP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC70890524B4AFFE00C8525E /* kotlinMP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EC708EFB24B4B63300C8525E /* kotlinMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC70890524B4AFFE00C8525E /* kotlinMP.framework */; };
-		EC708EFC24B4B63300C8525E /* kotlinMP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC70890524B4AFFE00C8525E /* kotlinMP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EC91C0FA24B780470020E878 /* IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC91C0F924B780470020E878 /* IOSTests.swift */; };
+		EC91C10124B780EA0020E878 /* kotlinMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC70890524B4AFFE00C8525E /* kotlinMP.framework */; };
+		EC91C10224B780EA0020E878 /* kotlinMP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC70890524B4AFFE00C8525E /* kotlinMP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ECB8362824A358F20083760D /* texture_forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB8362724A358F20083760D /* texture_forest.jpg */; };
 		ECB8362924A358F20083760D /* texture_forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB8362724A358F20083760D /* texture_forest.jpg */; };
 		ECB8362C24A359060083760D /* teacup.mtl in Resources */ = {isa = PBXBuildFile; fileRef = ECB8362A24A359060083760D /* teacup.mtl */; };
@@ -196,16 +194,48 @@
 		ECB8363924A35A8C0083760D /* float4x4Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8363724A35A8C0083760D /* float4x4Ext.swift */; };
 		ECB8363C24A35E420083760D /* MTKViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8363B24A35E420083760D /* MTKViewUI.swift */; };
 		ECB8363D24A35E420083760D /* MTKViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8363B24A35E420083760D /* MTKViewUI.swift */; };
+		ECC76ECE24B7850300F45122 /* OTUS-Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ECC76ED224B7A4C800F45122 /* AnimeSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573A9240F698B00B6CDDB /* AnimeSearch.swift */; };
+		ECC76ED324B7A4CB00F45122 /* DetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573B4240F7D3F00B6CDDB /* DetailInfo.swift */; };
+		ECC76ED424B7A52B00F45122 /* ProductVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573AD240F721A00B6CDDB /* ProductVM.swift */; };
+		ECC76ED624B7A5F600F45122 /* MainScreenIOSVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC76ED524B7A5F600F45122 /* MainScreenIOSVM.swift */; };
+		ECC76ED724B7A7C200F45122 /* OpenISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DF12421FE7300925F96 /* OpenISO8601DateFormatter.swift */; };
+		ECC76EDC24B7A80F00F45122 /* JSONDataEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DF02421FE7300925F96 /* JSONDataEncoding.swift */; };
+		ECC76EDD24B7A81300F45122 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEF2421FE7300925F96 /* Models.swift */; };
+		ECC76EDE24B7A81700F45122 /* URLSessionImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEE2421FE7300925F96 /* URLSessionImplementations.swift */; };
+		ECC76EDF24B7A81A00F45122 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DED2421FE7300925F96 /* APIHelper.swift */; };
+		ECC76EE024B7A81D00F45122 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE82421FE7300925F96 /* CodableHelper.swift */; };
+		ECC76EE124B7A82300F45122 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */; };
+		ECC76EE224B7A82300F45122 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE22421FE7300925F96 /* Configuration.swift */; };
+		ECC76EE324B7A82300F45122 /* SynchronizedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE32421FE7300925F96 /* SynchronizedDictionary.swift */; };
+		ECC76EE424B7A82300F45122 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE42421FE7300925F96 /* Extensions.swift */; };
+		ECC76EE524B7A82300F45122 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE72421FE7300925F96 /* APIs.swift */; };
+		ECC76EE624B7A82A00F45122 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEC2421FE7300925F96 /* Product.swift */; };
+		ECC76EE724B7A82A00F45122 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEA2421FE7300925F96 /* ProductList.swift */; };
+		ECC76EE824B7A82A00F45122 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEB2421FE7300925F96 /* ErrorModel.swift */; };
+		ECC76EE924B7A82F00F45122 /* SearchAnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE62421FE7300925F96 /* SearchAnimeAPI.swift */; };
+		ECC76EEA24B7A86400F45122 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454F8E4242CD422001AA9EE /* Badge.swift */; };
+		ECC76EEB24B7A86F00F45122 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AD81F72446FFA0004C4EC1 /* Cache.swift */; };
+		ECC76EEC24B7A87C00F45122 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443AED9241A1CA2009DDCEB /* CustomButton.swift */; };
+		ECC76EED24B7A89100F45122 /* FilteringString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE27C4243C42F1002D8B00 /* FilteringString.swift */; };
+		ECC76EEE24B7A8A400F45122 /* Spiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E0A2422849D00925F96 /* Spiner.swift */; };
+		ECC76EEF24B7A8AD00F45122 /* StretchyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454F8E6242CD9C1001AA9EE /* StretchyHeader.swift */; };
+		ECC76EF024B7A8F900F45122 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E0824224BEC00925F96 /* ColorExt.swift */; };
+		ECC76EF224B7AACA00F45122 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = ECC76EF124B7AACA00F45122 /* KingfisherSwiftUI */; };
+		ECC76EF324B7AADB00F45122 /* OTUS-Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ECC76EF824B7AAEC00F45122 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECC76EF724B7AAEC00F45122 /* RealmSwift */; };
+		ECC76EF924B7ABC200F45122 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A39A6243DA51F007E8E23 /* AnimeAPI.swift */; };
+		ECC76EFA24B7ABD200F45122 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24192251246EB1030090A21C /* DataProvider.swift */; };
+		ECC76EFB24B7ABD200F45122 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710824244F4B1B0068A847 /* DBService.swift */; };
+		ECC76EFC24B7ABD200F45122 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24192253246EB3510090A21C /* FileService.swift */; };
+		ECC76EFD24B7ABD200F45122 /* SharingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2419224E246EAECA0090A21C /* SharingService.swift */; };
+		ECC76EFE24B7ABD200F45122 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710822244F4B010068A847 /* UserDefaultsService.swift */; };
+		ECC76EFF24B7AC5700F45122 /* RandomAccessCollectionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E012422066000925F96 /* RandomAccessCollectionExt.swift */; };
+		ECC76F0024B7ACBA00F45122 /* AnyTransitionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443AED7241A1665009DDCEB /* AnyTransitionExt.swift */; };
+		ECC76F0124B7ACBA00F45122 /* ImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454F872242CB732001AA9EE /* ImageExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2484CCAD246BCC0000C59D56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2484CCA4246BCC0000C59D56;
-			remoteInfo = "OTUS-Share";
-		};
 		EC24741224A12D1900D35F94 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
@@ -220,34 +250,44 @@
 			remoteGlobalIDString = EC24740324A12D1700D35F94;
 			remoteInfo = WatchApp;
 		};
-		EC70890A24B4AFFE00C8525E /* PBXContainerItemProxy */ = {
+		EC91C0FC24B780470020E878 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EC70890424B4AFFE00C8525E;
-			remoteInfo = KotlinMP;
+			remoteGlobalIDString = 24DF7770240E327700D80C8E;
+			remoteInfo = "OTUS-Practice";
 		};
-		EC708EFD24B4B63300C8525E /* PBXContainerItemProxy */ = {
+		EC91C10324B780EA0020E878 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EC70890424B4AFFE00C8525E;
-			remoteInfo = KotlinMP;
+			remoteInfo = kotlinMP;
+		};
+		ECC76ECC24B784EF00F45122 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2484CCA4246BCC0000C59D56;
+			remoteInfo = "OTUS-Share";
+		};
+		ECC76ECF24B7850300F45122 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2484CCA4246BCC0000C59D56;
+			remoteInfo = "OTUS-Share";
+		};
+		ECC76EF424B7AADB00F45122 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2484CCA4246BCC0000C59D56;
+			remoteInfo = "OTUS-Share";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2484CCB3246BCC0000C59D56 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				2484CCAF246BCC0000C59D56 /* OTUS-Share.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EC24742924A12D1A00D35F94 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,26 +310,37 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC70890E24B4AFFE00C8525E /* Embed Frameworks */ = {
+		EC91C10524B780EA0020E878 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EC70890D24B4AFFE00C8525E /* kotlinMP.framework in Embed Frameworks */,
+				EC91C10224B780EA0020E878 /* kotlinMP.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC708EFF24B4B63300C8525E /* Embed Frameworks */ = {
+		ECC76ED124B7850300F45122 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolderSpec = 13;
 			files = (
-				EC708EFC24B4B63300C8525E /* kotlinMP.framework in Embed Frameworks */,
+				ECC76ECE24B7850300F45122 /* OTUS-Share.appex in Embed App Extensions */,
 			);
-			name = "Embed Frameworks";
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC76EF624B7AADB00F45122 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				ECC76EF324B7AADB00F45122 /* OTUS-Share.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -307,7 +358,7 @@
 		2454F872242CB732001AA9EE /* ImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExt.swift; sourceTree = "<group>"; };
 		2454F8E4242CD422001AA9EE /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		2454F8E6242CD9C1001AA9EE /* StretchyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeader.swift; sourceTree = "<group>"; };
-		245573A9240F698B00B6CDDB /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		245573A9240F698B00B6CDDB /* AnimeSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeSearch.swift; sourceTree = "<group>"; };
 		245573AB240F699D00B6CDDB /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		245573AD240F721A00B6CDDB /* ProductVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVM.swift; sourceTree = "<group>"; };
 		245573B4240F7D3F00B6CDDB /* DetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfo.swift; sourceTree = "<group>"; };
@@ -419,6 +470,9 @@
 		EC6EDCAC24A614CB00B71D10 /* View3DVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View3DVM.swift; sourceTree = "<group>"; };
 		EC6EDCAF24A616B500B71D10 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		EC70890524B4AFFE00C8525E /* kotlinMP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = kotlinMP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC91C0F724B780470020E878 /* IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC91C0F924B780470020E878 /* IOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSTests.swift; sourceTree = "<group>"; };
+		EC91C0FB24B780470020E878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECB8362724A358F20083760D /* texture_forest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture_forest.jpg; sourceTree = "<group>"; };
 		ECB8362A24A359060083760D /* teacup.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = teacup.mtl; sourceTree = "<group>"; };
 		ECB8362B24A359060083760D /* teacup.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = teacup.obj; sourceTree = "<group>"; };
@@ -426,6 +480,7 @@
 		ECB8363424A359ED0083760D /* MaterialShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MaterialShader.metal; sourceTree = "<group>"; };
 		ECB8363724A35A8C0083760D /* float4x4Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = float4x4Ext.swift; sourceTree = "<group>"; };
 		ECB8363B24A35E420083760D /* MTKViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTKViewUI.swift; sourceTree = "<group>"; };
+		ECC76ED524B7A5F600F45122 /* MainScreenIOSVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenIOSVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,7 +495,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC70890C24B4AFFE00C8525E /* kotlinMP.framework in Frameworks */,
+				EC91C10124B780EA0020E878 /* kotlinMP.framework in Frameworks */,
 				EC655FE024A2489300798CC6 /* ServiceLocator in Frameworks */,
 				24D7955E2476779E0016D1AF /* RealmSwift in Frameworks */,
 				2484CC9B246ADC1B00C59D56 /* KingfisherSwiftUI in Frameworks */,
@@ -458,7 +513,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC708EFB24B4B63300C8525E /* kotlinMP.framework in Frameworks */,
+				ECC76EF824B7AAEC00F45122 /* RealmSwift in Frameworks */,
+				ECC76EF224B7AACA00F45122 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,27 +525,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC91C0F424B780470020E878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2419224A246DE7C50090A21C /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				248081A82475303B0023A709 /* Saving */,
-				248A39A6243DA51F007E8E23 /* AnimeAPI.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		2443AED6241A1636009DDCEB /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				249C4E042422066F00925F96 /* Data */,
-				249C4E032422066800925F96 /* Visible */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		2443C49F2499EEDA00D9C97E /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,9 +576,6 @@
 			isa = PBXGroup;
 			children = (
 				245573B6240F8EA100B6CDDB /* Components */,
-				2443AED6241A1636009DDCEB /* Extensions */,
-				249C4DE02421FE7300925F96 /* OpenAPIs */,
-				2443C49F2499EEDA00D9C97E /* Packages */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -553,7 +595,6 @@
 			children = (
 				24DF7778240E327700D80C8E /* MainScreenIOS.swift */,
 				2454F86F242CB491001AA9EE /* Animations */,
-				245573B2240F790800B6CDDB /* AnimeSearch */,
 				245573B3240F791E00B6CDDB /* CustomNavigation */,
 				2484CD4C246C907400C59D56 /* LocaliseText */,
 				2484CC9C246AFA3F00C59D56 /* ValidateINN */,
@@ -573,7 +614,6 @@
 			children = (
 				24DF7774240E327700D80C8E /* AppDelegate.swift */,
 				24DF7776240E327700D80C8E /* SceneDelegate.swift */,
-				2419224A246DE7C50090A21C /* Services */,
 				248081A92475311F0023A709 /* VM */,
 			);
 			path = BusinessLogic;
@@ -582,7 +622,7 @@
 		245573B2240F790800B6CDDB /* AnimeSearch */ = {
 			isa = PBXGroup;
 			children = (
-				245573A9240F698B00B6CDDB /* FirstView.swift */,
+				245573A9240F698B00B6CDDB /* AnimeSearch.swift */,
 				245573B4240F7D3F00B6CDDB /* DetailInfo.swift */,
 			);
 			path = AnimeSearch;
@@ -604,12 +644,6 @@
 			children = (
 				2466DD4B24326E2B009F2FC4 /* Diagram */,
 				24CCC5CC241F5AAC00A5528A /* Navigation */,
-				2454F8E4242CD422001AA9EE /* Badge.swift */,
-				24AD81F72446FFA0004C4EC1 /* Cache.swift */,
-				2443AED9241A1CA2009DDCEB /* CustomButton.swift */,
-				24DE27C4243C42F1002D8B00 /* FilteringString.swift */,
-				249C4E0A2422849D00925F96 /* Spiner.swift */,
-				2454F8E6242CD9C1001AA9EE /* StretchyHeader.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -658,7 +692,7 @@
 			children = (
 				2443AED4241A0762009DDCEB /* ColumnVM.swift */,
 				2419224C246DED500090A21C /* LocaliseTextVM.swift */,
-				245573AD240F721A00B6CDDB /* ProductVM.swift */,
+				ECC76ED524B7A5F600F45122 /* MainScreenIOSVM.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -748,15 +782,6 @@
 			path = Visible;
 			sourceTree = "<group>";
 		};
-		249C4E042422066F00925F96 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				249C4E0824224BEC00925F96 /* ColorExt.swift */,
-				249C4E012422066000925F96 /* RandomAccessCollectionExt.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		24CCC5CC241F5AAC00A5528A /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -779,6 +804,7 @@
 				EC65601924A258B100798CC6 /* AppTV */,
 				EC24740524A12D1700D35F94 /* AppWatch */,
 				EC24741424A12D1900D35F94 /* AppWatch Extension */,
+				EC91C0F824B780470020E878 /* IOSTests */,
 				24DF7772240E327700D80C8E /* Products */,
 				EC655FDE24A2489300798CC6 /* Frameworks */,
 			);
@@ -794,6 +820,7 @@
 				EC655FE524A2524900798CC6 /* AppCatalyst.app */,
 				EC65601824A258B100798CC6 /* AppTV.app */,
 				EC70890524B4AFFE00C8525E /* kotlinMP.framework */,
+				EC91C0F724B780470020E878 /* IOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -900,8 +927,10 @@
 		EC655FC324A2112700798CC6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				248A39A6243DA51F007E8E23 /* AnimeAPI.swift */,
 				EC6EDCAF24A616B500B71D10 /* Renderer.swift */,
 				2476971C24917B38002AC915 /* Job */,
+				248081A82475303B0023A709 /* Saving */,
 				248081AA247532D30023A709 /* StructureProcessor */,
 			);
 			path = Services;
@@ -912,6 +941,7 @@
 			children = (
 				2480819D247527AB0023A709 /* AlgoTypesVM.swift */,
 				248081A1247528E30023A709 /* AlgoTestVM.swift */,
+				245573AD240F721A00B6CDDB /* ProductVM.swift */,
 				EC6EDCAC24A614CB00B71D10 /* View3DVM.swift */,
 			);
 			path = VM;
@@ -940,6 +970,8 @@
 				EC2E924724B46499006762E1 /* Animation */,
 				EC655FDB24A22AF200798CC6 /* Components */,
 				EC655FD624A227B900798CC6 /* Extensions */,
+				249C4DE02421FE7300925F96 /* OpenAPIs */,
+				2443C49F2499EEDA00D9C97E /* Packages */,
 				ECB8363024A3596D0083760D /* Shaders */,
 			);
 			path = Core;
@@ -949,6 +981,7 @@
 			isa = PBXGroup;
 			children = (
 				EC655FD724A227C700798CC6 /* Data */,
+				249C4E032422066800925F96 /* Visible */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -956,8 +989,10 @@
 		EC655FD724A227C700798CC6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				249C4E0824224BEC00925F96 /* ColorExt.swift */,
 				2476972124921979002AC915 /* DispatchQoSExt.swift */,
 				ECB8363724A35A8C0083760D /* float4x4Ext.swift */,
+				249C4E012422066000925F96 /* RandomAccessCollectionExt.swift */,
 				2484CC9F246B000900C59D56 /* StringExt.swift */,
 			);
 			path = Data;
@@ -966,10 +1001,16 @@
 		EC655FDB24A22AF200798CC6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2454F8E4242CD422001AA9EE /* Badge.swift */,
+				24AD81F72446FFA0004C4EC1 /* Cache.swift */,
 				2476972524924267002AC915 /* CellList.swift */,
+				2443AED9241A1CA2009DDCEB /* CustomButton.swift */,
+				24DE27C4243C42F1002D8B00 /* FilteringString.swift */,
 				EC655FD824A22AEC00798CC6 /* HandleTestAndButton.swift */,
 				245573B7240F8EC300B6CDDB /* LazyView.swift */,
 				ECB8363B24A35E420083760D /* MTKViewUI.swift */,
+				249C4E0A2422849D00925F96 /* Spiner.swift */,
+				2454F8E6242CD9C1001AA9EE /* StretchyHeader.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1059,6 +1100,7 @@
 			isa = PBXGroup;
 			children = (
 				2480819A247518E90023A709 /* AlgoBigO */,
+				245573B2240F790800B6CDDB /* AnimeSearch */,
 				EC65604424A27F8400798CC6 /* TestingRedux */,
 				ECB8363A24A35C170083760D /* View3D */,
 			);
@@ -1134,6 +1176,15 @@
 			path = TestingRedux;
 			sourceTree = "<group>";
 		};
+		EC91C0F824B780470020E878 /* IOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC91C0F924B780470020E878 /* IOSTests.swift */,
+				EC91C0FB24B780470020E878 /* Info.plist */,
+			);
+			path = IOSTests;
+			sourceTree = "<group>";
+		};
 		ECB8362624A358940083760D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1188,16 +1239,17 @@
 				24DF776D240E327700D80C8E /* Sources */,
 				24DF776E240E327700D80C8E /* Frameworks */,
 				24DF776F240E327700D80C8E /* Resources */,
-				2484CCB3246BCC0000C59D56 /* Embed App Extensions */,
 				EC24742924A12D1A00D35F94 /* Embed Watch Content */,
-				EC70890E24B4AFFE00C8525E /* Embed Frameworks */,
+				EC91C10524B780EA0020E878 /* Embed Frameworks */,
+				ECC76ED124B7850300F45122 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2484CCAE246BCC0000C59D56 /* PBXTargetDependency */,
 				EC24742724A12D1A00D35F94 /* PBXTargetDependency */,
-				EC70890B24B4AFFE00C8525E /* PBXTargetDependency */,
+				EC91C10424B780EA0020E878 /* PBXTargetDependency */,
+				ECC76ECD24B784EF00F45122 /* PBXTargetDependency */,
+				ECC76ED024B7850300F45122 /* PBXTargetDependency */,
 			);
 			name = "OTUS-Practice";
 			packageProductDependencies = (
@@ -1250,14 +1302,18 @@
 				EC655FE124A2524900798CC6 /* Sources */,
 				EC655FE224A2524900798CC6 /* Frameworks */,
 				EC655FE324A2524900798CC6 /* Resources */,
-				EC708EFF24B4B63300C8525E /* Embed Frameworks */,
+				ECC76EF624B7AADB00F45122 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EC708EFE24B4B63300C8525E /* PBXTargetDependency */,
+				ECC76EF524B7AADB00F45122 /* PBXTargetDependency */,
 			);
 			name = AppCatalyst;
+			packageProductDependencies = (
+				ECC76EF124B7AACA00F45122 /* KingfisherSwiftUI */,
+				ECC76EF724B7AAEC00F45122 /* RealmSwift */,
+			);
 			productName = AppCatalyst;
 			productReference = EC655FE524A2524900798CC6 /* AppCatalyst.app */;
 			productType = "com.apple.product-type.application";
@@ -1294,6 +1350,24 @@
 			productReference = EC70890524B4AFFE00C8525E /* kotlinMP.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		EC91C0F624B780470020E878 /* IOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC91C10024B780470020E878 /* Build configuration list for PBXNativeTarget "IOSTests" */;
+			buildPhases = (
+				EC91C0F324B780470020E878 /* Sources */,
+				EC91C0F424B780470020E878 /* Frameworks */,
+				EC91C0F524B780470020E878 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC91C0FD24B780470020E878 /* PBXTargetDependency */,
+			);
+			name = IOSTests;
+			productName = IOSTests;
+			productReference = EC91C0F724B780470020E878 /* IOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1326,6 +1400,10 @@
 					EC70890424B4AFFE00C8525E = {
 						CreatedOnToolsVersion = 11.5;
 					};
+					EC91C0F624B780470020E878 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 24DF7770240E327700D80C8E;
+					};
 				};
 			};
 			buildConfigurationList = 24DF776C240E327700D80C8E /* Build configuration list for PBXProject "OTUS-Practice" */;
@@ -1352,6 +1430,7 @@
 				EC655FE424A2524900798CC6 /* AppCatalyst */,
 				EC65601724A258B100798CC6 /* AppTV */,
 				EC70890424B4AFFE00C8525E /* kotlinMP */,
+				EC91C0F624B780470020E878 /* IOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1418,6 +1497,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC91C0F524B780470020E878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1472,7 +1558,7 @@
 				248081B0247537EA0023A709 /* TestStructureProcessor.swift in Sources */,
 				248081A0247528770023A709 /* AlgoTestView.swift in Sources */,
 				248081B624755D0B0023A709 /* SetProcessor.swift in Sources */,
-				245573AA240F698B00B6CDDB /* FirstView.swift in Sources */,
+				245573AA240F698B00B6CDDB /* AnimeSearch.swift in Sources */,
 				2454F871242CB4EA001AA9EE /* ThirdView.swift in Sources */,
 				24192252246EB1030090A21C /* DataProvider.swift in Sources */,
 				24AD81F82446FFA0004C4EC1 /* Cache.swift in Sources */,
@@ -1536,6 +1622,7 @@
 				2484CC9E246AFA7100C59D56 /* ValidateINN.swift in Sources */,
 				249C4DFB2421FE7300925F96 /* Product.swift in Sources */,
 				24DF7779240E327700D80C8E /* MainScreenIOS.swift in Sources */,
+				ECC76ED624B7A5F600F45122 /* MainScreenIOSVM.swift in Sources */,
 				249C4DF62421FE7300925F96 /* SearchAnimeAPI.swift in Sources */,
 				249C4E022422066000925F96 /* RandomAccessCollectionExt.swift in Sources */,
 				24CCC5D0241F5C3B00A5528A /* NavPushButton.swift in Sources */,
@@ -1575,37 +1662,71 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECB8363324A359AB0083760D /* TextureShader.metal in Sources */,
+				ECC76EF024B7A8F900F45122 /* ColorExt.swift in Sources */,
+				ECC76EEA24B7A86400F45122 /* Badge.swift in Sources */,
+				ECC76EE324B7A82300F45122 /* SynchronizedDictionary.swift in Sources */,
 				EC65601124A2558D00798CC6 /* AlgoTestView.swift in Sources */,
 				EC6EDCAB24A612FF00B71D10 /* MainScreenCatalystVM.swift in Sources */,
 				EC65600C24A2542A00798CC6 /* TaskScheduler.swift in Sources */,
+				ECC76EEB24B7A86F00F45122 /* Cache.swift in Sources */,
 				EC32799524A5207E00844DC8 /* View3D.swift in Sources */,
 				EC655FE824A2524900798CC6 /* AppDelegate.swift in Sources */,
 				EC655FEA24A2524900798CC6 /* SceneDelegate.swift in Sources */,
+				ECC76EF924B7ABC200F45122 /* AnimeAPI.swift in Sources */,
+				ECC76EFD24B7ABD200F45122 /* SharingService.swift in Sources */,
 				EC6EDCAE24A614CB00B71D10 /* View3DVM.swift in Sources */,
+				ECC76EE724B7A82A00F45122 /* ProductList.swift in Sources */,
+				ECC76EFE24B7ABD200F45122 /* UserDefaultsService.swift in Sources */,
+				ECC76EE124B7A82300F45122 /* JSONEncodingHelper.swift in Sources */,
+				ECC76EED24B7A89100F45122 /* FilteringString.swift in Sources */,
+				ECC76EE424B7A82300F45122 /* Extensions.swift in Sources */,
+				ECC76EE224B7A82300F45122 /* Configuration.swift in Sources */,
+				ECC76ED324B7A4CB00F45122 /* DetailInfo.swift in Sources */,
+				ECC76F0124B7ACBA00F45122 /* ImageExt.swift in Sources */,
 				EC65600024A253DD00798CC6 /* StringExt.swift in Sources */,
 				EC65601224A2560100798CC6 /* AlgoTestVM.swift in Sources */,
 				EC65604224A266C800798CC6 /* LazyView.swift in Sources */,
 				EC65600924A2541900798CC6 /* SetProcessor.swift in Sources */,
 				EC6EDCB124A616B500B71D10 /* Renderer.swift in Sources */,
 				EC65600124A253E300798CC6 /* DispatchQoSExt.swift in Sources */,
+				ECC76EDD24B7A81300F45122 /* Models.swift in Sources */,
 				EC65600524A2540100798CC6 /* AlgoProvider.swift in Sources */,
 				ECB8363924A35A8C0083760D /* float4x4Ext.swift in Sources */,
+				ECC76EE924B7A82F00F45122 /* SearchAnimeAPI.swift in Sources */,
 				EC65600424A253FB00798CC6 /* AppError.swift in Sources */,
+				ECC76ED424B7A52B00F45122 /* ProductVM.swift in Sources */,
 				EC655FEC24A2524900798CC6 /* MainScreenCatalyst.swift in Sources */,
 				ECB8363D24A35E420083760D /* MTKViewUI.swift in Sources */,
+				ECC76ED224B7A4C800F45122 /* AnimeSearch.swift in Sources */,
 				EC65600A24A2541E00798CC6 /* DictionaryProcessor.swift in Sources */,
+				ECC76EFC24B7ABD200F45122 /* FileService.swift in Sources */,
+				ECC76ED724B7A7C200F45122 /* OpenISO8601DateFormatter.swift in Sources */,
+				ECC76EEE24B7A8A400F45122 /* Spiner.swift in Sources */,
+				ECC76EDC24B7A80F00F45122 /* JSONDataEncoding.swift in Sources */,
 				EC65600724A2541000798CC6 /* TestStructureProcessor.swift in Sources */,
+				ECC76EFF24B7AC5700F45122 /* RandomAccessCollectionExt.swift in Sources */,
+				ECC76EEC24B7A87C00F45122 /* CustomButton.swift in Sources */,
 				EC65600B24A2542300798CC6 /* ArrayProcessor.swift in Sources */,
+				ECC76EFB24B7ABD200F45122 /* DBService.swift in Sources */,
+				ECC76EFA24B7ABD200F45122 /* DataProvider.swift in Sources */,
+				ECC76F0024B7ACBA00F45122 /* AnyTransitionExt.swift in Sources */,
+				ECC76EDF24B7A81A00F45122 /* APIHelper.swift in Sources */,
 				EC65600324A253F100798CC6 /* CellList.swift in Sources */,
 				EC65600824A2541400798CC6 /* SuffixArrayProcessor.swift in Sources */,
 				EC65600224A253EC00798CC6 /* HandleTestAndButton.swift in Sources */,
+				ECC76EE024B7A81D00F45122 /* CodableHelper.swift in Sources */,
+				ECC76EDE24B7A81700F45122 /* URLSessionImplementations.swift in Sources */,
 				EC2C4B3624B4A8930079A2AA /* ScoreModifier.swift in Sources */,
 				EC65600D24A2542F00798CC6 /* Task.swift in Sources */,
 				EC2C4B3524B4A88F0079A2AA /* Shake.swift in Sources */,
+				ECC76EE824B7A82A00F45122 /* ErrorModel.swift in Sources */,
 				EC65600624A2540800798CC6 /* AlgoTypesVM.swift in Sources */,
+				ECC76EE524B7A82300F45122 /* APIs.swift in Sources */,
 				ECB8363624A359ED0083760D /* MaterialShader.metal in Sources */,
 				EC65601024A2558900798CC6 /* AlgoTypesView.swift in Sources */,
 				EC2C4B3424B4A8610079A2AA /* ReduxView.swift in Sources */,
+				ECC76EEF24B7A8AD00F45122 /* StretchyHeader.swift in Sources */,
+				ECC76EE624B7A82A00F45122 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1636,14 +1757,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC91C0F324B780470020E878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC91C0FA24B780470020E878 /* IOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2484CCAE246BCC0000C59D56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2484CCA4246BCC0000C59D56 /* OTUS-Share */;
-			targetProxy = 2484CCAD246BCC0000C59D56 /* PBXContainerItemProxy */;
-		};
 		EC24741324A12D1900D35F94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EC24740F24A12D1900D35F94 /* WatchApp Extension */;
@@ -1654,15 +1778,30 @@
 			target = EC24740324A12D1700D35F94 /* WatchApp */;
 			targetProxy = EC24742624A12D1A00D35F94 /* PBXContainerItemProxy */;
 		};
-		EC70890B24B4AFFE00C8525E /* PBXTargetDependency */ = {
+		EC91C0FD24B780470020E878 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EC70890424B4AFFE00C8525E /* kotlinMP */;
-			targetProxy = EC70890A24B4AFFE00C8525E /* PBXContainerItemProxy */;
+			target = 24DF7770240E327700D80C8E /* OTUS-Practice */;
+			targetProxy = EC91C0FC24B780470020E878 /* PBXContainerItemProxy */;
 		};
-		EC708EFE24B4B63300C8525E /* PBXTargetDependency */ = {
+		EC91C10424B780EA0020E878 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EC70890424B4AFFE00C8525E /* kotlinMP */;
-			targetProxy = EC708EFD24B4B63300C8525E /* PBXContainerItemProxy */;
+			targetProxy = EC91C10324B780EA0020E878 /* PBXContainerItemProxy */;
+		};
+		ECC76ECD24B784EF00F45122 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2484CCA4246BCC0000C59D56 /* OTUS-Share */;
+			targetProxy = ECC76ECC24B784EF00F45122 /* PBXContainerItemProxy */;
+		};
+		ECC76ED024B7850300F45122 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2484CCA4246BCC0000C59D56 /* OTUS-Share */;
+			targetProxy = ECC76ECF24B7850300F45122 /* PBXContainerItemProxy */;
+		};
+		ECC76EF524B7AADB00F45122 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2484CCA4246BCC0000C59D56 /* OTUS-Share */;
+			targetProxy = ECC76EF424B7AADB00F45122 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1715,9 +1854,10 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice.OTUS-Share";
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1737,9 +1877,10 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice.OTUS-Share";
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1862,7 +2003,6 @@
 		24DF7786240E327800D80C8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "AppIOS/Environments/OTUS-Practice.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -1884,7 +2024,6 @@
 		24DF7787240E327800D80C8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "AppIOS/Environments/OTUS-Practice.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -1912,7 +2051,7 @@
 				DEVELOPMENT_TEAM = B2H4W42259;
 				IBSC_MODULE = WatchApp_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/AppWatch/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1931,7 +2070,7 @@
 				DEVELOPMENT_TEAM = B2H4W42259;
 				IBSC_MODULE = WatchApp_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/AppWatch/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1955,7 +2094,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1979,7 +2118,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2004,7 +2143,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.AppCatalyst;
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -2027,7 +2166,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.AppCatalyst;
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -2048,7 +2187,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.AppTV;
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
@@ -2070,7 +2209,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.AppTV;
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
@@ -2102,7 +2241,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.KotlinMP;
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
@@ -2136,7 +2275,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.KotlinMP;
+				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
@@ -2144,6 +2283,48 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EC91C0FE24B780470020E878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2H4W42259;
+				INFOPLIST_FILE = IOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.IOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTUS-Practice.app/OTUS-Practice";
+			};
+			name = Debug;
+		};
+		EC91C0FF24B780470020E878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B2H4W42259;
+				INFOPLIST_FILE = IOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.IOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTUS-Practice.app/OTUS-Practice";
 			};
 			name = Release;
 		};
@@ -2222,6 +2403,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		EC91C10024B780470020E878 /* Build configuration list for PBXNativeTarget "IOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC91C0FE24B780470020E878 /* Debug */,
+				EC91C0FF24B780470020E878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -2257,6 +2447,16 @@
 		EC655FDF24A2489300798CC6 /* ServiceLocator */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ServiceLocator;
+		};
+		ECC76EF124B7AACA00F45122 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2484CC99246ADC1B00C59D56 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+		ECC76EF724B7AAEC00F45122 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24D7955C2476779E0016D1AF /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

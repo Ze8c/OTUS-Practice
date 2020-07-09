@@ -1,14 +1,14 @@
 //
-//  MainScreenCatalystVM.swift
-//  AppCatalyst
+//  MainScreenIOSVM.swift
+//  OTUS-Practice
 //
-//  Created by Максим Сытый on 26.06.2020.
+//  Created by Максим Сытый on 09.07.2020.
 //  Copyright © 2020 Mak. All rights reserved.
 //
 
 import Foundation
 
-final class MainScreenCatalystVM: ObservableObject {
+final class MainScreenIOSVM: ObservableObject {
     
     let algoVM: AlgoTypesVM
     let view3DVM: View3DVM

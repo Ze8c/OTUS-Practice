@@ -14,20 +14,22 @@ package services.jikanAPI
 import services.jikanAPI.models.ProductList
 import services.jikanAPI.infrastructure.*
 
-import kotlinx.serialization.UnstableDefault
+//import kotlinx.serialization.UnstableDefault
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.features.json.serializer.KotlinxSerializer
 import io.ktor.client.utils.EmptyContent
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonConfiguration
 
-class SearchApi @OptIn(UnstableDefault::class) constructor(
+class SearchApi
+//    @OptIn(UnstableDefault::class)
+    constructor(
         baseUrl: String = "https://api.jikan.moe/v3",
         httpClientEngine: HttpClientEngine? = null,
         serializer: KotlinxSerializer)
     : ApiClient(baseUrl, httpClientEngine, serializer) {
 
-    @OptIn(UnstableDefault::class)
+//    @OptIn(UnstableDefault::class)
     constructor(
         baseUrl: String = "https://api.jikan.moe/v3",
         httpClientEngine: HttpClientEngine? = null,

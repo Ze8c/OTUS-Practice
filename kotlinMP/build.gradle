@@ -81,7 +81,7 @@ kotlin {
             }
         }
 
-        androidMain {
+        main {
             dependsOn commonMain
             dependencies {
                 implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -93,7 +93,7 @@ kotlin {
             }
         }
 
-        androidTest {
+        test {
             dependsOn commonTest
             dependencies {
                 implementation kotlin('test')
@@ -103,6 +103,29 @@ kotlin {
                 implementation "io.ktor:ktor-client-mock-jvm:$ktor_version"
             }
         }
+
+//        androidMain {
+//            dependsOn commonMain
+//            dependencies {
+//                implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+//                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+//                implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
+//                api "io.ktor:ktor-client-core-jvm:$ktor_version"
+//                api "io.ktor:ktor-client-json-jvm:$ktor_version"
+//                api "io.ktor:ktor-client-serialization-jvm:$ktor_version"
+//            }
+//        }
+//
+//        androidTest {
+//            dependsOn commonTest
+//            dependencies {
+//                implementation kotlin('test')
+//                implementation kotlin('test-junit')
+//                implementation "org.jetbrains.kotlin:kotlin-test"
+//                implementation "org.jetbrains.kotlin:kotlin-test-junit"
+//                implementation "io.ktor:ktor-client-mock-jvm:$ktor_version"
+//            }
+//        }
 
         iosMain {
             dependsOn commonMain
@@ -120,37 +143,37 @@ kotlin {
             }
         }
 
-        iosArm64().compilations.main.defaultSourceSet {
-            dependsOn iosMain
-            dependencies {
-                api "io.ktor:ktor-client-ios-iosarm64:$ktor_version"
-                api "io.ktor:ktor-client-json-iosarm64:$ktor_version"
-                api "io.ktor:ktor-client-serialization-iosarm64:$ktor_version"
-            }
-        }
-
-        iosArm64().compilations.test.defaultSourceSet {
-            dependsOn iosTest
-        }
-
-        iosX64().compilations.main.defaultSourceSet {
-            dependsOn iosMain
-            dependencies {
-                api "io.ktor:ktor-client-ios-iosx64:$ktor_version"
-                api "io.ktor:ktor-client-json-iosx64:$ktor_version"
-                api "io.ktor:ktor-client-serialization-iosx64:$ktor_version"
-            }
-        }
-
-        iosX64().compilations.test.defaultSourceSet {
-            dependsOn iosTest
-        }
-
-        all {
-            languageSettings {
-                useExperimentalAnnotation('kotlin.Experimental')
-            }
-        }
+//        iosArm64().compilations.main.defaultSourceSet {
+//            dependsOn iosMain
+//            dependencies {
+//                api "io.ktor:ktor-client-ios-iosarm64:$ktor_version"
+//                api "io.ktor:ktor-client-json-iosarm64:$ktor_version"
+//                api "io.ktor:ktor-client-serialization-iosarm64:$ktor_version"
+//            }
+//        }
+//
+//        iosArm64().compilations.test.defaultSourceSet {
+//            dependsOn iosTest
+//        }
+//
+//        iosX64().compilations.main.defaultSourceSet {
+//            dependsOn iosMain
+//            dependencies {
+//                api "io.ktor:ktor-client-ios-iosx64:$ktor_version"
+//                api "io.ktor:ktor-client-json-iosx64:$ktor_version"
+//                api "io.ktor:ktor-client-serialization-iosx64:$ktor_version"
+//            }
+//        }
+//
+//        iosX64().compilations.test.defaultSourceSet {
+//            dependsOn iosTest
+//        }
+//
+//        all {
+//            languageSettings {
+//                useExperimentalAnnotation('kotlin.Experimental')
+//            }
+//        }
     }
 }
 
