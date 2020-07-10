@@ -9,15 +9,24 @@
 import Combine
 import SwiftUI
 
+typealias Reducer<S, A> = (S, A) -> S
+
+let reducerInt: Reducer<Int, ActionInt> = { prevState, action in
+    switch action {
+    case .increment:
+        return prevState + 1
+    case .decrement:
+        return prevState - 1
+    }
+}
+
 final class Store<State, Action>: ObservableObject {
     
-    typealias Reducer = (State, Action) -> State
-    
-    private let reducer: Reducer
+    private let reducer: Reducer<State, Action>
     
     @Published var state: State
     
-    init(initialState: State, reducer: @escaping Reducer) {
+    init(initialState: State, reducer: @escaping Reducer<State, Action>) {
         state = initialState
         self.reducer = reducer
     }
@@ -30,14 +39,14 @@ final class Store<State, Action>: ObservableObject {
     }
 }
 
-enum ActionReduxView {
+enum ActionInt {
     case increment
     case decrement
 }
 
 struct ReduxView: View {
     
-    @EnvironmentObject var store: Store<Int, ActionReduxView>
+    @EnvironmentObject var store: Store<Int, ActionInt>
     
     var body: some View {
         VStack {

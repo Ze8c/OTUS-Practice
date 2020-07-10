@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1140"
+   LastUpgradeVersion = "1150"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "24DF7770240E327700D80C8E"
-               BuildableName = "OTUS-Practice.app"
-               BlueprintName = "AppIOS"
+               BlueprintIdentifier = "EC70890424B4AFFE00C8525E"
+               BuildableName = "kotlinMP.framework"
+               BlueprintName = "kotlinMP"
                ReferencedContainer = "container:OTUS-Practice.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EC91C0F624B780470020E878"
-               BuildableName = "IOSTests.xctest"
-               BlueprintName = "IOSTests"
-               ReferencedContainer = "container:OTUS-Practice.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -50,16 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "24DF7770240E327700D80C8E"
-            BuildableName = "OTUS-Practice.app"
-            BlueprintName = "AppIOS"
-            ReferencedContainer = "container:OTUS-Practice.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -67,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "24DF7770240E327700D80C8E"
-            BuildableName = "OTUS-Practice.app"
-            BlueprintName = "AppIOS"
+            BlueprintIdentifier = "EC70890424B4AFFE00C8525E"
+            BuildableName = "kotlinMP.framework"
+            BlueprintName = "kotlinMP"
             ReferencedContainer = "container:OTUS-Practice.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

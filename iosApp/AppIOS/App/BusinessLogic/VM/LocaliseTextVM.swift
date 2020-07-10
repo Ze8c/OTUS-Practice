@@ -187,7 +187,7 @@ final class LocaliseTextVM: ObservableObject {
         var tmpTxt: String = "Locale: " + locale.rawValue + "\n"
         
         let temp = "dMMMMyEEEE"
-        let temp2 = "yyyy.MM.dd G"
+        _ = "yyyy.MM.dd G"
         tmpTxt += "Date: " + locale.get(fromDate: Date(), withFormat: temp) + "\n"
         
         let dist = Measurement(value: 15, unit: UnitLength.kilometers)

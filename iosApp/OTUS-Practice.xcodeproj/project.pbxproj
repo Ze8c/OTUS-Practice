@@ -89,9 +89,10 @@
 		24DF7781240E327800D80C8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DF777F240E327800D80C8E /* LaunchScreen.storyboard */; };
 		24F5A4222420ADA800F4A1C3 /* NextFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F5A4212420ADA800F4A1C3 /* NextFirstView.swift */; };
 		24F5A4242420AFB900F4A1C3 /* NextSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F5A4232420AFB900F4A1C3 /* NextSecondView.swift */; };
+		EC22F00824B8C85100435C98 /* Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2484CCA5246BCC0000C59D56 /* Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EC24740824A12D1700D35F94 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC24740624A12D1700D35F94 /* Interface.storyboard */; };
 		EC24740A24A12D1900D35F94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC24740924A12D1900D35F94 /* Assets.xcassets */; };
-		EC24741124A12D1900D35F94 /* WatchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EC24741024A12D1900D35F94 /* WatchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EC24741124A12D1900D35F94 /* WatchExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EC24741024A12D1900D35F94 /* WatchExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EC24741624A12D1900D35F94 /* MainScreenWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24741524A12D1900D35F94 /* MainScreenWatch.swift */; };
 		EC24741824A12D1900D35F94 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24741724A12D1900D35F94 /* HostingController.swift */; };
 		EC24741A24A12D1900D35F94 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24741924A12D1900D35F94 /* ExtensionDelegate.swift */; };
@@ -99,7 +100,6 @@
 		EC24741E24A12D1900D35F94 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24741D24A12D1900D35F94 /* NotificationView.swift */; };
 		EC24742024A12D1A00D35F94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC24741F24A12D1A00D35F94 /* Assets.xcassets */; };
 		EC24742324A12D1A00D35F94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC24742224A12D1A00D35F94 /* Preview Assets.xcassets */; };
-		EC24742824A12D1A00D35F94 /* WatchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EC24740424A12D1700D35F94 /* WatchApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EC2C4B3424B4A8610079A2AA /* ReduxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65604524A27FE500798CC6 /* ReduxView.swift */; };
 		EC2C4B3524B4A88F0079A2AA /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2E924824B464B0006762E1 /* Shake.swift */; };
 		EC2C4B3624B4A8930079A2AA /* ScoreModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2E924A24B464D8006762E1 /* ScoreModifier.swift */; };
@@ -178,8 +178,6 @@
 		EC6EDCB024A616B500B71D10 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAF24A616B500B71D10 /* Renderer.swift */; };
 		EC6EDCB124A616B500B71D10 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAF24A616B500B71D10 /* Renderer.swift */; };
 		EC91C0FA24B780470020E878 /* IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC91C0F924B780470020E878 /* IOSTests.swift */; };
-		EC91C10124B780EA0020E878 /* kotlinMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC70890524B4AFFE00C8525E /* kotlinMP.framework */; };
-		EC91C10224B780EA0020E878 /* kotlinMP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC70890524B4AFFE00C8525E /* kotlinMP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ECB8362824A358F20083760D /* texture_forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB8362724A358F20083760D /* texture_forest.jpg */; };
 		ECB8362924A358F20083760D /* texture_forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB8362724A358F20083760D /* texture_forest.jpg */; };
 		ECB8362C24A359060083760D /* teacup.mtl in Resources */ = {isa = PBXBuildFile; fileRef = ECB8362A24A359060083760D /* teacup.mtl */; };
@@ -194,7 +192,6 @@
 		ECB8363924A35A8C0083760D /* float4x4Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8363724A35A8C0083760D /* float4x4Ext.swift */; };
 		ECB8363C24A35E420083760D /* MTKViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8363B24A35E420083760D /* MTKViewUI.swift */; };
 		ECB8363D24A35E420083760D /* MTKViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8363B24A35E420083760D /* MTKViewUI.swift */; };
-		ECC76ECE24B7850300F45122 /* OTUS-Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ECC76ED224B7A4C800F45122 /* AnimeSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573A9240F698B00B6CDDB /* AnimeSearch.swift */; };
 		ECC76ED324B7A4CB00F45122 /* DetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573B4240F7D3F00B6CDDB /* DetailInfo.swift */; };
 		ECC76ED424B7A52B00F45122 /* ProductVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573AD240F721A00B6CDDB /* ProductVM.swift */; };
@@ -222,7 +219,6 @@
 		ECC76EEF24B7A8AD00F45122 /* StretchyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454F8E6242CD9C1001AA9EE /* StretchyHeader.swift */; };
 		ECC76EF024B7A8F900F45122 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E0824224BEC00925F96 /* ColorExt.swift */; };
 		ECC76EF224B7AACA00F45122 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = ECC76EF124B7AACA00F45122 /* KingfisherSwiftUI */; };
-		ECC76EF324B7AADB00F45122 /* OTUS-Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ECC76EF824B7AAEC00F45122 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECC76EF724B7AAEC00F45122 /* RealmSwift */; };
 		ECC76EF924B7ABC200F45122 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A39A6243DA51F007E8E23 /* AnimeAPI.swift */; };
 		ECC76EFA24B7ABD200F45122 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24192251246EB1030090A21C /* DataProvider.swift */; };
@@ -236,6 +232,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EC22F00924B8C85100435C98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2484CCA4246BCC0000C59D56;
+			remoteInfo = "OTUS-Share";
+		};
 		EC24741224A12D1900D35F94 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
@@ -243,7 +246,7 @@
 			remoteGlobalIDString = EC24740F24A12D1900D35F94;
 			remoteInfo = "WatchApp Extension";
 		};
-		EC24742624A12D1A00D35F94 /* PBXContainerItemProxy */ = {
+		EC76417124B8B39300952355 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
 			proxyType = 1;
@@ -257,44 +260,26 @@
 			remoteGlobalIDString = 24DF7770240E327700D80C8E;
 			remoteInfo = "OTUS-Practice";
 		};
-		EC91C10324B780EA0020E878 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EC70890424B4AFFE00C8525E;
-			remoteInfo = kotlinMP;
-		};
-		ECC76ECC24B784EF00F45122 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2484CCA4246BCC0000C59D56;
-			remoteInfo = "OTUS-Share";
-		};
-		ECC76ECF24B7850300F45122 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2484CCA4246BCC0000C59D56;
-			remoteInfo = "OTUS-Share";
-		};
-		ECC76EF424B7AADB00F45122 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2484CCA4246BCC0000C59D56;
-			remoteInfo = "OTUS-Share";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		EC22F00B24B8C85100435C98 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EC22F00824B8C85100435C98 /* Share.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC24742924A12D1A00D35F94 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				EC24742824A12D1A00D35F94 /* WatchApp.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,40 +290,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				EC24741124A12D1900D35F94 /* WatchApp Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EC91C10524B780EA0020E878 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				EC91C10224B780EA0020E878 /* kotlinMP.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ECC76ED124B7850300F45122 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				ECC76ECE24B7850300F45122 /* OTUS-Share.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ECC76EF624B7AADB00F45122 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				ECC76EF324B7AADB00F45122 /* OTUS-Share.appex in Embed App Extensions */,
+				EC24741124A12D1900D35F94 /* WatchExt.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,7 +339,7 @@
 		248081B524755D0B0023A709 /* SetProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProcessor.swift; sourceTree = "<group>"; };
 		2484CC9D246AFA7100C59D56 /* ValidateINN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateINN.swift; sourceTree = "<group>"; };
 		2484CC9F246B000900C59D56 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
-		2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OTUS-Share.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2484CCA5246BCC0000C59D56 /* Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Share.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2484CCAC246BCC0000C59D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2484CCB4246BD44500C59D56 /* OTUS-Practice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OTUS-Practice.entitlements"; sourceTree = "<group>"; };
 		2484CD4B246C4E1300C59D56 /* OTUS-Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OTUS-Share.entitlements"; sourceTree = "<group>"; };
@@ -418,7 +370,7 @@
 		24CCC5D1241F5C7600A5528A /* NavPopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavPopButton.swift; sourceTree = "<group>"; };
 		24CCC5D3241F5D0700A5528A /* NavVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavVM.swift; sourceTree = "<group>"; };
 		24DE27C4243C42F1002D8B00 /* FilteringString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringString.swift; sourceTree = "<group>"; };
-		24DF7771240E327700D80C8E /* OTUS-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTUS-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24DF7771240E327700D80C8E /* Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DF7774240E327700D80C8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24DF7776240E327700D80C8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		24DF7778240E327700D80C8E /* MainScreenIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenIOS.swift; sourceTree = "<group>"; };
@@ -428,11 +380,11 @@
 		24DF7782240E327800D80C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24F5A4212420ADA800F4A1C3 /* NextFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextFirstView.swift; sourceTree = "<group>"; };
 		24F5A4232420AFB900F4A1C3 /* NextSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextSecondView.swift; sourceTree = "<group>"; };
-		EC24740424A12D1700D35F94 /* WatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC24740424A12D1700D35F94 /* Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC24740724A12D1700D35F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		EC24740924A12D1900D35F94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC24740B24A12D1900D35F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC24741024A12D1900D35F94 /* WatchApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC24741024A12D1900D35F94 /* WatchExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WatchExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC24741524A12D1900D35F94 /* MainScreenWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenWatch.swift; sourceTree = "<group>"; };
 		EC24741724A12D1900D35F94 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		EC24741924A12D1900D35F94 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
@@ -449,7 +401,7 @@
 		EC655FD124A213E900798CC6 /* AlgoTypesWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoTypesWatch.swift; sourceTree = "<group>"; };
 		EC655FD824A22AEC00798CC6 /* HandleTestAndButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleTestAndButton.swift; sourceTree = "<group>"; };
 		EC655FDD24A2487000798CC6 /* ServiceLocator */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ServiceLocator; sourceTree = "<group>"; };
-		EC655FE524A2524900798CC6 /* AppCatalyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCatalyst.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC655FE524A2524900798CC6 /* Catalist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catalist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC655FE724A2524900798CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC655FE924A2524900798CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EC655FEB24A2524900798CC6 /* MainScreenCatalyst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCatalyst.swift; sourceTree = "<group>"; };
@@ -458,7 +410,7 @@
 		EC655FF324A2524F00798CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC655FF524A2524F00798CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC655FF924A2526F00798CC6 /* AppCatalyst.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppCatalyst.entitlements; sourceTree = "<group>"; };
-		EC65601824A258B100798CC6 /* AppTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC65601824A258B100798CC6 /* TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC65601A24A258B100798CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC65601C24A258B100798CC6 /* MainScreenTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTV.swift; sourceTree = "<group>"; };
 		EC65601E24A258B200798CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -495,7 +447,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC91C10124B780EA0020E878 /* kotlinMP.framework in Frameworks */,
 				EC655FE024A2489300798CC6 /* ServiceLocator in Frameworks */,
 				24D7955E2476779E0016D1AF /* RealmSwift in Frameworks */,
 				2484CC9B246ADC1B00C59D56 /* KingfisherSwiftUI in Frameworks */,
@@ -813,12 +764,12 @@
 		24DF7772240E327700D80C8E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				24DF7771240E327700D80C8E /* OTUS-Practice.app */,
-				2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */,
-				EC24740424A12D1700D35F94 /* WatchApp.app */,
-				EC24741024A12D1900D35F94 /* WatchApp Extension.appex */,
-				EC655FE524A2524900798CC6 /* AppCatalyst.app */,
-				EC65601824A258B100798CC6 /* AppTV.app */,
+				24DF7771240E327700D80C8E /* Practice.app */,
+				2484CCA5246BCC0000C59D56 /* Share.appex */,
+				EC24740424A12D1700D35F94 /* Watch.app */,
+				EC24741024A12D1900D35F94 /* WatchExt.appex */,
+				EC655FE524A2524900798CC6 /* Catalist.app */,
+				EC65601824A258B100798CC6 /* TV.app */,
 				EC70890524B4AFFE00C8525E /* kotlinMP.framework */,
 				EC91C0F724B780470020E878 /* IOSTests.xctest */,
 			);
@@ -1229,36 +1180,33 @@
 			);
 			name = "OTUS-Share";
 			productName = "OTUS-Share";
-			productReference = 2484CCA5246BCC0000C59D56 /* OTUS-Share.appex */;
+			productReference = 2484CCA5246BCC0000C59D56 /* Share.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		24DF7770240E327700D80C8E /* OTUS-Practice */ = {
+		24DF7770240E327700D80C8E /* AppIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24DF7785240E327800D80C8E /* Build configuration list for PBXNativeTarget "OTUS-Practice" */;
+			buildConfigurationList = 24DF7785240E327800D80C8E /* Build configuration list for PBXNativeTarget "AppIOS" */;
 			buildPhases = (
 				24DF776D240E327700D80C8E /* Sources */,
 				24DF776E240E327700D80C8E /* Frameworks */,
 				24DF776F240E327700D80C8E /* Resources */,
 				EC24742924A12D1A00D35F94 /* Embed Watch Content */,
-				EC91C10524B780EA0020E878 /* Embed Frameworks */,
-				ECC76ED124B7850300F45122 /* Embed App Extensions */,
+				EC22F00B24B8C85100435C98 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EC24742724A12D1A00D35F94 /* PBXTargetDependency */,
-				EC91C10424B780EA0020E878 /* PBXTargetDependency */,
-				ECC76ECD24B784EF00F45122 /* PBXTargetDependency */,
-				ECC76ED024B7850300F45122 /* PBXTargetDependency */,
+				EC76417224B8B39300952355 /* PBXTargetDependency */,
+				EC22F00A24B8C85100435C98 /* PBXTargetDependency */,
 			);
-			name = "OTUS-Practice";
+			name = AppIOS;
 			packageProductDependencies = (
 				2484CC9A246ADC1B00C59D56 /* KingfisherSwiftUI */,
 				24D7955D2476779E0016D1AF /* RealmSwift */,
 				EC655FDF24A2489300798CC6 /* ServiceLocator */,
 			);
 			productName = "OTUS-Practice";
-			productReference = 24DF7771240E327700D80C8E /* OTUS-Practice.app */;
+			productReference = 24DF7771240E327700D80C8E /* Practice.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EC24740324A12D1700D35F94 /* WatchApp */ = {
@@ -1275,7 +1223,7 @@
 			);
 			name = WatchApp;
 			productName = WatchApp;
-			productReference = EC24740424A12D1700D35F94 /* WatchApp.app */;
+			productReference = EC24740424A12D1700D35F94 /* Watch.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		EC24740F24A12D1900D35F94 /* WatchApp Extension */ = {
@@ -1292,7 +1240,7 @@
 			);
 			name = "WatchApp Extension";
 			productName = "WatchApp Extension";
-			productReference = EC24741024A12D1900D35F94 /* WatchApp Extension.appex */;
+			productReference = EC24741024A12D1900D35F94 /* WatchExt.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		EC655FE424A2524900798CC6 /* AppCatalyst */ = {
@@ -1302,12 +1250,10 @@
 				EC655FE124A2524900798CC6 /* Sources */,
 				EC655FE224A2524900798CC6 /* Frameworks */,
 				EC655FE324A2524900798CC6 /* Resources */,
-				ECC76EF624B7AADB00F45122 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				ECC76EF524B7AADB00F45122 /* PBXTargetDependency */,
 			);
 			name = AppCatalyst;
 			packageProductDependencies = (
@@ -1315,7 +1261,7 @@
 				ECC76EF724B7AAEC00F45122 /* RealmSwift */,
 			);
 			productName = AppCatalyst;
-			productReference = EC655FE524A2524900798CC6 /* AppCatalyst.app */;
+			productReference = EC655FE524A2524900798CC6 /* Catalist.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EC65601724A258B100798CC6 /* AppTV */ = {
@@ -1332,7 +1278,7 @@
 			);
 			name = AppTV;
 			productName = AppTV;
-			productReference = EC65601824A258B100798CC6 /* AppTV.app */;
+			productReference = EC65601824A258B100798CC6 /* TV.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EC70890424B4AFFE00C8525E /* kotlinMP */ = {
@@ -1423,7 +1369,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				24DF7770240E327700D80C8E /* OTUS-Practice */,
+				24DF7770240E327700D80C8E /* AppIOS */,
 				2484CCA4246BCC0000C59D56 /* OTUS-Share */,
 				EC24740324A12D1700D35F94 /* WatchApp */,
 				EC24740F24A12D1900D35F94 /* WatchApp Extension */,
@@ -1768,40 +1714,25 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EC22F00A24B8C85100435C98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2484CCA4246BCC0000C59D56 /* OTUS-Share */;
+			targetProxy = EC22F00924B8C85100435C98 /* PBXContainerItemProxy */;
+		};
 		EC24741324A12D1900D35F94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EC24740F24A12D1900D35F94 /* WatchApp Extension */;
 			targetProxy = EC24741224A12D1900D35F94 /* PBXContainerItemProxy */;
 		};
-		EC24742724A12D1A00D35F94 /* PBXTargetDependency */ = {
+		EC76417224B8B39300952355 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EC24740324A12D1700D35F94 /* WatchApp */;
-			targetProxy = EC24742624A12D1A00D35F94 /* PBXContainerItemProxy */;
+			targetProxy = EC76417124B8B39300952355 /* PBXContainerItemProxy */;
 		};
 		EC91C0FD24B780470020E878 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 24DF7770240E327700D80C8E /* OTUS-Practice */;
+			target = 24DF7770240E327700D80C8E /* AppIOS */;
 			targetProxy = EC91C0FC24B780470020E878 /* PBXContainerItemProxy */;
-		};
-		EC91C10424B780EA0020E878 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EC70890424B4AFFE00C8525E /* kotlinMP */;
-			targetProxy = EC91C10324B780EA0020E878 /* PBXContainerItemProxy */;
-		};
-		ECC76ECD24B784EF00F45122 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2484CCA4246BCC0000C59D56 /* OTUS-Share */;
-			targetProxy = ECC76ECC24B784EF00F45122 /* PBXContainerItemProxy */;
-		};
-		ECC76ED024B7850300F45122 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2484CCA4246BCC0000C59D56 /* OTUS-Share */;
-			targetProxy = ECC76ECF24B7850300F45122 /* PBXContainerItemProxy */;
-		};
-		ECC76EF524B7AADB00F45122 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2484CCA4246BCC0000C59D56 /* OTUS-Share */;
-			targetProxy = ECC76EF424B7AADB00F45122 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1849,13 +1780,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B2H4W42259;
 				INFOPLIST_FILE = "$(SRCROOT)/AppShare/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.Practice.Share;
+				PRODUCT_NAME = Share;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1872,13 +1804,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B2H4W42259;
 				INFOPLIST_FILE = "$(SRCROOT)/AppShare/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.Practice.Share;
+				PRODUCT_NAME = Share;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -1936,7 +1869,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1990,7 +1923,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -2010,12 +1943,13 @@
 				DEVELOPMENT_TEAM = B2H4W42259;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/AppIOS/Environments/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.Practice;
+				PRODUCT_NAME = Practice;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2031,12 +1965,13 @@
 				DEVELOPMENT_TEAM = B2H4W42259;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/AppIOS/Environments/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.Practice;
+				PRODUCT_NAME = Practice;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2051,8 +1986,8 @@
 				DEVELOPMENT_TEAM = B2H4W42259;
 				IBSC_MODULE = WatchApp_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/AppWatch/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.Watch;
+				PRODUCT_NAME = Watch;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2070,8 +2005,8 @@
 				DEVELOPMENT_TEAM = B2H4W42259;
 				IBSC_MODULE = WatchApp_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/AppWatch/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.Watch;
+				PRODUCT_NAME = Watch;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2094,8 +2029,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.WatchExt;
+				PRODUCT_NAME = WatchExt;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2118,8 +2053,8 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.WatchExt;
+				PRODUCT_NAME = WatchExt;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2138,13 +2073,13 @@
 				DEVELOPMENT_TEAM = B2H4W42259;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/AppCatalyst/Environments/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.Catalist;
+				PRODUCT_NAME = Catalist;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -2161,13 +2096,13 @@
 				DEVELOPMENT_TEAM = B2H4W42259;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/AppCatalyst/Environments/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.Catalist;
+				PRODUCT_NAME = Catalist;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -2187,12 +2122,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.TV;
+				PRODUCT_NAME = TV;
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.4;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Debug;
 		};
@@ -2209,12 +2144,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.TV;
+				PRODUCT_NAME = TV;
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.4;
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Release;
 		};
@@ -2231,7 +2166,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/../kotlinMP/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				KOTLIN_BUILD_TYPE = DEBUG;
 				KOTLIN_TARGET = "";
 				"KOTLIN_TARGET[sdk=iphoneos13.5]" = ios;
@@ -2241,7 +2176,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.kotlinMP;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
@@ -2265,7 +2200,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/../kotlinMP/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				KOTLIN_BUILD_TYPE = RELEASE;
 				KOTLIN_TARGET = "";
 				"KOTLIN_TARGET[sdk=iphoneos13.5]" = ios;
@@ -2275,7 +2210,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PersonalTeam.OTUS-Practice";
+				PRODUCT_BUNDLE_IDENTIFIER = PersonalTeam.kotlinMP;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
@@ -2303,7 +2238,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTUS-Practice.app/OTUS-Practice";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Practice.app/Practice";
 			};
 			name = Debug;
 		};
@@ -2324,7 +2259,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTUS-Practice.app/OTUS-Practice";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Practice.app/Practice";
 			};
 			name = Release;
 		};
@@ -2349,7 +2284,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24DF7785240E327800D80C8E /* Build configuration list for PBXNativeTarget "OTUS-Practice" */ = {
+		24DF7785240E327800D80C8E /* Build configuration list for PBXNativeTarget "AppIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24DF7786240E327800D80C8E /* Debug */,

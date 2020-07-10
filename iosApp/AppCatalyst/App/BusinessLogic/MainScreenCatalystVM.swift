@@ -12,22 +12,13 @@ final class MainScreenCatalystVM: ObservableObject {
     
     let algoVM: AlgoTypesVM
     let view3DVM: View3DVM
-    let reduxStore: Store<Int, ActionReduxView>
+    let reduxStore: Store<Int, ActionInt>
     let animeVM: ProductVM
     
     init() {
         algoVM = AlgoTypesVM()
         view3DVM = View3DVM()
-        
-        reduxStore = Store<Int, ActionReduxView>(initialState: 0) { prevState, action in
-            switch action {
-            case .increment:
-                return prevState + 1
-            case .decrement:
-                return prevState - 1
-            }
-        }
-        
+        reduxStore = Store<Int, ActionInt>(initialState: 0, reducer: reducerInt)
         animeVM = ProductVM(serviceAPI: AnimeAPIImpl(), db: DBImpl())
     }
 }

@@ -31,7 +31,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "24DF7770240E327700D80C8E"
                BuildableName = "OTUS-Practice.app"
-               BlueprintName = "OTUS-Practice"
+               BlueprintName = "AppIOS"
                ReferencedContainer = "container:OTUS-Practice.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -77,7 +77,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24DF7770240E327700D80C8E"
             BuildableName = "OTUS-Practice.app"
-            BlueprintName = "OTUS-Practice"
+            BlueprintName = "AppIOS"
             ReferencedContainer = "container:OTUS-Practice.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -95,7 +95,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24DF7770240E327700D80C8E"
             BuildableName = "OTUS-Practice.app"
-            BlueprintName = "OTUS-Practice"
+            BlueprintName = "AppIOS"
             ReferencedContainer = "container:OTUS-Practice.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

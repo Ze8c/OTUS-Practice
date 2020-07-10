@@ -8,21 +8,21 @@
 import Foundation
 
 public class Box {
-    public var tmp: [String: AnyObject] = [:]
+    public var tmp: [String: () -> AnyObject] = [:]
     
-    public func inject(_ abstraction: Any.Type, _  implementation: () -> AnyObject) {
-        tmp[String(describing: abstraction.self)] = implementation()
+    public func inject(_ abstraction: Any.Type, _  implementation: @escaping () -> AnyObject) {
+        tmp[String(describing: abstraction.self)] = implementation
     }
 }
 
 public class ServiceLocatorImpl: ServiceLocator {
     
-    private var registry: [String: AnyObject] = [:]
+    private var registry: [String: () -> AnyObject] = [:]
     
     public init() {}
     
     public func register(_ service: Any) {
-        registry[String(describing: service.self)] = service as AnyObject
+        registry[String(describing: service.self)] = { service as AnyObject }
     }
     
     public func registrator(component: (Box) -> Void) {
@@ -32,6 +32,6 @@ public class ServiceLocatorImpl: ServiceLocator {
     }
     
     public func tryGet<T>() -> T? {
-        registry[String(describing: T.self)] as? T
+        registry[String(describing: T.self)]?() as? T
     }
 }

@@ -28,7 +28,7 @@ struct MainScreenIOS: View {
                 .tag(Tabs.first)
                 .tabItem {
                     Image(systemName: "scope")
-                    Text("1")
+                    Text("Anime")
                 }
             /*
             LocaliseTextView()
@@ -44,19 +44,26 @@ struct MainScreenIOS: View {
                 .tag(Tabs.second)
                 .tabItem {
                     Image(systemName: "checkmark.seal")
-                    Text("2")
+                    Text("Algorithms")
                 }
             ReduxView()
                 .environmentObject(vm.reduxStore)
                 .tag(Tabs.third)
                 .tabItem {
                     Image(systemName: "arrow.3.trianglepath")
-                    Text("3")
+                    Text("Redux")
                 }
         }
     }
     
     mutating func change(tab: Tabs) {
         selection = tab
+    }
+}
+
+struct MainScreenIOS_Previews: PreviewProvider {
+    static var previews: some View {
+        MainScreenIOS()
+            .environmentObject(MainScreenIOSVM())
     }
 }
