@@ -10,7 +10,7 @@ import Foundation
 
 final class UserDefaultsService: DataProvider {
     
-    internal let provider: UserDefaults?
+    private let provider: UserDefaults?
     
     init(with ud: UserDefaults? = UserDefaults(suiteName: "group.com.otus-pracitce.my")) {
         provider = ud

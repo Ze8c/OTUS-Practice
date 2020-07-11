@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "24DF7770240E327700D80C8E"
-               BuildableName = "OTUS-Practice.app"
+               BuildableName = "Practice.app"
                BlueprintName = "AppIOS"
                ReferencedContainer = "container:OTUS-Practice.xcodeproj">
             </BuildableReference>
@@ -26,7 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -55,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24DF7770240E327700D80C8E"
-            BuildableName = "OTUS-Practice.app"
+            BuildableName = "Practice.app"
             BlueprintName = "AppIOS"
             ReferencedContainer = "container:OTUS-Practice.xcodeproj">
          </BuildableReference>
@@ -72,7 +73,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24DF7770240E327700D80C8E"
-            BuildableName = "OTUS-Practice.app"
+            BuildableName = "Practice.app"
             BlueprintName = "AppIOS"
             ReferencedContainer = "container:OTUS-Practice.xcodeproj">
          </BuildableReference>

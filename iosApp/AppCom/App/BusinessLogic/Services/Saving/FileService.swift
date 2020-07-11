@@ -10,7 +10,7 @@ import Foundation
 
 final class FileService: DataProvider {
     
-    internal let provider: FileManager?
+    private let provider: FileManager?
     private let docPath: String
     
     init(with fm: FileManager? = FileManager.default) {// = UserDefaults(suiteName: "group.com.otus-pracitce.my")) {

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EC655FE424A2524900798CC6"
-               BuildableName = "OTUS-Practice.app"
+               BuildableName = "Catalist.app"
                BlueprintName = "AppCatalyst"
                ReferencedContainer = "container:OTUS-Practice.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EC655FE424A2524900798CC6"
-            BuildableName = "OTUS-Practice.app"
+            BuildableName = "Catalist.app"
             BlueprintName = "AppCatalyst"
             ReferencedContainer = "container:OTUS-Practice.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EC655FE424A2524900798CC6"
-            BuildableName = "OTUS-Practice.app"
+            BuildableName = "Catalist.app"
             BlueprintName = "AppCatalyst"
             ReferencedContainer = "container:OTUS-Practice.xcodeproj">
          </BuildableReference>

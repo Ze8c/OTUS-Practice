@@ -15,8 +15,13 @@ protocol DBAbstract: class {
 }
 
 final class DBImpl: DBAbstract {
-    private let realm = try? Realm()
-    private let dbQueue = DispatchQueue.main
+    private let realm: Realm?
+    private let dbQueue: DispatchQueue
+    
+    init() {
+        realm = try? Realm()
+        dbQueue = DispatchQueue.main
+    }
     
     func save<T: Object>(elements: Array<T>) {
         dbQueue.async {

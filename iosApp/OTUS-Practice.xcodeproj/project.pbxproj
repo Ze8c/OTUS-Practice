@@ -107,6 +107,8 @@
 		EC2E924B24B464D8006762E1 /* ScoreModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2E924A24B464D8006762E1 /* ScoreModifier.swift */; };
 		EC32799424A5207E00844DC8 /* View3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC32799324A5207E00844DC8 /* View3D.swift */; };
 		EC32799524A5207E00844DC8 /* View3D.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC32799324A5207E00844DC8 /* View3D.swift */; };
+		EC614E6C24B9A1DA0094DA95 /* AlgorithmsPerformanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC614E6B24B9A1D90094DA95 /* AlgorithmsPerformanceTest.swift */; };
+		EC614E7024B9C9480094DA95 /* SavingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC614E6F24B9C9480094DA95 /* SavingTest.swift */; };
 		EC655FC424A211A100798CC6 /* ArrayProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248081AB247533000023A709 /* ArrayProcessor.swift */; };
 		EC655FC524A211A700798CC6 /* DictionaryProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248081B324755C200023A709 /* DictionaryProcessor.swift */; };
 		EC655FC624A211AC00798CC6 /* SetProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248081B524755D0B0023A709 /* SetProcessor.swift */; };
@@ -177,7 +179,7 @@
 		EC6EDCAE24A614CB00B71D10 /* View3DVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAC24A614CB00B71D10 /* View3DVM.swift */; };
 		EC6EDCB024A616B500B71D10 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAF24A616B500B71D10 /* Renderer.swift */; };
 		EC6EDCB124A616B500B71D10 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAF24A616B500B71D10 /* Renderer.swift */; };
-		EC91C0FA24B780470020E878 /* IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC91C0F924B780470020E878 /* IOSTests.swift */; };
+		EC91C0FA24B780470020E878 /* StoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC91C0F924B780470020E878 /* StoreTest.swift */; };
 		ECB8362824A358F20083760D /* texture_forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB8362724A358F20083760D /* texture_forest.jpg */; };
 		ECB8362924A358F20083760D /* texture_forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB8362724A358F20083760D /* texture_forest.jpg */; };
 		ECB8362C24A359060083760D /* teacup.mtl in Resources */ = {isa = PBXBuildFile; fileRef = ECB8362A24A359060083760D /* teacup.mtl */; };
@@ -398,6 +400,8 @@
 		EC2E924A24B464D8006762E1 /* ScoreModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModifier.swift; sourceTree = "<group>"; };
 		EC32799324A5207E00844DC8 /* View3D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View3D.swift; sourceTree = "<group>"; };
 		EC53A26324B4CCF000A9860E /* kotlinMP */ = {isa = PBXFileReference; lastKnownFileType = folder; name = kotlinMP; path = ../kotlinMP; sourceTree = "<group>"; };
+		EC614E6B24B9A1D90094DA95 /* AlgorithmsPerformanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsPerformanceTest.swift; sourceTree = "<group>"; };
+		EC614E6F24B9C9480094DA95 /* SavingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingTest.swift; sourceTree = "<group>"; };
 		EC655FD124A213E900798CC6 /* AlgoTypesWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoTypesWatch.swift; sourceTree = "<group>"; };
 		EC655FD824A22AEC00798CC6 /* HandleTestAndButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleTestAndButton.swift; sourceTree = "<group>"; };
 		EC655FDD24A2487000798CC6 /* ServiceLocator */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ServiceLocator; sourceTree = "<group>"; };
@@ -423,7 +427,7 @@
 		EC6EDCAF24A616B500B71D10 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		EC70890524B4AFFE00C8525E /* kotlinMP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = kotlinMP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC91C0F724B780470020E878 /* IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC91C0F924B780470020E878 /* IOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSTests.swift; sourceTree = "<group>"; };
+		EC91C0F924B780470020E878 /* StoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTest.swift; sourceTree = "<group>"; };
 		EC91C0FB24B780470020E878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECB8362724A358F20083760D /* texture_forest.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture_forest.jpg; sourceTree = "<group>"; };
 		ECB8362A24A359060083760D /* teacup.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = teacup.mtl; sourceTree = "<group>"; };
@@ -1130,7 +1134,9 @@
 		EC91C0F824B780470020E878 /* IOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				EC91C0F924B780470020E878 /* IOSTests.swift */,
+				EC614E6B24B9A1D90094DA95 /* AlgorithmsPerformanceTest.swift */,
+				EC614E6F24B9C9480094DA95 /* SavingTest.swift */,
+				EC91C0F924B780470020E878 /* StoreTest.swift */,
 				EC91C0FB24B780470020E878 /* Info.plist */,
 			);
 			path = IOSTests;
@@ -1707,7 +1713,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC91C0FA24B780470020E878 /* IOSTests.swift in Sources */,
+				EC614E7024B9C9480094DA95 /* SavingTest.swift in Sources */,
+				EC614E6C24B9A1DA0094DA95 /* AlgorithmsPerformanceTest.swift in Sources */,
+				EC91C0FA24B780470020E878 /* StoreTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

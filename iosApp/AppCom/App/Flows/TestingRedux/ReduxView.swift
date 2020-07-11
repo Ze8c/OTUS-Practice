@@ -11,6 +11,11 @@ import SwiftUI
 
 typealias Reducer<S, A> = (S, A) -> S
 
+enum ActionInt {
+    case increment
+    case decrement
+}
+
 let reducerInt: Reducer<Int, ActionInt> = { prevState, action in
     switch action {
     case .increment:
@@ -37,11 +42,6 @@ final class Store<State, Action>: ObservableObject {
             self.state = self.reducer(self.state, action)
         }
     }
-}
-
-enum ActionInt {
-    case increment
-    case decrement
 }
 
 struct ReduxView: View {
