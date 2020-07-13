@@ -21,7 +21,8 @@ import services.jikanAPI.infrastructure.*
 
 class SearchApi {
 
-    private val apiService = ApiService()
+//    private val apiService: ApiConnector = ApiService()
+    private val apiService: ApiConnector = ApiStub()
 
     fun getAnime(q: String, page: Int, callback: (ProductList) -> Unit)  {
 
@@ -36,9 +37,10 @@ class SearchApi {
         )
 
         apiService.request(localVariableConfig) {
-            GlobalScope.launch(Dispatchers.Main) {
-                callback(it)
-            }
+//            GlobalScope.launch(Dispatchers.Main) {
+//                callback(it)
+//            }
+            callback(it)
         }
     }
 
@@ -55,11 +57,12 @@ class SearchApi {
         )
 
         apiService.request(localVariableConfig) {
-            GlobalScope.apply {
-                launch(Dispatchers.Main) {
-                    callback(it)
-                }
-            }
+//            GlobalScope.apply {
+//                launch(Dispatchers.Main) {
+//                    callback(it)
+//                }
+//            }
+            callback(it)
         }
     }
 }

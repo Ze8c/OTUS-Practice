@@ -47,5 +47,4 @@ final class AnimeVM: ObservableObject {
         store.set(query: query)
         store.dispatch(action: .search)
     }
-    
 }

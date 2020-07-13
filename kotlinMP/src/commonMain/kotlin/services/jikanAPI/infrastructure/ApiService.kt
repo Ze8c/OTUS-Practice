@@ -9,37 +9,42 @@ import io.ktor.client.features.json.serializer.KotlinxSerializer
 import io.ktor.client.request.*
 import io.ktor.http.*
 import kotlinx.coroutines.*
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonConfiguration
+import services.jikanAPI.models.Product
 
 import services.jikanAPI.models.ProductList
 
 expect val ApplicationDispatcher: CoroutineDispatcher
 
-class ApiService(private val baseUrl: String = "https://api.jikan.moe/v3") {
+interface ApiConnector {
+    fun request(config: RequestConfig, callback: (ProductList) -> Unit)
+}
 
-//    private val client = HttpClient()
+class ApiService : ApiConnector {
 
-    val client = HttpClient() {
+    private val baseUrl: String = "https://api.jikan.moe/v3"
 
-        // Full configuration.
+    private val client = HttpClient() {
+
         install(UserAgent) {
             agent = "ktor"
         }
 
         install(JsonFeature) {
-            serializer = KotlinxSerializer()
+            val json = Json(JsonConfiguration(ignoreUnknownKeys = true))
+            serializer = KotlinxSerializer(json)
         }
 
-        // Shortcut for the browser-like user agent.
         BrowserUserAgent()
 
-        // Shortcut for the curl-like user agent.
         CurlUserAgent()
     }
 
-    fun request(config: RequestConfig, callback: (ProductList) -> Unit) {
+    override fun request(config: RequestConfig, callback: (ProductList) -> Unit) {
 
         GlobalScope.launch(ApplicationDispatcher) {
-            val result: ProductList = client.get {
+            val result = client.get<ProductList> {
                 this.url {
                     this.takeFrom(URLBuilder(baseUrl))
                     appendPath(config.path.trimStart('/').split('/'))
@@ -59,5 +64,25 @@ class ApiService(private val baseUrl: String = "https://api.jikan.moe/v3") {
         encodedPath = encodedPath
             .trimEnd('/') + components
             .joinToString("/", prefix = "/") { it.encodeURLQueryComponent() }
+    }
+}
+
+class ApiStub : ApiConnector {
+
+    override fun request(config: RequestConfig, callback: (ProductList) -> Unit) {
+        GlobalScope.launch(ApplicationDispatcher) {
+
+            val prod = Product(malId = 2001,
+                    imageUrl = "",
+                    title =  config.path,
+                    synopsis = config.query.getValue("q"),
+                    type = "anime",
+                    members = 10,
+                    score = 10.0)
+
+            val prodA: Array<Product> = arrayOf(prod)
+            val prodL = ProductList(1, prodA)
+            callback(prodL)
+        }
     }
 }

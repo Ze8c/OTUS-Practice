@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import sample.R
 import store.ProductActions
 import store.ProductType
@@ -28,7 +31,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         store.add {
-            resultText.text = it.size.toString()
+            GlobalScope.launch(Dispatchers.Main) {
+                resultText.text = it.size.toString()
+            }
         }
     }
 }
