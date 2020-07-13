@@ -11,97 +11,55 @@
 */
 package services.jikanAPI
 
+import io.ktor.http.HttpMethod
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+
 import services.jikanAPI.models.ProductList
 import services.jikanAPI.infrastructure.*
 
-//import kotlinx.serialization.UnstableDefault
-import io.ktor.client.engine.HttpClientEngine
-import io.ktor.client.features.json.serializer.KotlinxSerializer
-import io.ktor.client.utils.EmptyContent
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonConfiguration
+class SearchApi {
 
-class SearchApi
-//    @OptIn(UnstableDefault::class)
-    constructor(
-        baseUrl: String = "https://api.jikan.moe/v3",
-        httpClientEngine: HttpClientEngine? = null,
-        serializer: KotlinxSerializer)
-    : ApiClient(baseUrl, httpClientEngine, serializer) {
+    private val apiService = ApiService()
 
-//    @OptIn(UnstableDefault::class)
-    constructor(
-        baseUrl: String = "https://api.jikan.moe/v3",
-        httpClientEngine: HttpClientEngine? = null,
-        jsonConfiguration: JsonConfiguration = JsonConfiguration.Default)
-    : this(baseUrl, httpClientEngine, KotlinxSerializer(Json(jsonConfiguration)))
+    fun getAnime(q: String, page: Int, callback: (ProductList) -> Unit)  {
 
-    /**
-    * Get Anime
-    * 
-    * @param q Query 
-    * @param page Paging 
-    * @return ProductList
-    */
-    @Suppress("UNCHECKED_CAST")
-    suspend fun getAnime(q: String, page: Int) : ProductList {
-
-        val localVariableAuthNames = listOf<String>()
-
-        val localVariableBody = EmptyContent
-
-        val localVariableQuery = mutableMapOf<String, List<String>>()
-        q.apply { localVariableQuery["q"] = listOf(q) }
-        page.apply { localVariableQuery["page"] = listOf("$page") }
-
-        val localVariableHeaders = mutableMapOf<String, String>()
+        val localVariableQuery = mutableMapOf<String, String>()
+        q.apply { localVariableQuery["q"] = q }
+        page.apply { localVariableQuery["page"] = "$page" }
 
         val localVariableConfig = RequestConfig(
-            RequestMethod.GET,
+                HttpMethod.Get,
             "/search/anime",
-            query = localVariableQuery,
-            headers = localVariableHeaders
+            query = localVariableQuery
         )
 
-        return request(
-            localVariableConfig,
-            localVariableBody,
-            localVariableAuthNames
-        )
+        apiService.request(localVariableConfig) {
+            GlobalScope.launch(Dispatchers.Main) {
+                callback(it)
+            }
+        }
     }
 
+    fun getManga(q: String, page: Int, callback: (ProductList) -> Unit) {
 
-    /**
-    * Get Manga
-    * 
-    * @param q Query 
-    * @param page Paging 
-    * @return ProductList
-    */
-    @Suppress("UNCHECKED_CAST")
-    suspend fun getManga(q: String, page: Int) : ProductList {
-
-        val localVariableAuthNames = listOf<String>()
-
-        val localVariableBody = EmptyContent
-
-        val localVariableQuery = mutableMapOf<String, List<String>>()
-        q.apply { localVariableQuery["q"] = listOf(q) }
-        page.apply { localVariableQuery["page"] = listOf("$page") }
-
-        val localVariableHeaders = mutableMapOf<String, String>()
+        val localVariableQuery = mutableMapOf<String, String>()
+        q.apply { localVariableQuery["q"] = q }
+        page.apply { localVariableQuery["page"] = "$page" }
 
         val localVariableConfig = RequestConfig(
-            RequestMethod.GET,
+            HttpMethod.Get,
             "/search/manga",
-            query = localVariableQuery,
-            headers = localVariableHeaders
+            query = localVariableQuery
         )
 
-        return request(
-            localVariableConfig,
-            localVariableBody,
-            localVariableAuthNames
-        )
+        apiService.request(localVariableConfig) {
+            GlobalScope.apply {
+                launch(Dispatchers.Main) {
+                    callback(it)
+                }
+            }
+        }
     }
 }

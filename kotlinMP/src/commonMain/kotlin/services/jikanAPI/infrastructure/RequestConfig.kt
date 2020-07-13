@@ -1,5 +1,7 @@
 package services.jikanAPI.infrastructure
 
+import io.ktor.http.HttpMethod
+
 /**
  * Defines a config object for a given request.
  * NOTE: This object doesn't include 'body' because it
@@ -9,8 +11,7 @@ package services.jikanAPI.infrastructure
  *       multi-valued headers as csv-only.
  */
 data class RequestConfig(
-    val method: RequestMethod,
+    val method: HttpMethod,
     val path: String,
-    val headers: MutableMap<String, String> = mutableMapOf(),
-    val query: MutableMap<String, List<String>> = mutableMapOf()
+    val query: MutableMap<String, String> = mutableMapOf()
 )

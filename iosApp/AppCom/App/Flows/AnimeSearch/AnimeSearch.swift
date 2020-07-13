@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AnimeSearch: View {
     
-    @EnvironmentObject var vm: ProductVM
+    @EnvironmentObject var vm: AnimeVM
     
     @State private var searchText: String = ""
     @State private var searchFilter: String = ""
@@ -63,6 +63,6 @@ struct AnimeSearch: View {
 struct AnimeSearch_Previews: PreviewProvider {
     static var previews: some View {
         AnimeSearch()
-            .environmentObject(ProductVM(serviceAPI: AnimeAPIImpl(), db: DBImpl()))
+            .environmentObject(AnimeVM())
     }
 }

@@ -174,11 +174,17 @@
 		EC65604224A266C800798CC6 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573B7240F8EC300B6CDDB /* LazyView.swift */; };
 		EC65604324A266C900798CC6 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573B7240F8EC300B6CDDB /* LazyView.swift */; };
 		EC65604624A27FE500798CC6 /* ReduxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65604524A27FE500798CC6 /* ReduxView.swift */; };
+		EC68434D24BA31CE00383155 /* kotlinMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC70890524B4AFFE00C8525E /* kotlinMP.framework */; };
+		EC68434E24BA31CE00383155 /* kotlinMP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC70890524B4AFFE00C8525E /* kotlinMP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EC68435224BA32C100383155 /* kotlinMP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC70890524B4AFFE00C8525E /* kotlinMP.framework */; };
+		EC68435324BA32C100383155 /* kotlinMP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC70890524B4AFFE00C8525E /* kotlinMP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC6EDCAB24A612FF00B71D10 /* MainScreenCatalystVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAA24A612FF00B71D10 /* MainScreenCatalystVM.swift */; };
 		EC6EDCAD24A614CB00B71D10 /* View3DVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAC24A614CB00B71D10 /* View3DVM.swift */; };
 		EC6EDCAE24A614CB00B71D10 /* View3DVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAC24A614CB00B71D10 /* View3DVM.swift */; };
 		EC6EDCB024A616B500B71D10 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAF24A616B500B71D10 /* Renderer.swift */; };
 		EC6EDCB124A616B500B71D10 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAF24A616B500B71D10 /* Renderer.swift */; };
+		EC79972524BB8E8A00D3484B /* AnimeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79972424BB8E8A00D3484B /* AnimeVM.swift */; };
+		EC79972624BB8E8A00D3484B /* AnimeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79972424BB8E8A00D3484B /* AnimeVM.swift */; };
 		EC91C0FA24B780470020E878 /* StoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC91C0F924B780470020E878 /* StoreTest.swift */; };
 		ECB8362824A358F20083760D /* texture_forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB8362724A358F20083760D /* texture_forest.jpg */; };
 		ECB8362924A358F20083760D /* texture_forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB8362724A358F20083760D /* texture_forest.jpg */; };
@@ -248,6 +254,20 @@
 			remoteGlobalIDString = EC24740F24A12D1900D35F94;
 			remoteInfo = "WatchApp Extension";
 		};
+		EC68434F24BA31CE00383155 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC70890424B4AFFE00C8525E;
+			remoteInfo = kotlinMP;
+		};
+		EC68435424BA32C100383155 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC70890424B4AFFE00C8525E;
+			remoteInfo = kotlinMP;
+		};
 		EC76417124B8B39300952355 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24DF7769240E327700D80C8E /* Project object */;
@@ -295,6 +315,28 @@
 				EC24741124A12D1900D35F94 /* WatchExt.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC68435124BA31CE00383155 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EC68434E24BA31CE00383155 /* kotlinMP.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC68435624BA32C100383155 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EC68435324BA32C100383155 /* kotlinMP.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -426,6 +468,7 @@
 		EC6EDCAC24A614CB00B71D10 /* View3DVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View3DVM.swift; sourceTree = "<group>"; };
 		EC6EDCAF24A616B500B71D10 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		EC70890524B4AFFE00C8525E /* kotlinMP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = kotlinMP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC79972424BB8E8A00D3484B /* AnimeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeVM.swift; sourceTree = "<group>"; };
 		EC91C0F724B780470020E878 /* IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC91C0F924B780470020E878 /* StoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTest.swift; sourceTree = "<group>"; };
 		EC91C0FB24B780470020E878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -451,6 +494,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC68435224BA32C100383155 /* kotlinMP.framework in Frameworks */,
 				EC655FE024A2489300798CC6 /* ServiceLocator in Frameworks */,
 				24D7955E2476779E0016D1AF /* RealmSwift in Frameworks */,
 				2484CC9B246ADC1B00C59D56 /* KingfisherSwiftUI in Frameworks */,
@@ -468,6 +512,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC68434D24BA31CE00383155 /* kotlinMP.framework in Frameworks */,
 				ECC76EF824B7AAEC00F45122 /* RealmSwift in Frameworks */,
 				ECC76EF224B7AACA00F45122 /* KingfisherSwiftUI in Frameworks */,
 			);
@@ -896,6 +941,7 @@
 			children = (
 				2480819D247527AB0023A709 /* AlgoTypesVM.swift */,
 				248081A1247528E30023A709 /* AlgoTestVM.swift */,
+				EC79972424BB8E8A00D3484B /* AnimeVM.swift */,
 				245573AD240F721A00B6CDDB /* ProductVM.swift */,
 				EC6EDCAC24A614CB00B71D10 /* View3DVM.swift */,
 			);
@@ -1198,12 +1244,14 @@
 				24DF776F240E327700D80C8E /* Resources */,
 				EC24742924A12D1A00D35F94 /* Embed Watch Content */,
 				EC22F00B24B8C85100435C98 /* Embed App Extensions */,
+				EC68435624BA32C100383155 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				EC76417224B8B39300952355 /* PBXTargetDependency */,
 				EC22F00A24B8C85100435C98 /* PBXTargetDependency */,
+				EC68435524BA32C100383155 /* PBXTargetDependency */,
 			);
 			name = AppIOS;
 			packageProductDependencies = (
@@ -1256,10 +1304,12 @@
 				EC655FE124A2524900798CC6 /* Sources */,
 				EC655FE224A2524900798CC6 /* Frameworks */,
 				EC655FE324A2524900798CC6 /* Resources */,
+				EC68435124BA31CE00383155 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EC68435024BA31CE00383155 /* PBXTargetDependency */,
 			);
 			name = AppCatalyst;
 			packageProductDependencies = (
@@ -1553,6 +1603,7 @@
 				2454F8E7242CD9C1001AA9EE /* StretchyHeader.swift in Sources */,
 				24F5A4222420ADA800F4A1C3 /* NextFirstView.swift in Sources */,
 				241EBD542419FE610089A32B /* ColumnView.swift in Sources */,
+				EC79972524BB8E8A00D3484B /* AnimeVM.swift in Sources */,
 				248081B424755C200023A709 /* DictionaryProcessor.swift in Sources */,
 				249C4DF92421FE7300925F96 /* ProductList.swift in Sources */,
 				248081AC247533000023A709 /* ArrayProcessor.swift in Sources */,
@@ -1635,6 +1686,7 @@
 				ECC76EE224B7A82300F45122 /* Configuration.swift in Sources */,
 				ECC76ED324B7A4CB00F45122 /* DetailInfo.swift in Sources */,
 				ECC76F0124B7ACBA00F45122 /* ImageExt.swift in Sources */,
+				EC79972624BB8E8A00D3484B /* AnimeVM.swift in Sources */,
 				EC65600024A253DD00798CC6 /* StringExt.swift in Sources */,
 				EC65601224A2560100798CC6 /* AlgoTestVM.swift in Sources */,
 				EC65604224A266C800798CC6 /* LazyView.swift in Sources */,
@@ -1731,6 +1783,16 @@
 			isa = PBXTargetDependency;
 			target = EC24740F24A12D1900D35F94 /* WatchApp Extension */;
 			targetProxy = EC24741224A12D1900D35F94 /* PBXContainerItemProxy */;
+		};
+		EC68435024BA31CE00383155 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC70890424B4AFFE00C8525E /* kotlinMP */;
+			targetProxy = EC68434F24BA31CE00383155 /* PBXContainerItemProxy */;
+		};
+		EC68435524BA32C100383155 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC70890424B4AFFE00C8525E /* kotlinMP */;
+			targetProxy = EC68435424BA32C100383155 /* PBXContainerItemProxy */;
 		};
 		EC76417224B8B39300952355 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

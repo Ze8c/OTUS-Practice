@@ -1,60 +1,90 @@
 package store
 
-import io.ktor.client.features.json.serializer.KotlinxSerializer
-import io.ktor.http.content.MultiPartData
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
 import services.jikanAPI.SearchApi
 import services.jikanAPI.models.Product
 import services.jikanAPI.models.ProductList
-import kotlin.coroutines.CoroutineContext
 
-enum class ProductActions { SEARCH, UPDATE, NEXT }
+typealias StoreSubscriber <S> = (S) -> Unit
 
-val CounterStateReducer: Reducer<ProductList, ProductActions> = { old, action ->
-    when (action) {
-        ProductActions.SEARCH -> old
-        ProductActions.UPDATE -> old
-        ProductActions.NEXT -> old
-    }
+enum class ProductType {
+    ANIME {
+        override fun result(api: SearchApi, q: String, page: Int, async: (ProductList) -> Unit) {
+            api.getAnime(q, page, async)
+        }
+    },
+
+    MANGA {
+        override fun result(api: SearchApi, q: String, page: Int, async: (ProductList) -> Unit) {
+            api.getManga(q, page, async)
+        }
+    };
+
+    abstract fun result(api: SearchApi, q: String, page: Int, async: (ProductList) -> Unit)
 }
 
-final class StoreProduct(
-    initialState: ProductList = ProductList(0, emptyArray()),
-    private val reducer: Reducer<ProductList, ProductActions> = CounterStateReducer
-) : CoroutineScope {
+enum class ProductActions {
+    SEARCH {
+        override fun doing(api: SearchApi, q: ProductRequest, async: (ProductRequest) -> Unit) {
 
-    private var job: Job = Job()
+            q.firstPage = 1
 
-    override val coroutineContext: CoroutineContext
-        get() = Dispatchers.Main + job
+            q.filter.result(api, q.query, q.firstPage) {
+                q.firstPage = it.lastPage
+                q.result = it.results
+                async(q)
+            }
+        }
+    },
 
-    private val subscribers = mutableSetOf<StoreSubscriber<ProductList>>()
+    NEXT {
+        override fun doing(api: SearchApi, q: ProductRequest, async: (ProductRequest) -> Unit) {
+            q.filter.result(api, q.query, q.firstPage) {
+                q.firstPage = it.lastPage
+                q.result += it.results
+                async(q)
+            }
+        }
+    };
 
-    private var state: ProductList = initialState
+    abstract fun doing(api: SearchApi, q: ProductRequest, async: (ProductRequest) -> Unit)
+}
+
+data class ProductRequest(
+        var query: String,
+        var firstPage: Int,
+        var filter: ProductType,
+        var result: Array<Product>
+)
+
+class StoreProduct {
+
+    private val subscribers = mutableSetOf<StoreSubscriber<Array<Product>>>()
+    private val api: SearchApi = SearchApi()
+
+    private var state: ProductRequest = ProductRequest("",
+            1,
+            ProductType.ANIME,
+            emptyArray())
         set(value) {
             field = value
-            subscribers.forEach { it(value) }
+            subscribers.forEach { it(value.result) }
         }
 
-    fun getJob() = job
+    fun set(query: String) {
+        state.query = query
+    }
+
+    fun set(filter: ProductType) {
+        state.filter = filter
+    }
 
     fun dispatch(action: ProductActions) {
-        state = reducer(state, action)
+        action.doing(api, state) {
+            state = it
+        }
     }
 
-    fun add(subscriber: StoreSubscriber <ProductList>) = subscribers.add(element = subscriber)
+    fun add(subscriber: StoreSubscriber <Array<Product>>) = subscribers.add(element = subscriber)
 
-    fun remove(subscriber: StoreSubscriber <ProductList>) = subscribers.remove(element = subscriber)
-
-    fun search(q: String, page: Int) {
-        val apiInstance = SearchApi()
-        launch { state = apiInstance.getAnime(q, page) }
-    }
-
-    fun testSearch() {
-        state = ProductList(20, emptyArray())
-    }
+    fun remove(subscriber: StoreSubscriber <Array<Product>>) = subscribers.remove(element = subscriber)
 }
