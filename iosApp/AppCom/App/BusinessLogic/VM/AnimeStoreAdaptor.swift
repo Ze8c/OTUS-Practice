@@ -1,5 +1,5 @@
 //
-//  AnimeVM.swift
+//  AnimeStoreAdaptor.swift
 //  OTUS-Practice
 //
 //  Created by Максим Сытый on 12.07.2020.
@@ -10,30 +10,29 @@ import Foundation
 import Combine
 import kotlinMP
 
-final class AnimeVM: ObservableObject {
+final class AnimeStoreAdaptor: ObservableObject {
     
     private var bag = Set<AnyCancellable>()
     private let store: StoreProduct
     
     @Published var selected: Int? = nil
     @Published var query: String = ""
-    @Published var lastAppearElement: Product = .naught
+    @Published var lastAppearElement: ProductDB = .naught
     
-    @Published private(set) var list: Array<Product> = []
+    @Published private(set) var list: [ProductDB] = []
     @Published private(set) var isLoaded: Bool = true
     
-    @Published var filter: String = ProductType.anime.rawValue
+    @Published var filter: String = ProductDBType.anime.rawValue
     var filters: Array<String>
     
     init() {
-        filters = ProductType.allCases
+        filters = ProductDBType.allCases
             .map { $0.rawValue }
         
         store = StoreProduct()
         
-        store.add { res in
-            var tmpArr: Array<Product> = []
-            print("LOG > result", res)
+        store.observer.add { [weak self] res in
+            self?.list = res.map { ProductDB(kotlinModel: $0) }
         }
         
         $query

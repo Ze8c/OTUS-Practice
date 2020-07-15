@@ -8,9 +8,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import sample.R
-import store.ProductActions
-import store.ProductType
 import store.StoreProduct
+import store.entity.ProductActions
+import store.entity.ProductType
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             store.dispatch(ProductActions.SEARCH)
         }
 
-        store.add {
+        store.observer.add {
             GlobalScope.launch(Dispatchers.Main) {
                 resultText.text = it.size.toString()
             }

@@ -19,10 +19,10 @@ class SavingTest: XCTestCase {
         "testValue"
     }
     
-    var stubProduct: Product {
+    var stubProduct: ProductDB {
         let imgURL = "https://cdn.myanimelist.net/images/anime/13/11460.jpg?s=7e890b7e93b7b57c2de4aa90211931bd"
         
-        return Product(id: 245,
+        return ProductDB(id: 245,
                        imageUrl: imgURL,
                        title: "Great Teacher Onizuka",
                        synopsis: "Onizuka is a reformed biker gang leader who has his sights set on an honorable new ambition: to become the world's greatest teacher... for the purpose of meeting sexy high school girls. Okay, so he's...",
@@ -67,7 +67,7 @@ class SavingTest: XCTestCase {
         
         db.save(elements: [stubProduct])
         
-        let getProduct: Array<Product> = db.getElements()
+        let getProduct: Array<ProductDB> = db.getElements()
         
         XCTAssertTrue(getProduct[0] == stubProduct)
     }

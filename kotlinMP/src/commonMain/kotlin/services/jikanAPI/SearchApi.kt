@@ -18,51 +18,28 @@ import kotlinx.coroutines.launch
 
 import services.jikanAPI.models.ProductList
 import services.jikanAPI.infrastructure.*
+import services.jikanAPI.models.ContentResponse
 
 class SearchApi {
 
-//    private val apiService: ApiConnector = ApiService()
-    private val apiService: ApiConnector = ApiStub()
+    private val apiService: ApiConnector = ApiService()
+//    private val apiService: ApiConnector = ApiStub()
 
-    fun getAnime(q: String, page: Int, callback: (ProductList) -> Unit)  {
+    suspend fun getAnime(q: String, page: Int, callback: (ProductList) -> Unit) {
 
-        val localVariableQuery = mutableMapOf<String, String>()
-        q.apply { localVariableQuery["q"] = q }
-        page.apply { localVariableQuery["page"] = "$page" }
+        val query = "q=$q"
+        val pageStr = "page=$page"
 
-        val localVariableConfig = RequestConfig(
-                HttpMethod.Get,
-            "/search/anime",
-            query = localVariableQuery
-        )
-
-        apiService.request(localVariableConfig) {
-//            GlobalScope.launch(Dispatchers.Main) {
-//                callback(it)
-//            }
-            callback(it)
-        }
+        val path = "v3/search/anime?" + query + "&" + pageStr
+        apiService.getData(path, ProductList.serializer(), callback)
     }
 
-    fun getManga(q: String, page: Int, callback: (ProductList) -> Unit) {
+    suspend fun getManga(q: String, page: Int, callback: (ProductList) -> Unit) {
 
-        val localVariableQuery = mutableMapOf<String, String>()
-        q.apply { localVariableQuery["q"] = q }
-        page.apply { localVariableQuery["page"] = "$page" }
+        val query = "q=$q"
+        val pageStr = "page=$page"
 
-        val localVariableConfig = RequestConfig(
-            HttpMethod.Get,
-            "/search/manga",
-            query = localVariableQuery
-        )
-
-        apiService.request(localVariableConfig) {
-//            GlobalScope.apply {
-//                launch(Dispatchers.Main) {
-//                    callback(it)
-//                }
-//            }
-            callback(it)
-        }
+        val path = "v3/search/manga?" + query + "&" + pageStr
+        apiService.getData(path, ProductList.serializer(), callback)
     }
 }

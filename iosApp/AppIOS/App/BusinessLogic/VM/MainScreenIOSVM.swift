@@ -13,13 +13,13 @@ final class MainScreenIOSVM: ObservableObject {
     let algoVM: AlgoTypesVM
     let view3DVM: View3DVM
     let reduxStore: Store<Int, ActionInt>
-    let animeVM: AnimeVM
+    let animeVM: AnimeStoreAdaptor
     
     init() {
         algoVM = AlgoTypesVM()
         view3DVM = View3DVM()
         reduxStore = Store<Int, ActionInt>(initialState: 0, reducer: reducerInt)
 //        animeVM = ProductVM(serviceAPI: AnimeAPIImpl(), db: DBImpl())
-        animeVM = AnimeVM()
+        animeVM = AnimeStoreAdaptor()
     }
 }

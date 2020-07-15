@@ -13,7 +13,7 @@ struct DetailInfo: View {
     
     @State var isOn: Bool = false
     
-    var element: Product
+    var element: ProductDB
     
     var body: some View {
         VStack {

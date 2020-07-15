@@ -55,21 +55,7 @@
 		2484CCA0246B000900C59D56 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CC9F246B000900C59D56 /* StringExt.swift */; };
 		2484CD4E246C90BE00C59D56 /* LocaliseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CD4D246C90BE00C59D56 /* LocaliseTextView.swift */; };
 		248A39A7243DA51F007E8E23 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A39A6243DA51F007E8E23 /* AnimeAPI.swift */; };
-		249C4DF22421FE7300925F96 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */; };
-		249C4DF32421FE7300925F96 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE22421FE7300925F96 /* Configuration.swift */; };
-		249C4DF42421FE7300925F96 /* SynchronizedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE32421FE7300925F96 /* SynchronizedDictionary.swift */; };
-		249C4DF52421FE7300925F96 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE42421FE7300925F96 /* Extensions.swift */; };
-		249C4DF62421FE7300925F96 /* SearchAnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE62421FE7300925F96 /* SearchAnimeAPI.swift */; };
-		249C4DF72421FE7300925F96 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE72421FE7300925F96 /* APIs.swift */; };
-		249C4DF82421FE7300925F96 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE82421FE7300925F96 /* CodableHelper.swift */; };
-		249C4DF92421FE7300925F96 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEA2421FE7300925F96 /* ProductList.swift */; };
-		249C4DFA2421FE7300925F96 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEB2421FE7300925F96 /* ErrorModel.swift */; };
-		249C4DFB2421FE7300925F96 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEC2421FE7300925F96 /* Product.swift */; };
-		249C4DFC2421FE7300925F96 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DED2421FE7300925F96 /* APIHelper.swift */; };
-		249C4DFD2421FE7300925F96 /* URLSessionImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEE2421FE7300925F96 /* URLSessionImplementations.swift */; };
-		249C4DFE2421FE7300925F96 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEF2421FE7300925F96 /* Models.swift */; };
-		249C4DFF2421FE7300925F96 /* JSONDataEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DF02421FE7300925F96 /* JSONDataEncoding.swift */; };
-		249C4E002421FE7300925F96 /* OpenISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DF12421FE7300925F96 /* OpenISO8601DateFormatter.swift */; };
+		249C4DFB2421FE7300925F96 /* ProductDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEC2421FE7300925F96 /* ProductDB.swift */; };
 		249C4E022422066000925F96 /* RandomAccessCollectionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E012422066000925F96 /* RandomAccessCollectionExt.swift */; };
 		249C4E0924224BEC00925F96 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E0824224BEC00925F96 /* ColorExt.swift */; };
 		249C4E0B2422849D00925F96 /* Spiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E0A2422849D00925F96 /* Spiner.swift */; };
@@ -183,8 +169,8 @@
 		EC6EDCAE24A614CB00B71D10 /* View3DVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAC24A614CB00B71D10 /* View3DVM.swift */; };
 		EC6EDCB024A616B500B71D10 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAF24A616B500B71D10 /* Renderer.swift */; };
 		EC6EDCB124A616B500B71D10 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6EDCAF24A616B500B71D10 /* Renderer.swift */; };
-		EC79972524BB8E8A00D3484B /* AnimeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79972424BB8E8A00D3484B /* AnimeVM.swift */; };
-		EC79972624BB8E8A00D3484B /* AnimeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79972424BB8E8A00D3484B /* AnimeVM.swift */; };
+		EC79972524BB8E8A00D3484B /* AnimeStoreAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79972424BB8E8A00D3484B /* AnimeStoreAdaptor.swift */; };
+		EC79972624BB8E8A00D3484B /* AnimeStoreAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC79972424BB8E8A00D3484B /* AnimeStoreAdaptor.swift */; };
 		EC91C0FA24B780470020E878 /* StoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC91C0F924B780470020E878 /* StoreTest.swift */; };
 		ECB8362824A358F20083760D /* texture_forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB8362724A358F20083760D /* texture_forest.jpg */; };
 		ECB8362924A358F20083760D /* texture_forest.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB8362724A358F20083760D /* texture_forest.jpg */; };
@@ -204,21 +190,7 @@
 		ECC76ED324B7A4CB00F45122 /* DetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573B4240F7D3F00B6CDDB /* DetailInfo.swift */; };
 		ECC76ED424B7A52B00F45122 /* ProductVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245573AD240F721A00B6CDDB /* ProductVM.swift */; };
 		ECC76ED624B7A5F600F45122 /* MainScreenIOSVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC76ED524B7A5F600F45122 /* MainScreenIOSVM.swift */; };
-		ECC76ED724B7A7C200F45122 /* OpenISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DF12421FE7300925F96 /* OpenISO8601DateFormatter.swift */; };
-		ECC76EDC24B7A80F00F45122 /* JSONDataEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DF02421FE7300925F96 /* JSONDataEncoding.swift */; };
-		ECC76EDD24B7A81300F45122 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEF2421FE7300925F96 /* Models.swift */; };
-		ECC76EDE24B7A81700F45122 /* URLSessionImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEE2421FE7300925F96 /* URLSessionImplementations.swift */; };
-		ECC76EDF24B7A81A00F45122 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DED2421FE7300925F96 /* APIHelper.swift */; };
-		ECC76EE024B7A81D00F45122 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE82421FE7300925F96 /* CodableHelper.swift */; };
-		ECC76EE124B7A82300F45122 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */; };
-		ECC76EE224B7A82300F45122 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE22421FE7300925F96 /* Configuration.swift */; };
-		ECC76EE324B7A82300F45122 /* SynchronizedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE32421FE7300925F96 /* SynchronizedDictionary.swift */; };
-		ECC76EE424B7A82300F45122 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE42421FE7300925F96 /* Extensions.swift */; };
-		ECC76EE524B7A82300F45122 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE72421FE7300925F96 /* APIs.swift */; };
-		ECC76EE624B7A82A00F45122 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEC2421FE7300925F96 /* Product.swift */; };
-		ECC76EE724B7A82A00F45122 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEA2421FE7300925F96 /* ProductList.swift */; };
-		ECC76EE824B7A82A00F45122 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEB2421FE7300925F96 /* ErrorModel.swift */; };
-		ECC76EE924B7A82F00F45122 /* SearchAnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DE62421FE7300925F96 /* SearchAnimeAPI.swift */; };
+		ECC76EE624B7A82A00F45122 /* ProductDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEC2421FE7300925F96 /* ProductDB.swift */; };
 		ECC76EEA24B7A86400F45122 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454F8E4242CD422001AA9EE /* Badge.swift */; };
 		ECC76EEB24B7A86F00F45122 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AD81F72446FFA0004C4EC1 /* Cache.swift */; };
 		ECC76EEC24B7A87C00F45122 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2443AED9241A1CA2009DDCEB /* CustomButton.swift */; };
@@ -389,21 +361,7 @@
 		2484CD4B246C4E1300C59D56 /* OTUS-Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OTUS-Share.entitlements"; sourceTree = "<group>"; };
 		2484CD4D246C90BE00C59D56 /* LocaliseTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaliseTextView.swift; sourceTree = "<group>"; };
 		248A39A6243DA51F007E8E23 /* AnimeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeAPI.swift; sourceTree = "<group>"; };
-		249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodingHelper.swift; sourceTree = "<group>"; };
-		249C4DE22421FE7300925F96 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		249C4DE32421FE7300925F96 /* SynchronizedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynchronizedDictionary.swift; sourceTree = "<group>"; };
-		249C4DE42421FE7300925F96 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		249C4DE62421FE7300925F96 /* SearchAnimeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAnimeAPI.swift; sourceTree = "<group>"; };
-		249C4DE72421FE7300925F96 /* APIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIs.swift; sourceTree = "<group>"; };
-		249C4DE82421FE7300925F96 /* CodableHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
-		249C4DEA2421FE7300925F96 /* ProductList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
-		249C4DEB2421FE7300925F96 /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
-		249C4DEC2421FE7300925F96 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		249C4DED2421FE7300925F96 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
-		249C4DEE2421FE7300925F96 /* URLSessionImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionImplementations.swift; sourceTree = "<group>"; };
-		249C4DEF2421FE7300925F96 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		249C4DF02421FE7300925F96 /* JSONDataEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDataEncoding.swift; sourceTree = "<group>"; };
-		249C4DF12421FE7300925F96 /* OpenISO8601DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenISO8601DateFormatter.swift; sourceTree = "<group>"; };
+		249C4DEC2421FE7300925F96 /* ProductDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDB.swift; sourceTree = "<group>"; };
 		249C4E012422066000925F96 /* RandomAccessCollectionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAccessCollectionExt.swift; sourceTree = "<group>"; };
 		249C4E0824224BEC00925F96 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		249C4E0A2422849D00925F96 /* Spiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spiner.swift; sourceTree = "<group>"; };
@@ -468,7 +426,7 @@
 		EC6EDCAC24A614CB00B71D10 /* View3DVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View3DVM.swift; sourceTree = "<group>"; };
 		EC6EDCAF24A616B500B71D10 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		EC70890524B4AFFE00C8525E /* kotlinMP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = kotlinMP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC79972424BB8E8A00D3484B /* AnimeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeVM.swift; sourceTree = "<group>"; };
+		EC79972424BB8E8A00D3484B /* AnimeStoreAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeStoreAdaptor.swift; sourceTree = "<group>"; };
 		EC91C0F724B780470020E878 /* IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC91C0F924B780470020E878 /* StoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTest.swift; sourceTree = "<group>"; };
 		EC91C0FB24B780470020E878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -735,44 +693,6 @@
 			path = LocaliseText;
 			sourceTree = "<group>";
 		};
-		249C4DE02421FE7300925F96 /* OpenAPIs */ = {
-			isa = PBXGroup;
-			children = (
-				249C4DE52421FE7300925F96 /* APIs */,
-				249C4DE92421FE7300925F96 /* Models */,
-				249C4DE12421FE7300925F96 /* JSONEncodingHelper.swift */,
-				249C4DE22421FE7300925F96 /* Configuration.swift */,
-				249C4DE32421FE7300925F96 /* SynchronizedDictionary.swift */,
-				249C4DE42421FE7300925F96 /* Extensions.swift */,
-				249C4DE72421FE7300925F96 /* APIs.swift */,
-				249C4DE82421FE7300925F96 /* CodableHelper.swift */,
-				249C4DED2421FE7300925F96 /* APIHelper.swift */,
-				249C4DEE2421FE7300925F96 /* URLSessionImplementations.swift */,
-				249C4DEF2421FE7300925F96 /* Models.swift */,
-				249C4DF02421FE7300925F96 /* JSONDataEncoding.swift */,
-				249C4DF12421FE7300925F96 /* OpenISO8601DateFormatter.swift */,
-			);
-			path = OpenAPIs;
-			sourceTree = "<group>";
-		};
-		249C4DE52421FE7300925F96 /* APIs */ = {
-			isa = PBXGroup;
-			children = (
-				249C4DE62421FE7300925F96 /* SearchAnimeAPI.swift */,
-			);
-			path = APIs;
-			sourceTree = "<group>";
-		};
-		249C4DE92421FE7300925F96 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				249C4DEC2421FE7300925F96 /* Product.swift */,
-				249C4DEA2421FE7300925F96 /* ProductList.swift */,
-				249C4DEB2421FE7300925F96 /* ErrorModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		249C4E032422066800925F96 /* Visible */ = {
 			isa = PBXGroup;
 			children = (
@@ -941,7 +861,7 @@
 			children = (
 				2480819D247527AB0023A709 /* AlgoTypesVM.swift */,
 				248081A1247528E30023A709 /* AlgoTestVM.swift */,
-				EC79972424BB8E8A00D3484B /* AnimeVM.swift */,
+				EC79972424BB8E8A00D3484B /* AnimeStoreAdaptor.swift */,
 				245573AD240F721A00B6CDDB /* ProductVM.swift */,
 				EC6EDCAC24A614CB00B71D10 /* View3DVM.swift */,
 			);
@@ -953,6 +873,7 @@
 			children = (
 				24C28DD12473FD3E009F0476 /* AlgoProvider.swift */,
 				2476972324922143002AC915 /* AppError.swift */,
+				249C4DEC2421FE7300925F96 /* ProductDB.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -971,7 +892,6 @@
 				EC2E924724B46499006762E1 /* Animation */,
 				EC655FDB24A22AF200798CC6 /* Components */,
 				EC655FD624A227B900798CC6 /* Extensions */,
-				249C4DE02421FE7300925F96 /* OpenAPIs */,
 				2443C49F2499EEDA00D9C97E /* Packages */,
 				ECB8363024A3596D0083760D /* Shaders */,
 			);
@@ -1545,7 +1465,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				249C4E002421FE7300925F96 /* OpenISO8601DateFormatter.swift in Sources */,
 				2476971E24917BEF002AC915 /* Task.swift in Sources */,
 				ECB8363824A35A8C0083760D /* float4x4Ext.swift in Sources */,
 				2466DD532432754D009F2FC4 /* TapAnimatig.swift in Sources */,
@@ -1553,7 +1472,6 @@
 				ECB8363C24A35E420083760D /* MTKViewUI.swift in Sources */,
 				2476972024917C03002AC915 /* TaskScheduler.swift in Sources */,
 				249C4E0924224BEC00925F96 /* ColorExt.swift in Sources */,
-				249C4DFE2421FE7300925F96 /* Models.swift in Sources */,
 				2454F873242CB732001AA9EE /* ImageExt.swift in Sources */,
 				2466DD51243271A9009F2FC4 /* AnimatingServiceLocator.swift in Sources */,
 				24DF7775240E327700D80C8E /* AppDelegate.swift in Sources */,
@@ -1566,7 +1484,6 @@
 				24AD81F82446FFA0004C4EC1 /* Cache.swift in Sources */,
 				2443AED5241A0762009DDCEB /* ColumnVM.swift in Sources */,
 				2443AEDA241A1CA2009DDCEB /* CustomButton.swift in Sources */,
-				249C4DF42421FE7300925F96 /* SynchronizedDictionary.swift in Sources */,
 				24C28DD22473FD3E009F0476 /* AlgoProvider.swift in Sources */,
 				2419224D246DED500090A21C /* LocaliseTextVM.swift in Sources */,
 				EC2E924924B464B0006762E1 /* Shake.swift in Sources */,
@@ -1576,17 +1493,12 @@
 				245573AE240F721A00B6CDDB /* ProductVM.swift in Sources */,
 				24192254246EB3510090A21C /* FileService.swift in Sources */,
 				24CCC5D4241F5D0700A5528A /* NavVM.swift in Sources */,
-				249C4DF22421FE7300925F96 /* JSONEncodingHelper.swift in Sources */,
 				2476972624924267002AC915 /* CellList.swift in Sources */,
 				2419224F246EAECA0090A21C /* SharingService.swift in Sources */,
-				249C4DFD2421FE7300925F96 /* URLSessionImplementations.swift in Sources */,
 				24DF7777240E327700D80C8E /* SceneDelegate.swift in Sources */,
-				249C4DFA2421FE7300925F96 /* ErrorModel.swift in Sources */,
 				2480819C247521E30023A709 /* AlgoTypesView.swift in Sources */,
 				248A39A7243DA51F007E8E23 /* AnimeAPI.swift in Sources */,
 				EC32799424A5207E00844DC8 /* View3D.swift in Sources */,
-				249C4DF32421FE7300925F96 /* Configuration.swift in Sources */,
-				249C4DF72421FE7300925F96 /* APIs.swift in Sources */,
 				248081B224755AC20023A709 /* SuffixArrayProcessor.swift in Sources */,
 				249C4E0B2422849D00925F96 /* Spiner.swift in Sources */,
 				EC6EDCB024A616B500B71D10 /* Renderer.swift in Sources */,
@@ -1598,22 +1510,17 @@
 				ECB8363224A359AB0083760D /* TextureShader.metal in Sources */,
 				2476972224921979002AC915 /* DispatchQoSExt.swift in Sources */,
 				2443AED8241A1665009DDCEB /* AnyTransitionExt.swift in Sources */,
-				249C4DF82421FE7300925F96 /* CodableHelper.swift in Sources */,
 				24CCC5D2241F5C7600A5528A /* NavPopButton.swift in Sources */,
 				2454F8E7242CD9C1001AA9EE /* StretchyHeader.swift in Sources */,
 				24F5A4222420ADA800F4A1C3 /* NextFirstView.swift in Sources */,
 				241EBD542419FE610089A32B /* ColumnView.swift in Sources */,
-				EC79972524BB8E8A00D3484B /* AnimeVM.swift in Sources */,
+				EC79972524BB8E8A00D3484B /* AnimeStoreAdaptor.swift in Sources */,
 				248081B424755C200023A709 /* DictionaryProcessor.swift in Sources */,
-				249C4DF92421FE7300925F96 /* ProductList.swift in Sources */,
 				248081AC247533000023A709 /* ArrayProcessor.swift in Sources */,
 				2466DD4A24326D4C009F2FC4 /* AnimatingDiagram.swift in Sources */,
-				249C4DFF2421FE7300925F96 /* JSONDataEncoding.swift in Sources */,
 				245573AC240F699D00B6CDDB /* SecondView.swift in Sources */,
-				249C4DFC2421FE7300925F96 /* APIHelper.swift in Sources */,
 				2476972424922143002AC915 /* AppError.swift in Sources */,
 				2484CD4E246C90BE00C59D56 /* LocaliseTextView.swift in Sources */,
-				249C4DF52421FE7300925F96 /* Extensions.swift in Sources */,
 				EC65604624A27FE500798CC6 /* ReduxView.swift in Sources */,
 				2466DD4D24326E46009F2FC4 /* PathDiagram.swift in Sources */,
 				EC655FD924A22AEC00798CC6 /* HandleTestAndButton.swift in Sources */,
@@ -1623,10 +1530,9 @@
 				ECB8363524A359ED0083760D /* MaterialShader.metal in Sources */,
 				24F5A4242420AFB900F4A1C3 /* NextSecondView.swift in Sources */,
 				2484CC9E246AFA7100C59D56 /* ValidateINN.swift in Sources */,
-				249C4DFB2421FE7300925F96 /* Product.swift in Sources */,
+				249C4DFB2421FE7300925F96 /* ProductDB.swift in Sources */,
 				24DF7779240E327700D80C8E /* MainScreenIOS.swift in Sources */,
 				ECC76ED624B7A5F600F45122 /* MainScreenIOSVM.swift in Sources */,
-				249C4DF62421FE7300925F96 /* SearchAnimeAPI.swift in Sources */,
 				249C4E022422066000925F96 /* RandomAccessCollectionExt.swift in Sources */,
 				24CCC5D0241F5C3B00A5528A /* NavPushButton.swift in Sources */,
 				2480819E247527AB0023A709 /* AlgoTypesVM.swift in Sources */,
@@ -1667,7 +1573,6 @@
 				ECB8363324A359AB0083760D /* TextureShader.metal in Sources */,
 				ECC76EF024B7A8F900F45122 /* ColorExt.swift in Sources */,
 				ECC76EEA24B7A86400F45122 /* Badge.swift in Sources */,
-				ECC76EE324B7A82300F45122 /* SynchronizedDictionary.swift in Sources */,
 				EC65601124A2558D00798CC6 /* AlgoTestView.swift in Sources */,
 				EC6EDCAB24A612FF00B71D10 /* MainScreenCatalystVM.swift in Sources */,
 				EC65600C24A2542A00798CC6 /* TaskScheduler.swift in Sources */,
@@ -1678,25 +1583,19 @@
 				ECC76EF924B7ABC200F45122 /* AnimeAPI.swift in Sources */,
 				ECC76EFD24B7ABD200F45122 /* SharingService.swift in Sources */,
 				EC6EDCAE24A614CB00B71D10 /* View3DVM.swift in Sources */,
-				ECC76EE724B7A82A00F45122 /* ProductList.swift in Sources */,
 				ECC76EFE24B7ABD200F45122 /* UserDefaultsService.swift in Sources */,
-				ECC76EE124B7A82300F45122 /* JSONEncodingHelper.swift in Sources */,
 				ECC76EED24B7A89100F45122 /* FilteringString.swift in Sources */,
-				ECC76EE424B7A82300F45122 /* Extensions.swift in Sources */,
-				ECC76EE224B7A82300F45122 /* Configuration.swift in Sources */,
 				ECC76ED324B7A4CB00F45122 /* DetailInfo.swift in Sources */,
 				ECC76F0124B7ACBA00F45122 /* ImageExt.swift in Sources */,
-				EC79972624BB8E8A00D3484B /* AnimeVM.swift in Sources */,
+				EC79972624BB8E8A00D3484B /* AnimeStoreAdaptor.swift in Sources */,
 				EC65600024A253DD00798CC6 /* StringExt.swift in Sources */,
 				EC65601224A2560100798CC6 /* AlgoTestVM.swift in Sources */,
 				EC65604224A266C800798CC6 /* LazyView.swift in Sources */,
 				EC65600924A2541900798CC6 /* SetProcessor.swift in Sources */,
 				EC6EDCB124A616B500B71D10 /* Renderer.swift in Sources */,
 				EC65600124A253E300798CC6 /* DispatchQoSExt.swift in Sources */,
-				ECC76EDD24B7A81300F45122 /* Models.swift in Sources */,
 				EC65600524A2540100798CC6 /* AlgoProvider.swift in Sources */,
 				ECB8363924A35A8C0083760D /* float4x4Ext.swift in Sources */,
-				ECC76EE924B7A82F00F45122 /* SearchAnimeAPI.swift in Sources */,
 				EC65600424A253FB00798CC6 /* AppError.swift in Sources */,
 				ECC76ED424B7A52B00F45122 /* ProductVM.swift in Sources */,
 				EC655FEC24A2524900798CC6 /* MainScreenCatalyst.swift in Sources */,
@@ -1704,9 +1603,7 @@
 				ECC76ED224B7A4C800F45122 /* AnimeSearch.swift in Sources */,
 				EC65600A24A2541E00798CC6 /* DictionaryProcessor.swift in Sources */,
 				ECC76EFC24B7ABD200F45122 /* FileService.swift in Sources */,
-				ECC76ED724B7A7C200F45122 /* OpenISO8601DateFormatter.swift in Sources */,
 				ECC76EEE24B7A8A400F45122 /* Spiner.swift in Sources */,
-				ECC76EDC24B7A80F00F45122 /* JSONDataEncoding.swift in Sources */,
 				EC65600724A2541000798CC6 /* TestStructureProcessor.swift in Sources */,
 				ECC76EFF24B7AC5700F45122 /* RandomAccessCollectionExt.swift in Sources */,
 				ECC76EEC24B7A87C00F45122 /* CustomButton.swift in Sources */,
@@ -1714,23 +1611,18 @@
 				ECC76EFB24B7ABD200F45122 /* DBService.swift in Sources */,
 				ECC76EFA24B7ABD200F45122 /* DataProvider.swift in Sources */,
 				ECC76F0024B7ACBA00F45122 /* AnyTransitionExt.swift in Sources */,
-				ECC76EDF24B7A81A00F45122 /* APIHelper.swift in Sources */,
 				EC65600324A253F100798CC6 /* CellList.swift in Sources */,
 				EC65600824A2541400798CC6 /* SuffixArrayProcessor.swift in Sources */,
 				EC65600224A253EC00798CC6 /* HandleTestAndButton.swift in Sources */,
-				ECC76EE024B7A81D00F45122 /* CodableHelper.swift in Sources */,
-				ECC76EDE24B7A81700F45122 /* URLSessionImplementations.swift in Sources */,
 				EC2C4B3624B4A8930079A2AA /* ScoreModifier.swift in Sources */,
 				EC65600D24A2542F00798CC6 /* Task.swift in Sources */,
 				EC2C4B3524B4A88F0079A2AA /* Shake.swift in Sources */,
-				ECC76EE824B7A82A00F45122 /* ErrorModel.swift in Sources */,
 				EC65600624A2540800798CC6 /* AlgoTypesVM.swift in Sources */,
-				ECC76EE524B7A82300F45122 /* APIs.swift in Sources */,
 				ECB8363624A359ED0083760D /* MaterialShader.metal in Sources */,
 				EC65601024A2558900798CC6 /* AlgoTypesView.swift in Sources */,
 				EC2C4B3424B4A8610079A2AA /* ReduxView.swift in Sources */,
 				ECC76EEF24B7A8AD00F45122 /* StretchyHeader.swift in Sources */,
-				ECC76EE624B7A82A00F45122 /* Product.swift in Sources */,
+				ECC76EE624B7A82A00F45122 /* ProductDB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

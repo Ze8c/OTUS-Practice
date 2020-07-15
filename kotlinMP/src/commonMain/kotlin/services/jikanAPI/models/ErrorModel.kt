@@ -11,16 +11,22 @@
 */
 package services.jikanAPI.models
 
-import kotlinx.serialization.*
+enum class ErrorType {
+    NETWORK, AUTH, TECH, OTHER, NOTFOUND, BADANSWER
+}
 
 /**
- * 
- * @param message 
- * @param code 
+ *
+ * @param code
+ * @param errorType
+ * @param message
+ * @param type
  */
-@Serializable
 data class ErrorModel (
-    @SerialName(value = "message") @Required val message: String,
-    @SerialName(value = "code") @Required val code: Int
+    var code: Int = 0,
+    var errorType: String = "",
+    var message: String = "",
+
+    var type: ErrorType = ErrorType.OTHER
 )
 

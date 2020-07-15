@@ -21,6 +21,6 @@ import kotlinx.serialization.*
 @Serializable
 data class ProductList (
     @SerialName(value = "last_page") val lastPage: Int,
-    @SerialName(value = "results") val results: Array<Product>
+    @SerialName(value = "results") val results: List<Product>
 )
 

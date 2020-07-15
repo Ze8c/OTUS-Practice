@@ -20,7 +20,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let serviceLocator: ServiceLocator = ServiceLocatorImpl()
         
         serviceLocator.registrator { container in
-            container.inject(AbstractAnimeAPI.self) { AnimeAPIImpl() }
             container.inject(DBAbstract.self) { DBImpl() }
         }
         
