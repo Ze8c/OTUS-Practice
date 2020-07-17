@@ -11,14 +11,8 @@
 */
 package services.jikanAPI
 
-import io.ktor.http.HttpMethod
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-
 import services.jikanAPI.models.ProductList
 import services.jikanAPI.infrastructure.*
-import services.jikanAPI.models.ContentResponse
 
 class SearchApi {
 

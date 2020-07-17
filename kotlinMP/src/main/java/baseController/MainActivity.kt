@@ -1,21 +1,23 @@
 package baseController
 
+import adapters.MainHeader
+import adapters.ProductTable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import sample.R
 import store.StoreProduct
 import store.entity.ProductActions
 import store.entity.ProductType
 
 class MainActivity : AppCompatActivity() {
 
-    private val searchBtn by lazy { findViewById<Button>(R.id.search_button) }
-    private val resultText by lazy { findViewById<TextView>(R.id.text_test) }
+    private val header: MainHeader by lazy { MainHeader(this) }
+    private val listProduct: RecyclerView by lazy { findViewById<RecyclerView>(R.id.product_list) }
+    private val adapter: ProductTable by lazy { ProductTable() }
 
     private val store = StoreProduct()
 
@@ -24,7 +26,10 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        searchBtn.setOnClickListener {
+        listProduct.layoutManager = LinearLayoutManager(this)
+        listProduct.adapter = adapter
+
+        header.searchBtn.setOnClickListener {
             store.set("GTO")
             store.set(ProductType.ANIME)
             store.dispatch(ProductActions.SEARCH)
@@ -32,7 +37,8 @@ class MainActivity : AppCompatActivity() {
 
         store.observer.add {
             GlobalScope.launch(Dispatchers.Main) {
-                resultText.text = it.size.toString()
+                header.resultText.text = it.size.toString()
+                adapter.update(it)
             }
         }
     }

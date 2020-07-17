@@ -51,6 +51,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation "com.squareup.picasso:picasso:2.71828"
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
     implementation 'com.google.android.material:material:1.1.0'
     testImplementation 'io.kotlintest:kotlintest-runner-junit5:3.4.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
@@ -58,7 +60,6 @@ dependencies {
 
 kotlin {
     android("android")
-//    iosX64("ios") { binaries { framework() } }
 
     targets{
         final def iOSTarget = System.getenv('SDK_NAME')?.startsWith("iphoneos") \

@@ -9,60 +9,10 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonConfiguration
 import services.jikanAPI.models.ContentResponse
 import services.jikanAPI.models.ErrorModel
-
+import services.jikanAPI.models.Product
 import services.jikanAPI.models.ProductList
-import store.Dispatch
 
-//interface ApiConnector {
-//    fun request(config: RequestConfig, callback: (ProductList) -> Unit)
-//}
-//
-//class ApiService : ApiConnector {
-//
-//    private val baseUrl: String = "https://api.jikan.moe/v3"
-//    private val dispatch: Dispatch = Dispatch()
-//
-//    private val client = HttpClient() {
-//
-//        install(UserAgent) {
-//            agent = "ktor"
-//        }
-//
-//        install(JsonFeature) {
-//            val json = Json(JsonConfiguration(ignoreUnknownKeys = true))
-//            serializer = KotlinxSerializer(json)
-//        }
-//
-//        BrowserUserAgent()
-//
-//        CurlUserAgent()
-//    }
-//
-//    override fun request(config: RequestConfig, callback: (ProductList) -> Unit) {
-//
-//        GlobalScope.launch(dispatch.defaultDispatcher) {
-//            val result = client.get<ProductList> {
-//                this.url {
-//                    this.takeFrom(URLBuilder(baseUrl))
-//                    appendPath(config.path.trimStart('/').split('/'))
-//                    config.query.forEach { elemnt ->
-//                        parameter(elemnt.key, elemnt.value)
-//                    }
-//                }
-//
-//                this.method = config.method
-//            }
-//
-//            callback(result)
-//        }
-//    }
-//
-//    private fun URLBuilder.appendPath(components: List<String>): URLBuilder = apply {
-//        encodedPath = encodedPath
-//            .trimEnd('/') + components
-//            .joinToString("/", prefix = "/") { it.encodeURLQueryComponent() }
-//    }
-//}
+import store.Dispatch
 
 interface ApiConnector {
     suspend fun<T> getData(path: String, serializer: KSerializer<T>, completed: (T) -> Unit)
@@ -109,24 +59,32 @@ class ApiService : ApiConnector {
     }
 }
 
-//class ApiStub : ApiConnector {
-//
-//    private val dispatch: Dispatch = Dispatch()
-//
-//    override fun request(config: RequestConfig, callback: (ProductList) -> Unit) {
-//        GlobalScope.launch(dispatch.defaultDispatcher) {
-//
-//            val prod = Product(malId = 2001,
-//                    imageUrl = "",
-//                    title =  config.path,
-//                    synopsis = config.query.getValue("q"),
-//                    type = "anime",
-//                    members = 10,
-//                    score = 10.0)
-//
-//            val prodA: Array<Product> = arrayOf(prod)
-//            val prodL = ProductList(1, prodA)
-//            callback(prodL)
-//        }
-//    }
-//}
+class ApiStub : ApiConnector {
+
+    private val dispatch: Dispatch = Dispatch()
+
+    override suspend fun<T> getData(path: String, serializer: KSerializer<T>, completed: (T) -> Unit) {
+
+        dispatch.ktorScope {
+
+            var contentResponse = ContentResponse<T>()
+
+            val imgURL = "https://cdn.myanimelist.net/images/anime/13/11460.jpg?s=7e890b7e93b7b57c2de4aa90211931bd"
+
+            val prod = Product(
+                245,
+                imgURL,
+                "Great Teacher Onizuka",
+                "Onizuka is a reformed biker gang leader who has his sights set on an honorable new ambition...",
+                "Anime",
+            476501,
+            8.71)
+
+            contentResponse.content = ProductList(3, listOf(prod, prod)) as T
+
+            withContext(dispatch.uiDispatcher) {
+                contentResponse.content?.let { completed(it) }
+            }
+        }
+    }
+}
