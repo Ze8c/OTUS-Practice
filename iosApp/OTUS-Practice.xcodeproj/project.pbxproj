@@ -54,7 +54,6 @@
 		2484CC9E246AFA7100C59D56 /* ValidateINN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CC9D246AFA7100C59D56 /* ValidateINN.swift */; };
 		2484CCA0246B000900C59D56 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CC9F246B000900C59D56 /* StringExt.swift */; };
 		2484CD4E246C90BE00C59D56 /* LocaliseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484CD4D246C90BE00C59D56 /* LocaliseTextView.swift */; };
-		248A39A7243DA51F007E8E23 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A39A6243DA51F007E8E23 /* AnimeAPI.swift */; };
 		249C4DFB2421FE7300925F96 /* ProductDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4DEC2421FE7300925F96 /* ProductDB.swift */; };
 		249C4E022422066000925F96 /* RandomAccessCollectionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E012422066000925F96 /* RandomAccessCollectionExt.swift */; };
 		249C4E0924224BEC00925F96 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E0824224BEC00925F96 /* ColorExt.swift */; };
@@ -200,7 +199,6 @@
 		ECC76EF024B7A8F900F45122 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C4E0824224BEC00925F96 /* ColorExt.swift */; };
 		ECC76EF224B7AACA00F45122 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = ECC76EF124B7AACA00F45122 /* KingfisherSwiftUI */; };
 		ECC76EF824B7AAEC00F45122 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECC76EF724B7AAEC00F45122 /* RealmSwift */; };
-		ECC76EF924B7ABC200F45122 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248A39A6243DA51F007E8E23 /* AnimeAPI.swift */; };
 		ECC76EFA24B7ABD200F45122 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24192251246EB1030090A21C /* DataProvider.swift */; };
 		ECC76EFB24B7ABD200F45122 /* DBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24710824244F4B1B0068A847 /* DBService.swift */; };
 		ECC76EFC24B7ABD200F45122 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24192253246EB3510090A21C /* FileService.swift */; };
@@ -360,7 +358,6 @@
 		2484CCB4246BD44500C59D56 /* OTUS-Practice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OTUS-Practice.entitlements"; sourceTree = "<group>"; };
 		2484CD4B246C4E1300C59D56 /* OTUS-Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OTUS-Share.entitlements"; sourceTree = "<group>"; };
 		2484CD4D246C90BE00C59D56 /* LocaliseTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaliseTextView.swift; sourceTree = "<group>"; };
-		248A39A6243DA51F007E8E23 /* AnimeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeAPI.swift; sourceTree = "<group>"; };
 		249C4DEC2421FE7300925F96 /* ProductDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDB.swift; sourceTree = "<group>"; };
 		249C4E012422066000925F96 /* RandomAccessCollectionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAccessCollectionExt.swift; sourceTree = "<group>"; };
 		249C4E0824224BEC00925F96 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
@@ -847,7 +844,6 @@
 		EC655FC324A2112700798CC6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				248A39A6243DA51F007E8E23 /* AnimeAPI.swift */,
 				EC6EDCAF24A616B500B71D10 /* Renderer.swift */,
 				2476971C24917B38002AC915 /* Job */,
 				248081A82475303B0023A709 /* Saving */,
@@ -1497,7 +1493,6 @@
 				2419224F246EAECA0090A21C /* SharingService.swift in Sources */,
 				24DF7777240E327700D80C8E /* SceneDelegate.swift in Sources */,
 				2480819C247521E30023A709 /* AlgoTypesView.swift in Sources */,
-				248A39A7243DA51F007E8E23 /* AnimeAPI.swift in Sources */,
 				EC32799424A5207E00844DC8 /* View3D.swift in Sources */,
 				248081B224755AC20023A709 /* SuffixArrayProcessor.swift in Sources */,
 				249C4E0B2422849D00925F96 /* Spiner.swift in Sources */,
@@ -1580,7 +1575,6 @@
 				EC32799524A5207E00844DC8 /* View3D.swift in Sources */,
 				EC655FE824A2524900798CC6 /* AppDelegate.swift in Sources */,
 				EC655FEA24A2524900798CC6 /* SceneDelegate.swift in Sources */,
-				ECC76EF924B7ABC200F45122 /* AnimeAPI.swift in Sources */,
 				ECC76EFD24B7ABD200F45122 /* SharingService.swift in Sources */,
 				EC6EDCAE24A614CB00B71D10 /* View3DVM.swift in Sources */,
 				ECC76EFE24B7ABD200F45122 /* UserDefaultsService.swift in Sources */,
